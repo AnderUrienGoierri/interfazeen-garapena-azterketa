@@ -365,6 +365,38 @@
   }
   .score-circle.pass { border-color: var(--good); background: var(--good-soft); color: var(--good); }
   .score-circle.fail { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); }
+
+  /* QR Sync Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 16px;
+  }
+  .modal-box {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    max-width: 420px;
+    width: 100%;
+    padding: 20px 22px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  }
+  .qr-frame {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    border: 2px solid #e2e8f0;
+    margin: 10px 0;
+  }
+  .qr-frame img { display: block; width: 230px; height: 230px; }
 </style>
 </head>
 <body>
@@ -465,7 +497,7 @@
           <button class="btn-secondary hidden" id="btnDelProfile" style="padding:6px 10px;font-size:0.8rem;" onclick="deleteCurrentProfile()" title="Ezabatu profil hau">✖️</button>
         </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="copySyncLink()">🔗 Sinkronizatu mugikorrera</button>
+          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="openQrSyncModal()">📱 Sinkronizatu (QR / Esteka)</button>
           <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="exportStatsCode()">📤 Esportatu</button>
           <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="importStatsCode()">📥 Inportatu</button>
           <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="resetStats()">🗑️ Garbitu profila</button>
@@ -550,6 +582,23 @@
       <div id="reviewList"></div>
     </div>
   </section>
+  <!-- ==================== QR SINKRONIZAZIO MODALA ==================== -->
+  <div id="qrModal" class="modal-backdrop hidden" onclick="if(event.target===this) closeQrSyncModal()">
+    <div class="modal-box">
+      <h3 style="margin:0 0 4px 0;">📱 Eskaneatu mugikorrarekin</h3>
+      <p id="qrProfileInfo" style="margin:0 0 6px 0;font-size:0.84rem;color:var(--muted);"></p>
+      <div class="qr-frame">
+        <img id="qrImage" alt="QR sinkronizazio-kodea" />
+      </div>
+      <p style="margin:4px 0 12px 0;font-size:0.8rem;color:var(--muted);">
+        Ireki mugikorreko kamera eta eskaneatu QR hau: zure <strong>profila (izena barne) eta estatistika guztiak</strong> automatikoki kargatuko dira!
+      </p>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="copySyncLink()">📋 Kopiatu esteka</button>
+        <button class="btn-secondary" onclick="closeQrSyncModal()">Itxi</button>
+      </div>
+    </div>
+  </div>
 </main>
 
 <script>
@@ -1572,14 +1621,66 @@ function resetStats() {
 const GITHUB_PAGES_URL = "https://anderuriengoierri.github.io/interfazeen-garapena-azterketa/";
 
 function encodeStatsB64(st) {
-  const json = JSON.stringify(st);
+  const profiles = getProfiles();
+  const activeId = getActiveProfileId();
+  const cur = profiles.find(p => p.id === activeId);
+  const pname = cur ? cur.name.replace(/^👤\s*/, "") : "";
+  const compact = {
+    p: activeId === DEFAULT_PROFILE_ID ? "" : pname,
+    s: st.sessions || 0,
+    a: st.totalAns || 0,
+    g: st.totalGood || 0,
+    t: Object.fromEntries(Object.entries(st.byTopic || {}).map(([k, v]) => [k, [v.ok || 0, v.tot || 0]])),
+    m: st.missedIds || []
+  };
+  const json = JSON.stringify(compact);
   return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
 function decodeStatsB64(str) {
   let s = str.trim().replace(/-/g, "+").replace(/_/g, "/");
   while (s.length % 4) s += "=";
-  return JSON.parse(decodeURIComponent(escape(atob(s))));
+  const obj = JSON.parse(decodeURIComponent(escape(atob(s))));
+  if (typeof obj.s === "number" && obj.t) {
+    const byTopic = {};
+    for (const [k, pair] of Object.entries(obj.t)) {
+      byTopic[k] = { ok: pair[0] || 0, tot: pair[1] || 0 };
+    }
+    return {
+      profileName: obj.p || "",
+      stats: { sessions: obj.s, totalAns: obj.a || 0, totalGood: obj.g || 0, byTopic, missedIds: obj.m || [] }
+    };
+  }
+  if (typeof obj.sessions === "number" && obj.byTopic) {
+    return { profileName: "", stats: obj };
+  }
+  throw new Error("Formatu okerra");
+}
+
+function applySyncedPayload(decoded) {
+  const { profileName, stats } = decoded;
+  let label = "Nire profila";
+  if (profileName) {
+    const fullName = "👤 " + profileName;
+    const list = getProfiles();
+    let existing = list.find(p => p.name.toLowerCase() === fullName.toLowerCase());
+    if (!existing) {
+      existing = { id: "u_" + Date.now(), name: fullName };
+      list.push(existing);
+      saveProfiles(list);
+    }
+    setActiveProfileId(existing.id);
+    label = profileName;
+  }
+  saveStats(stats);
+  renderHomeStats();
+  return label;
+}
+
+function buildSyncUrl() {
+  const code = encodeStatsB64(loadStats());
+  const baseUrl = location.protocol.startsWith("http") ? (location.origin + location.pathname) : GITHUB_PAGES_URL;
+  return `${baseUrl}?sync=${code}`;
 }
 
 function showSyncNotice(msg) {
@@ -1587,17 +1688,33 @@ function showSyncNotice(msg) {
   if (!el) return;
   el.textContent = msg;
   el.classList.remove("hidden");
-  setTimeout(() => el.classList.add("hidden"), 6000);
+  setTimeout(() => el.classList.add("hidden"), 7000);
+}
+
+function openQrSyncModal() {
+  const fullUrl = buildSyncUrl();
+  const st = loadStats();
+  const cur = getProfiles().find(p => p.id === getActiveProfileId());
+  document.getElementById("qrProfileInfo").textContent =
+    `${cur ? cur.name : "👤 Nire profila"} · ${st.sessions} proba · ${st.totalGood}/${st.totalAns} zuzen`;
+  const img = document.getElementById("qrImage");
+  const primarySrc = `https://api.qrserver.com/v1/create-qr-code/?size=260x260&ecc=L&margin=8&data=${encodeURIComponent(fullUrl)}`;
+  const fallbackSrc = `https://quickchart.io/qr?size=260&ecLevel=L&text=${encodeURIComponent(fullUrl)}`;
+  img.onerror = () => { if (img.src !== fallbackSrc) img.src = fallbackSrc; };
+  img.src = primarySrc;
+  document.getElementById("qrModal").classList.remove("hidden");
+}
+
+function closeQrSyncModal() {
+  document.getElementById("qrModal").classList.add("hidden");
 }
 
 function copySyncLink() {
-  const st = loadStats();
-  const code = encodeStatsB64(st);
-  const baseUrl = location.protocol.startsWith("http") ? (location.origin + location.pathname) : GITHUB_PAGES_URL;
-  const fullUrl = `${baseUrl}?sync=${code}`;
+  const fullUrl = buildSyncUrl();
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(fullUrl).then(() => {
-      showSyncNotice("✅ Sinkronizazio-esteka arbelean kopiatuta! Bidali esteka hori zure mugikorrera (WhatsApp/Telegram) eta irekitzean estatistikak automatikoki kargatuko dira.");
+      closeQrSyncModal();
+      showSyncNotice("✅ Sinkronizazio-esteka arbelean kopiatuta! Ireki esteka mugikorrean eta zure profila + estatistikak automatikoki kargatuko dira.");
     }).catch(() => prompt("Kopiatu esteka hau eta ireki mugikorrean:", fullUrl));
   } else {
     prompt("Kopiatu esteka hau eta ireki mugikorrean:", fullUrl);
@@ -1620,11 +1737,9 @@ function importStatsCode() {
   if (!raw) return;
   try {
     const token = raw.includes("sync=") ? raw.split("sync=")[1].split("&")[0] : raw;
-    const parsed = decodeStatsB64(token);
-    if (typeof parsed.sessions !== "number" || !parsed.byTopic) throw new Error("Formatu okerra");
-    saveStats(parsed);
-    renderHomeStats();
-    showSyncNotice(`✅ Estatistikak ongi inportatu dira! (${parsed.sessions} proba, ${parsed.totalGood}/${parsed.totalAns} zuzen)`);
+    const decoded = decodeStatsB64(token);
+    const label = applySyncedPayload(decoded);
+    showSyncNotice(`✅ «${label}» profila ongi inportatu da! (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen)`);
   } catch (e) {
     alert("❌ Ezin izan da kodea irakurri. Ziurtatu kode osoa kopiatu duzula.");
   }
@@ -1635,14 +1750,12 @@ function importStatsCode() {
     const params = new URLSearchParams(location.search);
     const syncToken = params.get("sync");
     if (syncToken) {
-      const parsed = decodeStatsB64(syncToken);
-      if (typeof parsed.sessions === "number" && parsed.byTopic) {
-        saveStats(parsed);
-        if (history.replaceState) {
-          history.replaceState(null, "", location.pathname);
-        }
-        setTimeout(() => showSyncNotice(`✅ Zure aurrerapena automatikoki sinkronizatu da! (${parsed.sessions} proba, ${parsed.totalGood}/${parsed.totalAns} zuzen)`), 150);
+      const decoded = decodeStatsB64(syncToken);
+      const label = applySyncedPayload(decoded);
+      if (history.replaceState) {
+        history.replaceState(null, "", location.pathname);
       }
+      setTimeout(() => showSyncNotice(`✅ «${label}» profila eta estatistikak automatikoki sinkronizatu dira! (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen)`), 150);
     }
   } catch (e) { /* ignore malformed sync */ }
 })();
