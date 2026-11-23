@@ -457,13 +457,18 @@
 
     <!-- Aurrerapena -->
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-        <h2 style="margin:0;">📊 Zure aurrerapena</h2>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <h2 style="margin:0;">📊 Aurrerapena</h2>
+          <select id="selProfile" onchange="switchProfile(this.value)" style="width:auto;min-width:155px;padding:6px 10px;font-size:0.84rem;font-weight:700;"></select>
+          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="createProfile()">➕ Erabiltzaile berria</button>
+          <button class="btn-secondary hidden" id="btnDelProfile" style="padding:6px 10px;font-size:0.8rem;" onclick="deleteCurrentProfile()" title="Ezabatu profil hau">✖️</button>
+        </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="copySyncLink()">🔗 Sinkronizatu mugikorrera (Esteka)</button>
+          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="copySyncLink()">🔗 Sinkronizatu mugikorrera</button>
           <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="exportStatsCode()">📤 Esportatu</button>
           <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="importStatsCode()">📥 Inportatu</button>
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="resetStats()">🗑️ Garbitu</button>
+          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="resetStats()">🗑️ Garbitu profila</button>
         </div>
       </div>
       <div id="syncNotice" class="feedback-box good hidden" style="margin-top:8px;padding:8px 12px;font-size:0.84rem;"></div>
@@ -1480,8 +1485,12 @@ const QUESTIONS = [
   }
 ];
 
-/* ==================== STATE & STORAGE ==================== */
+/* ==================== STATE & STORAGE (MULTI-PROFILE) ==================== */
 const LS_KEY = "ig_azterketa_stats_v1";
+const LS_PROFILES_KEY = "ig_azterketa_profiles_v1";
+const LS_ACTIVE_PROFILE_KEY = "ig_azterketa_active_profile_v1";
+const DEFAULT_PROFILE_ID = "default";
+
 let state = {
   mode: "study",
   deck: [],
@@ -1500,15 +1509,68 @@ function escHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+function getProfiles() {
+  try {
+    const list = JSON.parse(localStorage.getItem(LS_PROFILES_KEY));
+    if (Array.isArray(list) && list.length > 0) return list;
+  } catch {}
+  return [{ id: DEFAULT_PROFILE_ID, name: "👤 Nire profila" }];
+}
+function saveProfiles(list) { localStorage.setItem(LS_PROFILES_KEY, JSON.stringify(list)); }
+
+function getActiveProfileId() {
+  const id = localStorage.getItem(LS_ACTIVE_PROFILE_KEY) || DEFAULT_PROFILE_ID;
+  const profiles = getProfiles();
+  return profiles.some(p => p.id === id) ? id : DEFAULT_PROFILE_ID;
+}
+function setActiveProfileId(id) { localStorage.setItem(LS_ACTIVE_PROFILE_KEY, id); }
+
+function getProfileStorageKey(profileId = getActiveProfileId()) {
+  return profileId === DEFAULT_PROFILE_ID ? LS_KEY : `${LS_KEY}__${profileId}`;
+}
+
 function loadStats() {
   try {
-    return JSON.parse(localStorage.getItem(LS_KEY)) || { sessions: 0, totalAns: 0, totalGood: 0, byTopic: {}, missedIds: [] };
+    return JSON.parse(localStorage.getItem(getProfileStorageKey())) || { sessions: 0, totalAns: 0, totalGood: 0, byTopic: {}, missedIds: [] };
   } catch { return { sessions: 0, totalAns: 0, totalGood: 0, byTopic: {}, missedIds: [] }; }
 }
-function saveStats(s) { localStorage.setItem(LS_KEY, JSON.stringify(s)); }
+function saveStats(s) { localStorage.setItem(getProfileStorageKey(), JSON.stringify(s)); }
+
+function switchProfile(id) {
+  setActiveProfileId(id);
+  renderHomeStats();
+}
+
+function createProfile() {
+  const raw = prompt("Idatzi erabiltzaile berriaren izena (adib. Mikel, Gonbidatua, 2. itzulia):");
+  if (!raw || !raw.trim()) return;
+  const name = "👤 " + raw.trim();
+  const id = "u_" + Date.now();
+  const list = getProfiles();
+  list.push({ id, name });
+  saveProfiles(list);
+  setActiveProfileId(id);
+  renderHomeStats();
+  showSyncNotice(`✅ «${raw.trim()}» profila sortu da estatistika hutsekin! Beste profilen datuak bere horretan mantentzen dira.`);
+}
+
+function deleteCurrentProfile() {
+  const activeId = getActiveProfileId();
+  if (activeId === DEFAULT_PROFILE_ID) return;
+  const list = getProfiles();
+  const current = list.find(p => p.id === activeId);
+  if (!confirm(`Ziur «${current ? current.name : activeId}» profila eta bere estatistikak ezabatu nahi dituzula?`)) return;
+  localStorage.removeItem(getProfileStorageKey(activeId));
+  saveProfiles(list.filter(p => p.id !== activeId));
+  setActiveProfileId(DEFAULT_PROFILE_ID);
+  renderHomeStats();
+}
+
 function resetStats() {
-  if (!confirm("Ziur estatistika eta huts egindako galderen historia garbitu nahi duzula?")) return;
-  localStorage.removeItem(LS_KEY);
+  const list = getProfiles();
+  const current = list.find(p => p.id === getActiveProfileId());
+  if (!confirm(`Ziur «${current ? current.name : 'profil honen'}» estatistikak soilik garbitu nahi dituzula?`)) return;
+  localStorage.removeItem(getProfileStorageKey());
   renderHomeStats();
 }
 
@@ -1627,6 +1689,15 @@ function goHome() {
 }
 
 function renderHomeStats() {
+  const profiles = getProfiles();
+  const activeId = getActiveProfileId();
+  const sel = document.getElementById("selProfile");
+  if (sel) {
+    sel.innerHTML = profiles.map(p => `<option value="${escHtml(p.id)}" ${p.id === activeId ? "selected" : ""}>${escHtml(p.name)}</option>`).join("");
+  }
+  const delBtn = document.getElementById("btnDelProfile");
+  if (delBtn) delBtn.classList.toggle("hidden", activeId === DEFAULT_PROFILE_ID);
+
   const st = loadStats();
   document.getElementById("missedCountHome").textContent = st.missedIds.length;
   const pct = st.totalAns ? Math.round((st.totalGood / st.totalAns) * 100) : 0;
