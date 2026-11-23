@@ -744,74 +744,74 @@ const QUESTIONS = [
   // ---------- 1. UX ----------
   { id:"ux1", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"ISO 9241-210 arauaren arabera, zer da UX (User eXperience)?",
-    opts:["Pertsona batek produktu edo zerbitzu bat erabiltzean —edo erabiltzea aurreikustean— dituen pertzepzio eta erantzun guztiak.","Botoien kolorea, tipografia eta ikonoen estiloa soilik.","Aplikazio baten datu-baseko kontsulten abiadura teknikoa.","Webgune baten kode HTML garbia."],
+    opts:["Produktu bat erabiltzean edo aurreikustean pertsonak dituen pertzepzio eta erantzunak.", "Interfaze bateko botoien kolorea, tipografia, ikonoen estiloa eta trantsizio grafikoen multzoa.", "Aplikazio baten datu-baseko kontsulten abiadura eta zerbitzariaren erantzun-denbora teknikoa.", "Webgune edo aplikazio baten HTML egitura semantikoa eta bilatzaileetako posizionamendu organikoa."],
     ans:0, exp:"UX-ek esperientzia osoa hartzen du barne: erabilera aurretik, bitartean eta ondoren sortzen diren pertzepzio, emozio eta erantzun guztiak."
   },
   { id:"ux2", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Ate batek tiratzeko helduleku handi bat du, baina kartel batean «BULTZA» jartzen du. Zer izen ematen zaio akats honi?",
-    opts:["Norman atea (afordantzia edo seinale bisual kontraesankorra).","Fitts-en paradoxa.","Jakob-en legea.","Hansen-en akatsa."],
+    opts:["Norman atea.", "Fitts-en efektu kontraesankorra.", "Jakob-en legearen haustura.", "Hansen-en seinalizazio-akatsa."],
     ans:0, exp:"Don Normanek ezagun egin zuen: objektuaren formak (heldulekuak) tiratzeko dio, baina benetan bultzatu egin behar da."
   },
   { id:"ux3", topic:"T1_UX", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.natural_mapping,
     q:"Aztertu A eta B sukaldeko suen kontrolak. Zergatik da B diseinua askoz hobea UX aldetik?",
-    opts:["Mapeo naturala aplikatzen duelako: botoien antolaketak suen kokapena islatzen du eta ez da etiketarik behar.","Kolore berdea erabiltzen duelako gorriaren ordez.","Botoiak txikiagoak direlako eta Fitts-en legea betetzen duelako.","Sintesi kengarria erabiltzen duelako."],
+    opts:["Mapeo naturala aplikatzen duelako suen kokapena islatuz.", "Kolore berde bizia erabiltzen duelako gorriaren ordez arreta hobetzeko.", "Botoi guztiak pantailaren eskuineko ertzean daudelako Fitts-en legea betez.", "Sintesi kengarriaren bidez kontraste bisual handiagoa sortzen duelako."],
     ans:0, exp:"Mapeo naturala (Don Norman): kontrolen kokapen geometrikoak berak adierazten du zein elementuri eragiten dion."
   },
   { id:"ux4", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Biwenger aplikazioak jokalariak futbol-zelai baten gainean kokatzen ditu. Zein kontzeptu aplikatzen ari da?",
-    opts:["Eredu mentala (Mental Model): erabiltzaileak buruan duen futbol-hamaikakoaren irudira egokitzen da.","Muga fisikoa (Physical Constraint).","Gestalt-en itxitura-legea.","WCAG AAA kontrastea."],
+    opts:["Eredu mentala (Mental Model).", "Muga fisikoa (Physical Constraint).", "Gestalt-en itxitura-legea (Closure).", "WCAG 2.2 AAA mailako kontraste bisuala."],
     ans:0, exp:"Diseinuak erabiltzaileen eredu mentaletara egokitu behar dira, eta ez alderantziz. Biwenger-ek futbol-zelaiaren eredu mentala aprobetxatzen du."
   },
   { id:"ux5", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Zein da PKI/HCI eta UX-en arteko erlazioa?",
-    opts:["PKI/HCI interakzioa ikertzen duen diziplina da, eta haren metodoak erabiltzen ditugu UX ona lortzeko.","Gauza bera dira, izen ezberdinarekin.","UX zientzia matematikoa da eta PKI diseinu grafikoa.","PKI mugikorretarako da eta UX webguneetarako."],
+    opts:["PKI/HCI ikerketa-diziplina da, eta haren metodoekin UX ona lortzen da.", "Biak kontzeptu berdina dira, baina PKI Europan eta UX Ameriketan erabiltzen da.", "UX algoritmo matematikoen multzoa da eta PKI diseinu grafiko hutsa da.", "PKI mugikorretako aplikazioetarako erabiltzen da eta UX mahaigaineko sistemetarako."],
     ans:0, exp:"PKI/HCI diziplina akademiko eta metodologikoa da; bere ezagutzak eta probak erabiltzen dira produktuaren UX ona eraikitzeko."
   },
   { id:"ux6", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Hansen-en 4 printzipioetako (1971) 3. printzipioak («Eragiketak optimizatu») zer adierazten du supermerkatuko kutxa automatikoaren adibidearekin?",
-    opts:["Erabiltzaileek benetan zein ordenatan egiten dituzten pausoak behatu (1. Eskaneatu → 2. Bonua → 3. Ordaindu) eta interfazea horrela antolatu.","Aukera guztiak pantaila berean neurri handian jartzea.","Hizkuntza-hautatzailea pantailaren erdian jartzea.","Testu teknikoak erabiltzea."],
+    opts:["Erabiltzailearen benetako pauso-ordena behatzea eta interfazea horrela antolatzea.", "Aukera eta botoi guztiak hasierako pantaila berean neurri berdinean eta nabarmenduta jartzea.", "Hizkuntza-hautatzailea eta ezarpenak pantailaren erdian finkatzea fluxu nagusiaren barruan.", "Erabiltzaileari mezu tekniko zehatzak erakustea prozesuaren barne-egoera uler dezan."],
     ans:0, exp:"Interfazea ez da diseinatzailearen uste hutsez antolatu behar: erabiltzailearen benetako fluxua behatu eta nagusia lehenetsi behar da."
   },
 
   // ---------- 2. NIELSEN 10 HEURISTIKOAK ----------
   { id:"n1", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Formulario batean «Errorea 422: Unprocessable Entity» ordez «Badirudi zerbait falta dela. Ziurtatu eremu guztiak beteta daudela» erakustean, zein heuristiko betetzen da batez ere?",
-    opts:["H2 · Sistemaren eta mundu errealaren arteko bat-etortzea (eta H9).","H7 · Malgutasuna eta eraginkortasuna.","H6 · Gogoratu beharrean, ezagutu.","H8 · Diseinu estetiko eta minimalista."],
+    opts:["H2 · Sistemaren eta mundu errealaren bat-etortzea.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H6 · Gogoratu beharrean, elementuak ezagutu.", "H8 · Diseinu estetiko eta minimalista garbia."],
     ans:0, exp:"H2 heuristikoak dio sistemak erabiltzailearen hizkuntza arrunta erabili behar duela, ez hizkera tekniko edo barneko kodeak."
   },
   { id:"n2", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Pasahitza idazten ari garen bitartean, baldintzak denbora errealean berdez markatzen dira eta urrats-adierazleak (stepper) 2/3 erakusten du. Zein heuristiko da?",
-    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.","H3 · Erabiltzailearen kontrola eta askatasuna.","H6 · Gogoratu beharrean, ezagutu.","H10 · Laguntza eta dokumentazioa."],
+    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.", "H3 · Erabiltzailearen kontrola eta askatasuna.", "H6 · Gogoratu beharrean, elementuak ezagutu.", "H10 · Laguntza-sistema eta dokumentazioa."],
     ans:0, exp:"H1: erabiltzaileak une oro jakin behar du sistema zein egoeratan dagoen feedback argi eta egokiaren bidez."
   },
   { id:"n3", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Ctrl + Z (Desegin), Ezeztatu eta Atzera botoi argiak eskaintzea zein heuristikorekin dago lotuta zuzenean?",
-    opts:["H3 · Erabiltzailearen kontrola eta askatasuna.","H4 · Koherentzia eta estandarrak.","H8 · Diseinu estetiko eta minimalista.","H2 · Mundu errealarekiko bat-etortzea."],
+    opts:["H3 · Erabiltzailearen kontrola eta askatasuna.", "H4 · Barneko eta kanpoko koherentzia eta estandarrak.", "H8 · Diseinu estetiko eta minimalista garbia.", "H2 · Sistemaren eta mundu errealaren arteko bat-etortzea."],
     ans:0, exp:"H3: gizakiok akatsak egiten ditugunez, «larrialdi-irteera» argiak eman behar dira prozesu luze bat berriz hasi beharrik gabe."
   },
   { id:"n4", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Zein heuristikorekin dago lotuta Jakob-en legea (erabiltzaileek beste app/webetan ikasitako estandarrak espero dituzte)?",
-    opts:["H4 · Koherentzia eta estandarrak (kanpo-koherentzia).","H5 · Erroreen prebentzioa.","H7 · Malgutasuna.","H1 · Sistemaren egoeraren ikusgarritasuna."],
+    opts:["H4 · Koherentzia eta estandarrak.", "H5 · Erroreen prebentzio sistematikoa.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H1 · Sistemaren egoeraren ikusgarritasuna."],
     ans:0, exp:"H4-k bi alderdi ditu: barne-koherentzia (aplikazio barruan) eta kanpo-koherentzia (merkatuko estandarrak: saskia, lupa, X itxi...)."
   },
   { id:"n5", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Taula batean erregistro bat ezabatzeko ID zenbakia eskuz idatzi ordez, errenkadaren ondoan zakarrontzi-ikono bat jartzea zein heuristiko da?",
-    opts:["H6 · Gogoratu beharrean, ezagutu (Recognition rather than recall).","H8 · Diseinu estetiko eta minimalista.","H9 · Erroreak diagnostikatu.","H10 · Laguntza eta dokumentazioa."],
+    opts:["H6 · Gogoratu beharrean, ezagutu.", "H8 · Diseinu estetiko eta minimalista garbia.", "H9 · Erroreak ezagutu, diagnostikatu eta konpondu.", "H10 · Laguntza-sistema eta dokumentazioa."],
     ans:0, exp:"H6: erabiltzailearen memoria-karga murriztu behar da aukerak eta ekintzak ikusgai jarriz."
   },
   { id:"n6", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Visual Studio Code-k «Get Started» gida eskaintzen die hasiberriei eta Ctrl+Shift+P komando-paleta adituei. Zein heuristiko da?",
-    opts:["H7 · Malgutasuna eta erabilera-eraginkortasuna.","H1 · Egoeraren ikusgarritasuna.","H5 · Erroreen prebentzioa.","H4 · Koherentzia eta estandarrak."],
+    opts:["H7 · Malgutasuna eta eraginkortasuna.", "H1 · Sistemaren egoeraren ikusgarritasuna.", "H5 · Erroreen prebentzio sistematikoa.", "H4 · Koherentzia eta merkatuko estandarrak."],
     ans:0, exp:"H7: sistema erabiltzaile berrientzat argia izan behar da, baina esperientziadunentzat azeleratzaile eta lasterbideak eskaini behar ditu."
   },
   { id:"n7", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Google-ren hasierako orriak bilaketa-kutxa bakarrik erakusten du, zarata bisualik gabe. Zein heuristiko betetzen du?",
-    opts:["H8 · Diseinu estetiko eta minimalista.","H3 · Kontrola eta askatasuna.","H9 · Erroreak konpontzen lagundu.","H2 · Mundu erreala."],
+    opts:["H8 · Diseinu estetiko eta minimalista.", "H3 · Erabiltzailearen kontrola eta askatasuna.", "H9 · Erroreak ezagutu eta konpontzen lagundu.", "H2 · Sistemaren eta mundu errealaren bat-etortzea."],
     ans:0, exp:"H8: beharrezko informazioa bakarrik erakutsi behar da, soberako unitate bakoitzak garrantzitsuena ezkutatzen duelako."
   },
   { id:"n8", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Airbnb-ren 404 orriak kodea bigarren mailan uzten du, zer gertatu den argi azaltzen du eta aurrera jarraitzeko estekak ematen ditu. Zein heuristiko da?",
-    opts:["H9 · Erroreak ezagutzen, diagnostikatzen eta konpontzen lagundu.","H5 · Erroreen prebentzioa.","H7 · Malgutasuna.","H6 · Gogoratu beharrean, ezagutu."],
+    opts:["H9 · Erroreak ezagutu, diagnostikatu eta konpondu.", "H5 · Erroreen prebentzio sistematikoa eta balidazioa.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H6 · Gogoratu beharrean, aukerak ikusgai ezagutu."],
     ans:0, exp:"H9: errore-mezu on batek zer gertatu den eta nola konpondu azaltzen du hizkera argian."
   },
   { id:"n9", topic:"T2_NIELSEN", kind:"tf", tags:["TEORIA"],
@@ -823,118 +823,118 @@ const QUESTIONS = [
   // ---------- 3. FITTS & 3 DENBORAK ----------
   { id:"f1", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Fitts-en legearen arabera (T = a + b · log₂(2D/W)), nola lortzen da botoi bat azkarrago eta errazago sakatzea?",
-    opts:["Distantzia (D) txikituz eta botoiaren zabalera (W) handituz.","Distantzia (D) handituz eta zabalera (W) txikituz.","Kolore argiagoa jarriz.","Botoia pantailaren erdian bakarrik jarriz."],
+    opts:["Distantzia (D) txikituz eta zabalera (W) handituz.", "Distantzia (D) handituz eta botoiaren zabalera (W) txikituz.", "Botoiari saturazio handiko kolore argiagoa eta ertz fina jarriz.", "Botoi guztiak pantailaren erdiko ardatzean pilatuta kokatuz."],
     ans:0, exp:"Helburua zenbat eta gertuago (D txikia) eta handiago (W handia), orduan eta denbora gutxiago eta zehaztasun-ahalegin txikiagoa behar da."
   },
   { id:"f2", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Zergatik dira pantailaren ertzak eta izkinak «helburu infinituak» saguarekin?",
-    opts:["Kurtsorea ezin delako pantailatik atera, beraz muga fisikoak gelditzen du eta ez da zehaztasun handirik behar.","Distantzia D beti 0 delako.","Ukipen-pantailetan bakarrik funtzionatzen dutelako.","Botoi handiagoak marrazten direlako beti."],
+    opts:["Kurtsorea ezin delako pantailatik atera eta ertzean gelditzen delako.", "Saguaren eta pantailaren ertzen arteko distantzia D beti zero pixel delako.", "Sistema eragileek ertzetako botoiak bikoitza handitzen dituztelako automatikoki.", "Ukipen-pantailetan hatzak errazago detektatzen direlako ertzetako sentsoreetan."],
     ans:0, exp:"Adibidez, macOS-eko goiko menu-barra edo Windows-eko Start/Itxi izkinak: sagua izkinaraino bultzatzea nahikoa da."
   },
   { id:"f3", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Zein dira ukipen-pantailetako gutxieneko neurriak Apple HIG, Material Design eta WCAG 2.2 AA estandarretan?",
-    opts:["Apple: 44×44 pt · Material Design: 48×48 dp · WCAG 2.2 AA: 24×24 px.","Apple: 20×20 pt · Material: 20×20 dp · WCAG: 10×10 px.","Guztietan 64×64 px zehatz.","Ez dago gomendiorik ukipen-pantailetarako."],
+    opts:["44×44 pt (Apple), 48×48 dp (Material) eta 24×24 px (WCAG AA).", "20×20 pt (Apple), 24×24 dp (Material) eta 12×12 px (WCAG AA).", "64×64 pt (Apple), 64×64 dp (Material) eta 48×48 px (WCAG AA).", "Ez dago neurri estandarrik; pantailaren bereizmenaren % 10 izan behar da beti."],
     ans:0, exp:"Ukipen-eremuak hatzarekin eroso sakatzeko adinakoak izan behar dira: 44 pt (Apple), 48 dp (Google), gutxienez 24×24 px (WCAG 2.2 AA)."
   },
   { id:"f4", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Nielsen-en 3 erantzun-denboren legean, zer gertatzen da sistemak 0,1 segundo baino gutxiagoan erantzuten badu?",
-    opts:["Berehalakoa sentitzen da eta ez da karga-feedback berezirik behar (emaitza bera nahikoa da).","Spinner bat jarri behar da nahitaez.","Aurrerapen-barra eta Ezeztatu botoia jarri behar dira.","Erabiltzaileak arreta galtzen du."],
+    opts:["Berehalakoa sentitzen da; ez da karga-feedback berezirik behar.", "Spinner edo kargatzen ikur arin bat erakutsi behar da nahitaez.", "Aurrerapen-barra ehunekoarekin eta Ezeztatu botoia jarri behar dira.", "Erabiltzailearen arreta eteten da eta sistema motel dabilela sentitzen du."],
     ans:0, exp:"0,1 s: berehalakoa (adib. Instagramen bihotza gorritzea edo WhatsAppen mezua agertzea)."
   },
   { id:"f5", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Eragiketa batek 15 segundo behar baditu (10 s-tik gora), zer egin behar da Nielsen-en 3 denboren legearen arabera?",
-    opts:["Aurrerapen-barra (ehunekoarekin edo denborarekin) eta «Ezeztatu» aukera eman, arretaren muga gainditzen delako.","Spinner txiki bat soilik jarri.","Ezer ez erakutsi pantaila garbi mantentzeko.","Saioa automatikoki itxi."],
+    opts:["Aurrerapen-barra (% / denbora) eta «Ezeztatu» botoia eskaini.", "Spinner txiki bat jarri erdian testurik eta ezeztatzeko aukerarik gabe.", "Pantaila guztiz garbi utzi zarata bisuala murrizteko H8 arauaren arabera.", "Saioa automatikoki itxi eta erabiltzaileari berriro hasteko eskatu."],
     ans:0, exp:"10 s da arretaren muga: hortik gora erabiltzaileak aplikazioak huts egin duela pentsa dezake; aurrerapen-barra eta Cancel ezinbestekoak dira."
   },
   { id:"f6", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"1 segundoko erantzun-denboraren muga gainditzean (baina 10 s baino gutxiagoan), zer gertatzen da?",
-    opts:["Atzerapena nabaritzen da baina fluxua ez da eteten; segundo 1etik gora spinner / kargatzen ikurra jarri behar da.","Erabiltzaileak ez du ezer nabaritzen.","Aplikazioak huts egin duela uste du berehala.","Ez da inoiz feedbackik jarri behar."],
+    opts:["Fluxua ez da eteten; 1 s-tik gora spinner bat jarri behar da.", "Erabiltzaileak ez du inolako atzerapenik nabaritzen eta berehalakoa dirudi.", "Erabiltzaileak aplikazioak huts egin duela pentsatzen du eta orria ixten du.", "Ez da inolako karga-adierazlerik jarri behar 10 segundo pasa arte."],
     ans:0, exp:"1 s: pentsamendu-fluxua mantentzen da (Spotify abestia, Google bilaketa), baina >1 s bada zerbait kargatzen ari dela adierazi behar da."
   },
 
   // ---------- 4. DISEINUA, ESTILO GIDA & UI ----------
   { id:"d1", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zerk osatzen du Diseinu Sistema bat (Design System)?",
-    opts:["Estilo gidak + Osagai-liburutegiak (kodearekin) + Diseinu-printzipioek eta dokumentazioak.","Kolore-paletak eta logoak soilik.","Datu-basearen diagramak eta SQL taulak.","Wireframe estatiko batek."],
+    opts:["Estilo gida, osagai-liburutegia (kodea) eta dokumentazioa.", "Kolore-paleta nagusia, logoaren bertsioak eta tipografia-zerrenda soilik.", "Datu-basearen entitate-erlazio diagramak eta SQL kontsulta optimizatuak.", "Fideltasun baxuko wireframe estatikoen bilduma inprimagarri bat."],
     ans:0, exp:"Diseinu Sistema = Estilo gida (alde bisuala) + Osagai berrerabilgarrien liburutegia (kodea) + dokumentazioa. Adib.: Material Design 3, Apple HIG, IBM Carbon."
   },
   { id:"d2", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zein da etxearen analogia UX eta UI bereizteko?",
-    opts:["UX etxearen banaketa eta bizitzeko erosotasuna da; UI akaberak, koloreak eta altzariak.","UI etxearen egitura eta zimenduak dira; UX koloreak.","Biak gauza bera dira analogia horretan.","UX marketing-a da eta UI prezioa."],
+    opts:["UX = etxearen banaketa eta erosotasuna; UI = akaberak eta altzariak.", "UI = etxearen zimenduak eta gelen banaketa; UX = hormetako koloreak.", "Biak gauza bera dira etxearen analogian, ikuspegi teknikotik bakarrik aldatuz.", "UX = etxearen prezioa eta kokapena; UI = argindar eta ur instalazioak."],
     ans:0, exp:"UX esperientzia eta arkitektura globala da; UI ikusten eta ukitzen den geruza bisual eta interaktiboa."
   },
   { id:"d3", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zein da prototipoen bilakaera-ordena zuzena (fideltasun baxuenetik altuenera)?",
-    opts:["Wireframe → Mockup → Prototipo interaktiboa.","Mockup → Wireframe → Prototipo interaktiboa.","Prototipo interaktiboa → Mockup → Wireframe.","Kodea → Mockup → Wireframe."],
+    opts:["Wireframe → Mockup → Prototipo interaktiboa.", "Mockup → Wireframe → Prototipo interaktiboa.", "Prototipo interaktiboa → Mockup → Wireframe.", "Estilo gida → Azken kodea → Wireframe estatikoa."],
     ans:0, exp:"Wireframe (egitura-zirriborroa) → Mockup (kolore/tipografia estatikoa) → Prototipo interaktiboa (klikagarria, Figma/Penpot)."
   },
   { id:"d4", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Estilo Gida baten 7 ataletako bat «Elementu interaktiboak» da. Zer jaso behar du atal horrek botoi eta estekei buruz?",
-    opts:["Bakoitzaren itxura egoera guztietan: normala, gainean (hover), sakatuta (active) eta desgaituta (disabled).","Botoien SQL kontsultak.","Botoiaren itxura normala soilik.","Erabiltzaileen pasahitzak."],
+    opts:["Egoera guztietako itxura: normala, hover, sakatuta eta desgaituta.", "Botoi bakoitzak datu-basean exekutatzen dituen SQL kontsulta guztiak.", "Botoiaren hasierako egoera normala soilik, kolore nagusiarekin.", "Erabiltzaileen saio-hasierako kredentzialak eta sarbide-baimenak."],
     ans:0, exp:"Elementu interaktiboen egoera guztiak definitu behar dira talde osoak koherentzia mantentzeko."
   },
   { id:"d5", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Mendebaldeko hizkuntzetan (euskara, gaztelania, ingelesa), zein da pantailako irakurketa-ordena ohikoena?",
-    opts:["Goian-ezkerrean hasi eta behean-eskuinean amaitu (Z eta F patroiak).","Behean-eskuinean hasi eta goian-ezkerrean amaitu.","Pantailaren erdian hasi eta gora jo.","Beti zirkuluan."],
+    opts:["Goian-ezkerretik behean-eskuinera (Z eta F patroiak).", "Behean-eskuinetik goian-ezkerrera (alderantzizko Z patroia).", "Pantailaren erditik hasi eta ertzetara zabaltzen den espirala.", "Goian-eskuinetik behean-ezkerrera lerro diagonalean beti."],
     ans:0, exp:"Hori dela eta, edukirik garrantzitsuena edo logoa/nabigazio nagusia goian-ezkerrean kokatu ohi da."
   },
 
   // ---------- 5. GESTALT & ERABILGARRITASUNA ----------
   { id:"g1", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_proximity,
     q:"Begiratu irudiari: zein Gestalt lege ari da erabiltzen puntuak bi multzotan bereizteko eta formularioan etiketa bere koadroarekin lotzeko?",
-    opts:["Hurbiltasunaren legea (Proximity).","Itxieraren legea (Closure).","Simetriaren legea (Symmetry).","Norabide komunaren legea (Common Fate)."],
+    opts:["Hurbiltasunaren legea (Proximity).", "Itxieraren edo itxituraren legea (Closure).", "Simetriaren eta ordenaren legea (Symmetry).", "Norabide komunaren legea (Common Fate)."],
     ans:0, exp:"G1 · Hurbiltasuna: elkarren ondoan dauden elementuak talde bakar gisa hautematen ditugu (tarteek atalak bereizten dituzte)."
   },
   { id:"g2", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_similarity,
     q:"Begiratu irudiari (formak/koloreak eta txat-mezuak): zein Gestalt lege ari da aplikatzen?",
-    opts:["Antzekotasunaren legea (Similarity).","Eskualde komunaren legea (Common Region).","Jarraitutasunaren legea (Continuity).","Itxieraren legea (Closure)."],
+    opts:["Antzekotasunaren legea (Similarity).", "Eskualde komunaren legea (Common Region).", "Jarraitutasunaren legea (Continuity).", "Itxieraren edo itxituraren legea (Closure)."],
     ans:0, exp:"G2 · Antzekotasuna: kolore, forma edo tamaina bera duten elementuak funtzio edo talde berekoak direla interpretatzen dugu (WhatsApp mezuak)."
   },
   { id:"g3", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_common_region,
     q:"Zein Gestalt legek azaltzen du koadro/txartel beraren barruan dauden puntuak talde berekoak ikustea, nahiz eta elkarrengandik urrunago egon?",
-    opts:["Eskualde komunaren legea (Common Region).","Hurbiltasunaren legea (Proximity).","Simetriaren legea (Symmetry).","Norabide komuna (Common Fate)."],
+    opts:["Eskualde komunaren legea (Common Region).", "Hurbiltasunaren eta tartearen legea (Proximity).", "Simetriaren eta orekaren legea (Symmetry).", "Norabide komunaren legea (Common Fate)."],
     ans:0, exp:"G3 · Eskualde komuna: muga, koadro edo atzeko plano berean dauden elementuak talde bat dira (Spotify erreproduzigailu-barra, txartelak)."
   },
   { id:"g4", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_closure,
     q:"Marra osoak izan ez arren, gure garunak zirkulua eta triangelua osatzen ditu. Zein Gestalt lege da?",
-    opts:["Itxieraren / Itxituraren legea (Closure).","Antzekotasunaren legea (Similarity).","Jarraitutasunaren legea (Continuity).","Eskualde komuna (Common Region)."],
+    opts:["Itxieraren legea (Closure).", "Antzekotasunaren legea (Similarity).", "Jarraitutasunaren legea (Continuity).", "Eskualde komunaren legea (Common Region)."],
     ans:0, exp:"G4 · Itxiera (Closure): zatiak falta badira ere, garunak figura osoa osatzen du. Oso erabilia logo minimalistetan eta ikonoetan."
   },
   { id:"g5", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_figure_ground,
     q:"Pop-up / modal leiho hau agertzean atzeko planoa ilundu egiten da arreta leiho zurian finkatzeko. Zein Gestalt printzipio da?",
-    opts:["Irudia eta funtsa (Figure-Ground).","Norabide komuna (Common Fate).","Simetria (Symmetry).","Jarraitutasuna (Continuity)."],
+    opts:["Irudia eta funtsa (Figure-Ground).", "Norabide komunaren legea (Common Fate).", "Simetriaren eta ordenaren legea (Symmetry).", "Jarraitutasunaren legea (Continuity)."],
     ans:0, exp:"Irudia eta funtsa: begiak elementu nagusia (irudia = leiho modala) eta atzeko planoa (funtsa ilundua) berehala bereizten ditu."
   },
   { id:"g6", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA"],
     q:"Zein dira Jakob Nielsen-en erabilgarritasunaren 5 osagaiak?",
-    opts:["Ikasgarritasuna, Efizientzia, Gogoragarritasuna, Erroreak eta Gogobetetzea.","RGB, CMYK, HEX, HSL eta Kontrastea.","Hautemangarria, Eragingarria, Ulergarria, Sendoa eta Azkarra.","Wireframe, Mockup, Prototipoa, Kodea eta Testa."],
+    opts:["Ikasgarritasuna, Efizientzia, Gogoragarritasuna, Erroreak, Gogobetetzea.", "Hautemangarria, Eragingarria, Ulergarria, Sendoa eta Irisgarria.", "Hurbiltasuna, Antzekotasuna, Itxitura, Simetria eta Jarraitutasuna.", "Wireframe, Mockup, Prototipo interaktiboa, Ebaluazioa eta Kodea."],
     ans:0, exp:"ISO 9241-11 (eraginkortasuna, efizientzia, gogobetetzea) + Nielsen-en 5 zutabeak: Ikasgarritasuna, Efizientzia, Gogoragarritasuna, Erroreak, Gogobetetzea."
   },
   { id:"g7", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA"],
     q:"Norabide berean mugitzen diren azpimenuak edo karruseleko txartelak talde bakar gisa ikustea zein Gestalt lege da?",
-    opts:["G7 · Norabide komunaren legea (Common Fate).","G5 · Simetriaren legea.","G1 · Hurbiltasuna.","G4 · Itxitura."],
+    opts:["G7 · Norabide komuna (Common Fate).", "G5 · Simetriaren eta ordenaren legea.", "G1 · Hurbiltasunaren legea (Proximity).", "G4 · Itxieraren legea (Closure)."],
     ans:0, exp:"G7 · Norabide komuna: norabide berean mugitzen edo begiratzen duten elementuak multzo berekoak direla hautematen dugu."
   },
 
   // ---------- 6. KOLOREAK ----------
   { id:"c1", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zein da RGB eta CMYK kolore-sintesien arteko aldea?",
-    opts:["RGB sintesi gehigarria da (argia / pantailak → zuria); CMYK sintesi kengarria (pigmentuak / inprimaketa → beltza).","CMYK pantailentzat da eta RGB paperean inprimatzeko.","Biek zuria ematen dute nahastean.","RGB-k 4 kanal ditu eta CMYK-k 3."],
+    opts:["RGB gehigarria da (argia → zuria); CMYK kengarria (pigmentua → beltza).", "CMYK sintesi gehigarria da pantailetarako; RGB kengarria inprimaketarako.", "Bi sintesiek kolore zuri purua sortzen dute kanal guztiak % 100ean nahastean.", "RGB-k lau kolore-kanal ditu pantailetan eta CMYK-k hiru kanal bakarrik."],
     ans:0, exp:"Pantailek argia igortzen dute (RGB gehigarria); inprimagailuek pigmentuak nahasten dituzte argia xurgatuz (CMYK kengarria)."
   },
   { id:"c2", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"HSL notazioan (Hue, Saturation, Lightness), zer adierazten dute L = % 0, L = % 50 eta L = % 100 balioek?",
-    opts:["% 0 beltza, % 50 kolore purua eta % 100 zuria.","% 0 zuria, % 50 grisa eta % 100 beltza.","% 0 gorria, % 50 berdea eta % 100 urdina.","% 0 gardena eta % 100 opakoa."],
+    opts:["% 0 beltza, % 50 kolore purua, % 100 zuria.", "% 0 zuria, % 50 grisa neutroa, % 100 beltza.", "% 0 gorria, % 50 berde purua, % 100 urdina.", "% 0 guztiz gardena, % 50 erdi-gardena, % 100 opakoa."],
     ans:0, exp:"HSL oso intuitiboa da tonuak (tintak eta itzalak) sortzeko: Lightness igota kolorea zuritzen da, jaitsita iluntzen."
   },
   { id:"c3", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zirkulu kromatikoan aurkako aldean (180°-ra) dauden bi kolore aukeratzean zein harmonia sortzen da, eta zertarako da egokia?",
-    opts:["Banaketa osagarria (Complementary): kontraste handia sortzen du, ekintza-botoiak (CTA) nabarmentzeko bikaina.","Banaketa monokromatikoa: kontraste oso baxua.","Banaketa analogoa: kolore ia berdinak.","Triada: 3 kolore 120°-ra."],
+    opts:["Banaketa osagarria: kontraste handia, azentuetarako egokia.", "Banaketa monokromatikoa: ñabardura bakarra kontraste oso baxuarekin.", "Banaketa analogoa: zirkuluan ondoz ondo dauden kolore leunak.", "Triada harmonikoa: zirkulu kromatikoan 120°-ra dauden hiru kolore."],
     ans:0, exp:"Kolore osagarriek kontraste altua eta harmonia eskaintzen dute batera, arreta erakartzeko oso erabilgarriak."
   },
   { id:"c4", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zein da 60-30-10 arauaren banaketa zuzena paleta orekatu batean?",
-    opts:["% 60 kolore nagusi leuna (atzeko planoak), % 30 bigarrena (marka/egitura), % 10 azentua (botoiak, estekak).","% 60 azentua, % 30 beltza, % 10 zuria.","% 60 testua, % 30 irudiak, % 10 marjinak.","% 60 gorria, % 30 berdea, % 10 urdina."],
+    opts:["% 60 nagusi leuna, % 30 bigarrena (marka), % 10 azentua (CTA).", "% 60 azentu-kolore bizia, % 30 beltz purua, % 10 zuri purua.", "% 60 gorputzeko testua, % 30 argazkiak, % 10 kanpoko marjinak.", "% 60 gorria, % 30 berdea eta % 10 urdina RGB proportzioan."],
     ans:0, exp:"60-30-10 arauak oreka bisuala bermatzen du eta % 10eko azentu-koloreak berehala nabarmentzen ditu ekintza nagusiak."
   },
   { id:"c5", topic:"T6_KOLOREAK", kind:"tf", tags:["TEORIA"],
@@ -944,24 +944,24 @@ const QUESTIONS = [
   },
   { id:"c6", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Koloreen psikologiaren arabera, zein kolore lotzen da gehien konfiantzarekin, seriotasunarekin eta segurtasunarekin (bankuak, medikuntza, teknologia)?",
-    opts:["Urdina.","Horia.","Gorria.","Laranja."],
+    opts:["Urdina.", "Horia.", "Gorria.", "Laranja."],
     ans:0, exp:"Urdinak lasaitasuna, konfiantza eta profesionaltasuna transmititzen ditu. Gogoratu psikologia ez dela zientzia zehatza eta kulturak eragina duela!"
   },
 
   // ---------- 7. IRISGARRITASUNA ----------
   { id:"i1", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"Zer esan nahi du WCAG 2.2 estandarreko POUR akronimoak?",
-    opts:["Hautemangarria (Perceivable), Eragingarria (Operable), Ulergarria (Understandable), Sendoa (Robust).","Polit, Ordenatu, Ulerkor, Rapido.","Pantaila, Ordenagailu, UI, Responsive.","Paleta, Osagaiak, UX, Reglak."],
+    opts:["Hautemangarria, Eragingarria, Ulergarria, Sendoa.", "Polita, Ordenatua, Ulerkorra, Azkarra (Rapido).", "Pantaila, Ordenagailua, UI geruza, Responsive.", "Paleta, Osagai-liburutegia, UX fluxua, Arauak."],
     ans:0, exp:"WCAG 2.2-ren lau printzipioak: Perceivable, Operable, Understandable eta Robust."
   },
   { id:"i2", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.wcag_contrast,
     q:"Aztertu irudi hau. Zein 2 irisgarritasun-arau (WCAG 2.2) ari da urratzen?",
-    opts:["AA kontrastea (< 4,5:1 testu arruntean) + informazioa kolore hutsez ematea (ertz gorria testu/ikonorik gabe).","Fitts-en legea + Nielsen-en 10 segundoko muga.","H7 malgutasuna + sintesi kengarria.","Ez du araurik urratzen, 3:1 nahikoa da testu arruntean."],
+    opts:["AA kontrastea (< 4,5:1) + errorea kolore hutsez adieraztea.", "Fitts-en legearen neurria + Nielsen-en 10 segundoko muga.", "H7 malgutasun-heuristikoa + CMYK sintesi kengarriaren araua.", "Ez du araurik urratzen, 3:1 nahikoa baita testu arrunterako."],
     ans:0, exp:"Testu arruntak gutxienez 4,5:1 kontrastea behar du AA mailan (#949494 = 3,03:1 ez da nahikoa), eta daltonismoa dutenentzat errorea ezin da kolore hutsez adierazi."
   },
   { id:"i3", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"Zein da WCAG 2.2 AAA (maila gorena) kontraste-erlazioa testu arrunterako eta testu handirako?",
-    opts:["7:1 testu arrunta eta 4,5:1 testu handia.","4,5:1 testu arrunta eta 3:1 testu handia.","3:1 testu arrunta eta 2:1 testu handia.","15:1 kasu guztietan."],
+    opts:["7:1 testu arrunta eta 4,5:1 testu handia.", "4,5:1 testu arrunta eta 3:1 testu handia.", "3:1 testu arrunta eta 2:1 testu handia.", "15:1 testu arrunta eta 10:1 testu handia."],
     ans:0, exp:"AA = 4,5:1 (arrunta) / 3:1 (handia eta ikonoak). AAA = 7:1 (arrunta) / 4,5:1 (handia)."
   },
   { id:"i4", topic:"T7_IRISG", kind:"tf", tags:["TEORIA"],
@@ -973,120 +973,115 @@ const QUESTIONS = [
   // ---------- 8. ZAILTASUNAK & ERROREAK ----------
   { id:"z1", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"USB-A konektore bat bere atakan posizio bakarrean sartzea zein motatako diseinu-muga (constraint) da?",
-    opts:["Muga fisikoa.","Muga logikoa.","Muga semantikoa.","Muga kulturala."],
+    opts:["Muga fisikoa.", "Muga logikoa.", "Muga semantikoa.", "Muga kulturala."],
     ans:0, exp:"Muga fisikoetan objektuaren forma fisikoak berak mugatzen du zein ekintza egin daitezkeen."
   },
   { id:"z2", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Google Forms-en «Bidali» botoia desgaituta egotea derrigorrezko eremuak bete arte zein muga-mota da?",
-    opts:["Muga logikoa.","Muga fisikoa.","Muga semantikoa.","Muga kulturala."],
+    opts:["Muga logikoa.", "Muga fisikoa.", "Muga semantikoa.", "Muga kulturala."],
     ans:0, exp:"Muga logikoak: sistemaren arau edo baldintza logikoek gidatzen dute erabiltzailea akatsak saihesteko."
   },
   { id:"z3", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.slip_buttons,
     q:"Aztertu irudiko bi botoiak. Erabiltzaileak «Gorde aldaketak» sakatu nahi du baina nahi gabe «Ezabatu kontua» sakatzen du. Zer gertatu da?",
-    opts:["Slip (exekuzio-errorea / lapsusa), Fitts-en legea eta H5 (erroreen prebentzioa) urratzeagatik okertua.","Mistake (akats kontzeptuala), ez zekielako «Ezabatu» zer den.","Muga fisiko bat.","WCAG R (Sendoa) printzipioa."],
+    opts:["Slip (lapsusa), Fitts eta H5 urratzeagatik okertua.", "Mistake (akats kontzeptuala), «Ezabatu» zer den ulertu gabe.", "Muga fisiko eta kultural baten aplikazio egokia.", "WCAG R (Sendoa) printzipioaren kontraste-akatsa."],
     ans:0, exp:"Erabiltzaileak bazekien zer egin nahi zuen, baina botoiak elkarri itsatsita eta itxura berean egoteagatik lapsusa (Slip) gertatu da. Konponbidea: bereizi, kolorea aldatu eta berrespena eskatu."
   },
   { id:"z4", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Instagramen erabiltzaileak argitalpen bat behin betiko ezabatu nahi du, baina «Artxibatu» sakatzen du bien arteko aldea ulertzen ez duelako. Zer motatako errorea da?",
-    opts:["Mistake (akats kontzeptuala).","Slip (lapsusa).","Muga logikoa.","H1 egoera-ikustea."],
+    opts:["Mistake (akats kontzeptuala).", "Slip (exekuzio-lapsusa).", "Muga logikoaren urraketa.", "H1 egoera-ikusgarritasun falta."],
     ans:0, exp:"Mistake: erabiltzaileak sistema ez duelako ongi ulertzen, helburu okerra hautatzen du."
   },
   { id:"z5", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Gmail-ek mezu bat bidali ondoren «Desegin» (Undo) botoia eskaintzen du segundo batzuez. Zein printzipio betetzen du?",
-    opts:["Design for Errors (estresik gabe konpontzeko aukera) + H3 (Erabiltzailearen kontrola eta askatasuna).","Muga fisikoa + Fitts-en legea.","Gestalt-en itxitura.","H8 minimalismoa soilik."],
+    opts:["Design for Errors + H3 (Kontrola eta askatasuna).", "Muga fisikoa + Fitts-en legearen helburu infinitua.", "Gestalt-en itxitura-legea + 60-30-10 proportzioa.", "H8 diseinu minimalista + WCAG AAA kontrastea."],
     ans:0, exp:"Errore batzuk saihestezinak direnez, Design for Errors-en 2. zutabeak dio estresik gabe konpontzeko bideak (Desegin / zakarrontzi berreskuragarria) eman behar direla."
   },
 
   // ---------- 9. MVC & INTELLIJ PROIEKTU-FLUXUA ----------
   { id:"m1", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL"],
     q:"MVC jatetxearen analogian, nor da Modeloa eta nor Kontrolatzailea?",
-    opts:["Modeloa = Sukaldaria/Errezetak (datuak eta logika); Kontrolatzailea = Zerbitzaria (eskaera jaso eta mahaira bueltatu).","Modeloa = Bezeroa; Kontrolatzailea = Menua.","Modeloa = Menua (.fxml); Kontrolatzailea = Hozkailua.","Modeloa = Zerbitzaria; Kontrolatzailea = Bezeroa."],
+    opts:["Modeloa = Sukaldaria; Kontrolatzailea = Zerbitzaria.", "Modeloa = Bezeroa; Kontrolatzailea = Mahaiko menua.", "Modeloa = Menua (.fxml); Kontrolatzailea = Despentsa.", "Modeloa = Zerbitzaria; Kontrolatzailea = Sukaldaria."],
     ans:0, exp:"Bezeroa = Erabiltzailea · Menua/Platera = View (.fxml) · Zerbitzaria = Controller · Sukaldaria = Model · Despentsa = DB/API."
   },
   { id:"m2", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: `<img src="${MVC_TREE_IMG}" alt="IntelliJ MVC egitura"/>`,
     q:"Begiratu IntelliJ IDEA proiektuaren egiturari. Zein fitxategi da Bista (View) eta non gordetzen da?",
-    opts:["src/main/resources/org.example.model_view_controller_ariketa/erreserbak-view.fxml","src/main/java/.../controller/ErreserbakController.java","src/main/java/.../db/DBKonexioa.java","pom.xml"],
+    opts:["resources/.../erreserbak-view.fxml", "java/.../controller/ErreserbakController.java", "java/.../db/DBKonexioa.java", "src/main/java/module-info.java"],
     ans:0, exp:"JavaFX Maven proiektuetan .fxml bistak resources/ karpetan gordetzen dira, pakete-egitura berdinarekin."
   },
   { id:"m3", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","VISUAL","CODE"], visual: `<img src="${MVC_TREE_IMG}" alt="IntelliJ MVC egitura"/>`,
     q:"Proiektu honetan, erabiltzaileak «Aldatu APIra ->» sakatzean, zein da exekuzio-ordena zuzena?",
-    opts:[
-      "erreserbak-view.fxml (onAction) → ErreserbakController → ApiZerbitzua/ApiErantzuna → List<Erreserba> → TableView.setItems()",
-      "erreserbak-view.fxml → DBKonexioa → ErreserbakController → App.java",
-      "ApiZerbitzua → Launcher → erreserbak-view.fxml → DBKonexioa",
-      "erreserbak-view.fxml zuzenean konektatzen da http://localhost:5030-ra"
-    ],
+    opts:["FXML → Controller → ApiZerbitzua → List<Erreserba> → TableView", "FXML → DBKonexioa → ErreserbakController → App.java → Stage", "ApiZerbitzua → Launcher → erreserbak-view.fxml → DBKonexioa", "FXML → http://localhost:5030 (zuzenean) → TableView.setItems()"],
     ans:0, exp:"Bistak gertaera Kontrolatzailera bidaltzen du, honek ApiZerbitzua deitzen du (JSON → List<Erreserba>), eta berriz Bistako TableView eguneratzen du."
   },
   { id:"m4", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`zutabeEmaila.setCellValueFactory(new PropertyValueFactory<>("bazkideaEmaila"));`,
     q:"Zer bilatzen du JavaFX-ek Erreserba klasean kode-lerro hau exekutatzean?",
-    opts:["getBazkideaEmaila() getter metodo publikoa (reflexio bidez).","bazkideaEmaila SQL taula datu-basean.","onBazkideaEmailaClick() metodoa kontrolatzailean.","bazkideaEmaila.fxml fitxategia."],
+    opts:["getBazkideaEmaila() getter metodo publikoa.", "bazkideaEmaila izeneko SQL zutabea datu-basean.", "onBazkideaEmailaClick() metodoa kontrolatzailean.", "bazkideaEmaila izeneko fx:id etiketa FXML fitxategian."],
     ans:0, exp:"PropertyValueFactory<>(\"izena\")-k Modeloko klasean getIzena() getter publikoa bilatzen du zutabearen balioa irakurtzeko."
   },
   { id:"m5", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`<!-- erreserbak-view.fxml -->\n<Button onAction="#onKargatuDatuak" text="Kargatu" />\n\n// ErreserbakController.java\n@FXML private void onKargatuClick() { kargatuDatuak(); }`,
     q:"BUG HUNT: Zer gertatuko da aplikazioa exekutatzean kode honekin?",
-    opts:["javafx.fxml.LoadException emango du, FXML-ko #onKargatuDatuak metodoa ez delako kontrolatzailean aurkitzen.","Ondo funtzionatuko du, JavaFX-ek antzeko izenak automatikoki lotzen dituelako.","Datu-basea ezabatuko du.","Botoia ikusezin geratuko da errorerik gabe."],
+    opts:["LoadException emango du, metodoaren izenak ez datozelako bat.", "Ondo funtzionatuko du, JavaFX-ek antzeko izenak lotzen dituelako.", "Konpilazio-errorea emango du FXML fitxategia Javara pasatzean.", "Botoia pantailan agertuko da baina ez du ezer egingo klikatzean."],
     ans:0, exp:"FXML-ko onAction=\"#metodoIzena\" eta Kontrolatzaileko @FXML metodoaren izenak ZEHATZ berdinak izan behar dira."
   },
   { id:"m6", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Zergatik balio du erreserbak-view.fxml bista BAKARRAK bai MySQL datu-baseko bai .NET REST APIko datuak erakusteko?",
-    opts:["Bi datu-iturriek (Erreserba.lortuGuztiak eta ApiZerbitzua.lortuErreserbak) modelo-objektu bera (List<Erreserba>) itzultzen dutelako.","FXML fitxategiak SQL eta HTTP biak exekutatzen dituelako bere barruan.","JavaFX-ek ezin duelako .fxml bat baino gehiago eduki.","APIak zuzenean MySQL fitxategiak kopiatzen dituelako."],
+    opts:["Bi iturriek List<Erreserba> modelo-objektu bera itzultzen dutelako.", "FXML fitxategiak SQL eta HTTP biak exekutatzen dituelako bere barruan.", "JavaFX-ek proiektu bakoitzean .fxml fitxategi bakarra onartzen duelako.", "REST APIak zuzenean MySQL taulen fitxategi fisikoak kopiatzen dituelako."],
     ans:0, exp:"MVC-ren abantaila nagusia: bista datu-iturritik independentea da; datu-egitura (Erreserba) bera bada, bista bakarra nahikoa da (DRY)."
   },
   { id:"m7", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Kiroldegiko APIa itzalita badago eta erabiltzailea API moduan badago, zer egin behar du ErreserbakController-ek?",
-    opts:["Taula hustu (clear), taularen erdian eta egoera-barran APIa itzalita dagoela adierazi gorriz — eta EZ kargatu DBko datuak.","Isilean MySQL datu-basetik kargatu erabiltzaileari esan gabe.","Aplikazioa itxi abisurik gabe.","Aurreko datuak pantailan utzi aldaketarik gabe."],
+    opts:["Taula hustu eta abisu gorria erakutsi (DBtik kargatu gabe).", "Isilean MySQL datu-basetik kargatu erabiltzaileari ezer esan gabe.", "Aplikazioaren Stage leihoa berehala itxi salbuespena saihesteko.", "Aurreko pantailako datuak taulan utzi egoera-barra ukitu gabe."],
     ans:0, exp:"API moduan ezin dira DBko datuak nahastu; taula hustu eta errore argia eman behar da (H1 + H9 + Design for Errors)."
   },
   { id:"m8", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"JavaFX aplikazio modular batean FXMLLoader-ek LoadException / IllegalAccessException ematen badu kontrolatzailea kargatzean, zer falta da module-info.java-n?",
-    opts:["opens paketea.controller to javafx.fxml; (eta model paketea javafx.base-ri irekitzea).","requires java.sql; bakarrik.","public static void main() kentzea.","pom.xml ezabatzea."],
+    opts:["opens ...controller to javafx.fxml; (eta model → javafx.base).", "requires java.sql; eta requires java.net.http; lerroak gehitzea.", "Launcher.java klaseko public static void main() metodoa kentzea.", "pom.xml fitxategian javafx-controls menpekotasuna ezabatzea."],
     ans:0, exp:"Java modulu-sistemak reflexioa blokeatzen du lehenetsita; javafx.fxml-ri eta javafx.base-ri paketeak ireki behar zaizkie (opens ... to ...)."
   },
 
   // ---------- 10. JAVAFX PANES & RESPONSIVE ----------
   { id:"p1", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"Zein da JavaFX-eko elementuen hierarkia zuzena kanpotik barrura?",
-    opts:["Stage (leihoa) → Scene (eszenatokia) → Node (Edukiontziak eta Elementuak).","Scene → Stage → Controller.","Node → Stage → Scene.","FXML → CSS → Stage."],
+    opts:["Stage → Scene → Node (Edukiontziak eta Elementuak).", "Scene → Stage → Controller (FXML eta CSS).", "Node → Stage → Scene (Layout eta Kontrolak).", "FXML → Controller → Stage (Scene Builder)."],
     ans:0, exp:"Stage sistema eragileko leihoa da, Scene bere edukia, eta Scene barruko osagai guztiak Node dira (Containers eta Controls)."
   },
   { id:"p2", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: SVGS.borderpane_svg,
     q:"Zein JavaFX Layout Pane da egokiena irudiko posta-bezeroaren egitura nagusirako (erro gisa)?",
-    opts:["BorderPane (5 eremu: TOP, LEFT, CENTER, RIGHT, BOTTOM).","TilePane.","AnchorPane posizio finkoekin.","StackPane."],
+    opts:["BorderPane.", "TilePane.", "AnchorPane (posizio finkoak).", "StackPane."],
     ans:0, exp:"BorderPane aplikazio nagusien erro ideala da: CENTER-ek hartzen du soberako espazio guztia, eta eremu bakoitzean edukiontzi bat sartzen da."
   },
   { id:"p3", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: SVGS.tilepane_svg,
     q:"Kalkulagailuaren 16 teklak tamaina bereko baldosetan antolatzeko (4 zutabetan), zein Pane da egokiena?",
-    opts:["TilePane (Pref Columns = 4, Pref Tile Width/Height, botoietan Max Width/Height = MAX_VALUE).","FlowPane.","StackPane.","BorderPane."],
+    opts:["TilePane.", "FlowPane.", "StackPane.", "BorderPane."],
     ans:0, exp:"TilePane-k baldosa guztiei tamaina bera ematen die (kalkulagailuak, katalogo uniformeak)."
   },
   { id:"p4", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"Zein da FlowPane eta TilePane-ren arteko aldea?",
-    opts:["FlowPane-n elementu bakoitzak bere tamaina propioa mantentzen du eta lekurik ez badago wrap egiten du; TilePane-n baldosa guztiak berdinak dira.","FlowPane-k ez du wrap egiten.","TilePane-n elementu bakoitzak tamaina ezberdina du.","Berdinak dira."],
+    opts:["FlowPane-n bakoitzak bere neurria du (wrap); TilePane-n denak berdinak dira.", "FlowPane-k ez du hurrengo lerrora jauzi egiten leihoa estutzean.", "TilePane-n baldosa bakoitzak bere zabalera ezberdina mantentzen du.", "Biak berdinak dira, baina TilePane bertikala da eta FlowPane horizontala."],
     ans:0, exp:"FlowPane Flexbox estilokoa da (Windows File Explorer modukoa, ScrollPane barruan); TilePane-n gelaxka guztiek neurri bera dute."
   },
   { id:"p5", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"Hotel-erreserba formulario batean etiketak ezkerreko zutabean eta input-ak eskuineko zutabean lerrokatzeko (eta eskuinekoa zabaltzeko), zer erabili behar da?",
-    opts:["GridPane + 1. zutabean ColumnConstraints (Hgrow = ALWAYS edo Percent Width).","StackPane + Layout X/Y.","AnchorPane aingurarik gabe.","TilePane."],
+    opts:["GridPane + ColumnConstraints (Hgrow / Percent Width).", "StackPane + Layout X eta Layout Y koordenatu finkoak.", "AnchorPane aingurarik gabe eta Pref Width finkoarekin.", "TilePane Pref Columns = 2 eta Hgap = 0 jarrita."],
     ans:0, exp:"GridPane taula-egitura da (Row/Column, Column Span) eta ColumnConstraints behar ditu leihoarekin ondo eskalatzeko."
   },
   { id:"p6", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"Cookie-en abisu bat pantaila nagusiaren gainean jartzeko, atzean % 50eko geruza ilun batekin, zein edukiontzi behar da?",
-    opts:["StackPane (elementuak Z ardatzean elkarren gainean pilatzen ditu).","HBox.","GridPane.","FlowPane."],
+    opts:["StackPane.", "HBox.", "GridPane.", "FlowPane."],
     ans:0, exp:"StackPane-k geruzak gainjartzen ditu (1. pantaila nagusia, 2. geruza iluna, 3. abisu-koadroa)."
   },
   { id:"p7", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`scene.widthProperty().addListener((obs, oldVal, newVal) -> {\n    rightPanel.setVisible(newVal.doubleValue() >= 1000);\n});`,
     q:"BUG HUNT: Leihoa 900 px-era estutzean rightPanel desagertzen da, baina CENTER taula EZ da zabaltzen bere hutsunea betetzeko. Zer falta da?",
-    opts:["rightPanel.setManaged(newVal.doubleValue() >= 1000); lerroa gehitzea.","stage.setFullScreen(true); gehitzea.","rightPanel = null; jartzea.","stage.close(); deitzea."],
+    opts:["rightPanel.setManaged(newVal.doubleValue() >= 1000);", "stage.setFullScreen(newVal.doubleValue() < 1000);", "rightPanel.getChildren().clear();", "stage.setMinWidth(1000);"],
     ans:0, exp:"setVisible(false)-k elementua ezkutatzen du baina layout-ean espazioa gordetzen jarraitzen du; setManaged(false)-k espazio hori liberatzen du!"
   },
   { id:"p8", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`<HBox alignment="CENTER_LEFT" spacing="10.0">\n    <Label fx:id="lblIzenburua" text="Erreserbak" />\n    <Region HBox.hgrow="ALWAYS" />\n    <Button text="Aldatu APIra ->" />\n</HBox>`,
     q:"Zertarako dago <Region HBox.hgrow=\"ALWAYS\" /> goiburuko HBox horretan?",
-    opts:["Soberako espazio horizontal guztia hartzen duen malguki (spacer) gisa, botoia eskuineko ertzera bultzatuz.","Botoiari kolore urdina emateko.","Taula ordenatzeko.","Leihoaren gutxieneko altuera ezartzeko."],
+    opts:["Malguki (spacer) gisa, botoia eskuineko ertzera bultzatuz.", "Goiburuko botoiari kolore urdina eta ertz biribildua emateko.", "TableView-ko zutabeak alfabetikoki automatikoki ordenatzeko.", "Leihoaren gutxieneko altuera 500 pixeletan finkatzeko."],
     ans:0, exp:"HBox barruan Region + HBox.hgrow=\"ALWAYS\" da JavaFX-eko trikimailu estandarra elementuak ezker-eskuin banatzeko."
   },
   { id:"p9", topic:"M2_PANES", kind:"tf", tags:["MVC_ALL"],
@@ -1098,27 +1093,27 @@ const QUESTIONS = [
   // ---------- 1. UX (GEHIGARRIAK) ----------
   { id:"ux7", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Volkswagen-en «The Fun Theory» kanpainan (Stockholm, 2009), zer egin zuten Odenplan geltokiko eskailera arruntekin eta zer frogatu zuen?",
-    opts:["Piano-teklatu bihurtu zituzten, eta jendeak askoz gehiago erabili zituen eskailera mekanikoen ordez: esperientzia atseginak jokaera aldatzen du.","Bikoitza zabaldu zituzten Fitts-en legea aplikatuz.","Kartel gorri erraldoiak jarri zituzten eskailera mekanikoak debekatzeko.","Abiadura neurtzeko pantaila bat jarri zuten."],
+    opts:["Piano-teklatu bihurtu zituzten, eta esperientzia atseginak erabilera asko handitu zuen.", "Eskailerak bikoitza zabaldu zituzten Fitts-en legearen printzipioak espazio fisikoan aplikatuz.", "Kartel gorri erraldoiak jarri zituzten eskailera mekanikoak erabiltzea debekatu eta mugatzeko.", "Abiadura eta kaloriak neurtzeko pantaila digital interaktibo bat jarri zuten geltokiaren sarreran."],
     ans:0, exp:"UX onak ez du funtzionalitatea bakarrik hobetzen; esperientzia atsegin eta dibertigarri batek erabiltzaileen erabakietan eragin zuzena du."
   },
   { id:"ux8", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"«User Inyerface» webgunea teoria-apunteetan aipatzen da. Zergatik da ezaguna UX alorrean?",
-    opts:["Konbentzio eta eredu mental guztiak nahita hausteko diseinatutako interfaze txar baten adibide didaktikoa delako.","Google-ren diseinu sistema ofiziala delako.","WCAG AAA ziurtagiria duen lehen webgunea delako.","JavaFX prototipoak egiteko tresna delako."],
+    opts:["Konbentzioak nahita hausten dituen UX txarreko adibidea delako.", "Google-ren Material Design 3 sistemaren erreferentzia ofiziala delako.", "WCAG 2.2 AAA ziurtagiria lortu zuen lehen web-aplikazio interaktiboa delako.", "JavaFX eta Scene Builder prototipoak probatzeko doako tresna ofiziala delako."],
     ans:0, exp:"User Inyerface-k erakusten du zein frustragarria den konbentzioak (botoien koloreak, denbora-mugak, testu engainagarriak) hausten dituen interfazea."
   },
   { id:"ux9", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Auto bateko keinu-argien (intermitenteen) palanka gora mugitzen da eskuinera biratzeko eta behera ezkerrera biratzeko. Zergatik da hori diseinu ona?",
-    opts:["Bolantearen biraketaren noranzko naturalarekin eta erabiltzailearen eredu mentalarekin bat datorrelako (mapeo naturala).","Muga kultural hutsa delako.","H8 minimalismoa betetzen duelako.","Pantailaren izkina batean dagoelako."],
+    opts:["Bolantearen biraketaren noranzko naturalarekin bat datorrelako.", "Europako zirkulazio-araudiak ezarritako muga kultural eta legal hutsa delako.", "Nielsen-en H8 minimalismoa eta 60-30-10 kolore-araua betetzen dituelako.", "Gidariaren eskuineko izkinan kokatuta dagoelako helburu infinitu gisa."],
     ans:0, exp:"Kontrolaren mugimenduak (gora = erlojuaren orratzen noranzkoa = eskuinera) erabiltzailearen eredu mentalarekin guztiz bat egiten du."
   },
   { id:"ux10", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Zein da Hansen-en (1971) 2. printzipioaren («Memorizazioa gutxitu») ideia nagusia?",
-    opts:["Idatzi beharrean aukeratu, zenbakien ordez izenak erabili eta portaera aurreikusgarria eskaini («Gutxiago gehiago da»).","Erabiltzaileari kode tekniko guztiak buruz ikastera behartu.","Aplikazioan datu-baseko cachea desaktibatu.","Testu guztiak letra lodiz idatzi."],
+    opts:["Idatzi beharrean aukeratu eta zenbakien ordez izenak erabiltzea.", "Erabiltzaileari sistemako kode tekniko eta laburdura guztiak buruz ikastera behartzea.", "Aplikazioan datu-baseko cachea eta historia guztiz desaktibatzea memoria aurrezteko.", "Pantailako testu eta etiketa guztiak letra larriz eta lodiz idaztea hobeto gogoratzeko."],
     ans:0, exp:"Hansen-en 2. printzipioak gerora Nielsen-en H6 (Gogoratu beharrean, ezagutu) heuristikoaren oinarria ezarri zuen."
   },
   { id:"ux11", topic:"T1_UX", kind:"mcq", tags:["TEORIA"],
     q:"Don Norman-en esaldi ezagunaren arabera («The Design of Everyday Things»), zergatik egiten dugu huts gizakiok sarritan produktuak erabiltzean?",
-    opts:["Ez garelako beti baldarrak, baizik eta erabiltzen ditugun gauzak gaizki pentsatuta eta diseinatuta daudelako.","Erabiltzaileek ez dutelako inoiz eskuliburua irakurtzen.","Teknologia konplexuegia delako berez.","Pantailak txikiegiak direlako."],
+    opts:["Erabiltzen ditugun gauzak gaizki pentsatuta eta diseinatuta daudelako.", "Erabiltzaile gehienek ez dutelako inoiz produktuaren erabiltzaile-eskuliburua osorik irakurtzen.", "Gaur egungo teknologia digitala konplexuegia delako gizaki arruntaren gaitasunetarako.", "Gailu mugikorren pantailak txikiegiak direlako kontrol guztiak argi erakusteko."],
     ans:0, exp:"Don Normanek errua erabiltzailearengandik diseinu txarrera pasatzen du: diseinu onak akatsak saihestu behar ditu."
   },
   { id:"ux12", topic:"T1_UX", kind:"tf", tags:["TEORIA"],
@@ -1130,59 +1125,59 @@ const QUESTIONS = [
   // ---------- 2. NIELSEN 10 HEURISTIKOAK (GEHIGARRIAK) ----------
   { id:"n10", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Zergatik deitzen zaie «heuristiko» Jakob Nielsen-en 10 printzipioei?",
-    opts:["Ez direlako arau zehatz eta zurrunak, baizik eta erabilgarritasuna ebaluatzeko gida-arau orokorrak.","Ordenagailuak bakarrik ebalua ditzakeelako.","Matematikoki frogatutako formulak direlako.","Programazio-lengoaien sintaxi-arauak direlako."],
+    opts:["Arau zurrunak barik gida-arau orokorrak direlako.", "Ordenagailu bidezko algoritmo automatikoek bakarrik ebalua ditzaketelako.", "Psikologia kognitiboan matematikoki frogatutako lege zehatzak direlako.", "Programazio-lengoaien konpiladoreek egiaztatzen dituzten sintaxi-arauak direlako."],
     ans:0, exp:"Heuristikoak esperientzian oinarritutako printzipio orokorrak dira (Nielsen & Molich, 1990/1994), ebaluazio heuristikoetan erabiltzen direnak."
   },
   { id:"n11", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Online denda batean «Eskaeraren egoera: banaketa logistikorako ilaran» ordez «Zure eskaera bidean da» idaztea zein heuristikoren adibidea da?",
-    opts:["H2 · Sistemaren eta mundu errealaren arteko bat-etortzea.","H4 · Koherentzia eta estandarrak.","H7 · Malgutasuna.","H10 · Laguntza eta dokumentazioa."],
+    opts:["H2 · Sistemaren eta mundu errealaren bat-etortzea.", "H4 · Barneko eta kanpoko koherentzia eta estandarrak.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H10 · Laguntza-sistema eta kanpoko dokumentazioa."],
     ans:0, exp:"Barneko hizkera logistiko/teknikoa saihestu eta bezeroak berehala ulertzen duen hizkuntza naturala erabiltzen da (H2)."
   },
   { id:"n12", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Instagramen story batean norbait aipatzean (@), zure jarraitzaile hurbilenak automatikoki iradokitzen ditu. Zein heuristiko betetzen du?",
-    opts:["H6 · Gogoratu beharrean, ezagutu.","H3 · Kontrola eta askatasuna.","H8 · Diseinu minimalista.","H5 · Erroreen prebentzioa."],
+    opts:["H6 · Gogoratu beharrean, ezagutu.", "H3 · Erabiltzailearen kontrola eta askatasuna.", "H8 · Diseinu estetiko eta minimalista garbia.", "H5 · Erroreen prebentzio sistematikoa."],
     ans:0, exp:"Erabiltzaileak ez du kontuaren izen zehatza buruz gogoratu beharrik; zerrendatik ezagutu eta sakatzea nahikoa da (H6)."
   },
   { id:"n13", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Aplikazio baten pantaila batean «Gorde» botoia eskuinean urdinez dago, baina hurrengo pantailan ezkerrean berdez eta «Bidali» izenarekin gauza bera egiteko. Zein heuristiko urratzen da?",
-    opts:["H4 · Koherentzia eta estandarrak (barne-koherentzia).","H1 · Egoeraren ikusgarritasuna.","H9 · Erroreak konpontzea.","H10 · Dokumentazioa."],
+    opts:["H4 · Koherentzia eta estandarrak.", "H1 · Sistemaren egoeraren ikusgarritasuna.", "H9 · Erroreak ezagutu, diagnostikatu eta konpondu.", "H10 · Laguntza-sistema eta dokumentazioa."],
     ans:0, exp:"Barne-koherentzia urratzen da: aplikazio berean ekintza berdinak izen, kokapen eta itxura berarekin agertu behar dira beti."
   },
   { id:"n14", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"H5 (Erroreen prebentzioa) aplikatzeko zein da neurririk eraginkorrena ekintza itzulezin batean (adib. kontua behin betiko ezabatzea)?",
-    opts:["Berrespen-elkarrizketa argia eskatzea (zer gertatuko den aurrez azalduz) eta aukera segurua lehenetsita jartzea.","Ezabatu ondoren 500 errore-kodea erakustea.","Botoia handiagoa egitea Fitts-en legearekin.","FAQ orrialde batera bidaltzea."],
+    opts:["Berrespen-leiho argia eskatzea eta aukera segurua lehenestea.", "Ekintza exekutatu ondoren 500 errore-kode teknikoa erakustea pantailan.", "Ezabatzeko botoia handiagoa eta gertuago jartzea Fitts-en legea aplikatuz.", "Erabiltzailea kanpoko FAQ orrialde luze batera birbideratzea."],
     ans:0, exp:"H5-k erroreak gertatu aurretik prebenitzea bilatzen du: balidazio dinamikoak, tooltip argiak eta ekintza kritikoetan berrespena eskatzea."
   },
   { id:"n15", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"H10 (Laguntza eta dokumentazioa) heuristikoaren arabera, nolakoa izan behar da laguntza-sistema on bat?",
-    opts:["Onena dokumentaziorik behar ez izatea da, baina behar denean erraz aurkitzekoa, intuitiboa eta ataza zehatzetara bideratua (FAQ, tutorialak, txatbota).","200 orrialdeko PDF tekniko bakarra bilatzailerik gabe.","Hasierako pantaila osoa estaltzen duen testu luzea.","Soilik garatzaileentzako kode-komentarioak."],
+    opts:["Erraz aurkitzekoa, intuitiboa eta ataza zehatzetara bideratua.", "200 orrialdeko PDF tekniko bakarra, barneko bilatzailerik gabe deskargatzeko.", "Hasierako pantaila osoa estaltzen duen azalpen-testu luze eta finko bat.", "Soilik programatzaileek irakur ditzaketen iturburu-kodeko iruzkin teknikoak."],
     ans:0, exp:"H10: laguntzak erabiltzailearen arazo konkretura azkar iristeko aukera eman behar du, bilaketa eta urrats argiekin."
   },
   { id:"n16", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA"],
     q:"Erosketa amaitzean «Zure eskaera #1042 jaso dugu» berrespen-pantaila eta emaila bidaltzea zein heuristiko da?",
-    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.","H6 · Gogoratu beharrean, ezagutu.","H7 · Malgutasuna.","H8 · Minimalismoa."],
+    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.", "H6 · Gogoratu beharrean, elementuak ezagutu.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H8 · Diseinu estetiko eta minimalista garbia."],
     ans:0, exp:"H1: eragiketa ongi burutu dela berresten duen feedback argia ematen dio erabiltzaileari."
   },
 
   // ---------- 3. FITTS & 3 DENBORAK (GEHIGARRIAK) ----------
   { id:"f7", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.fitts_target,
     q:"Begiratu A eta B egoerei. Zein legek azaltzen du B egoeran botoia askoz azkarrago eta zehatzago sakatuko dela?",
-    opts:["Fitts-en legeak (1954): distantzia txikiagoa (D) eta helburu handiagoa (W) = denbora gutxiago.","Nielsen-en 3 denboren legeak.","Gestalt-en simetriaren legeak.","Jakob-en legeak."],
+    opts:["Fitts-en legea (distantzia txikia eta tamaina handia).", "Nielsen-en 3 erantzun-denboren lege psikologikoa.", "Gestalt-en simetriaren eta ordenaren lege bisuala.", "Jakob-en legea eta kanpoko estandarren printzipioa."],
     ans:0, exp:"Paul Fitts (1954): T = a + b·log₂(2D/W). B egoeran D txikia eta W handia direnez, askoz errazagoa da."
   },
   { id:"f8", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Fitts-en legea aplikatuz, non kokatu behar dira gutxitan erabiltzen diren aukerak (adib. «Ezarpen aurreratuak») edo ekintza arriskutsuak («Ezabatu»)?",
-    opts:["Ohiko ekintza nagusietatik bereizita edo urrunago, ustekabean ez sakatzeko.","«Gorde» botoiaren ondo-ondoan, tamaina erraldoian.","Pantailaren erdian finkatuta.","Izkinarik erabilgarrienean."],
+    opts:["Ohiko ekintzetatik bereizita edo urrunago, ustekabean ez sakatzeko.", "«Gorde» botoi nagusiaren ondo-ondoan eta tamaina handian erraz aurkitzeko.", "Pantailaren erdian beti finkatuta eta kolore berde deigarriarekin markatuta.", "Pantailako goiko ezkerreko izkinan, helburu infinitu gisa erabiltzeko."],
     ans:0, exp:"Fitts-en legea bi zentzutan erabiltzen da: ohikoak gertu eta handiak; arriskutsuak urrunago eta ongi bereizita Slip-ak saihesteko."
   },
   { id:"f9", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Spotifyn abesti bat sakatu eta 0,8 segundotan hasten bada, edo Googlen bilaketa batek 0,9 segundo behar baditu, zein muga tartean gaude?",
-    opts:["1 segundoko mugan: atzerapena apur bat nabaritzen da, baina erabiltzailearen pentsamendu-fluxua ez da eteten.","0,1 segundoko muga berehalakoan.","10 segundoko arretaren mugatik gora.","Sistema blokeatutzat jotzen da."],
+    opts:["1 s-ko mugan: atzerapena sumatzen da, baina fluxua ez da eteten.", "0,1 s-ko muga berehalakoan: ez da atzerapenik nabaritzen inola ere.", "10 s-ko arretaren mugatik gora: aurrerapen-barra eta Cancel behar dira.", "Sistema blokeatutzat jotzen da eta prozesua bertan behera utzi behar da."],
     ans:0, exp:"0,1 s eta 1 s artean atzerapena sumatzen da, baina fluxua ez da hausten. 1 s gainditzean jarri behar da kargatzen-adierazlea (spinner)."
   },
   { id:"f10", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Zein Nielsen heuristikorekin dago estuki lotuta Nielsen-en 3 erantzun-denboren legea?",
-    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.","H8 · Diseinu estetiko eta minimalista.","H4 · Koherentzia eta estandarrak.","H6 · Gogoratu beharrean, ezagutu."],
+    opts:["H1 · Sistemaren egoeraren ikusgarritasuna.", "H8 · Diseinu estetiko eta minimalista garbia.", "H4 · Barneko eta kanpoko koherentzia eta estandarrak.", "H6 · Gogoratu beharrean, aukerak ikusgai ezagutu."],
     ans:0, exp:"H1-ek feedbacka ematea eskatzen du, eta 3 erantzun-denboren legeak zehazten du NOIZ eta NOLAKO feedbacka eman behar den (0,1s / 1s / 10s)."
   },
   { id:"f11", topic:"T3_FITTS", kind:"tf", tags:["TEORIA"],
@@ -1192,66 +1187,66 @@ const QUESTIONS = [
   },
   { id:"f12", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA"],
     q:"Snapchaten konexio txarrarekin argazki bat bidaltzean edo Fortnite partida kargatzean 15 segundo igarotzen badira, zer arrisku dago feedbackik ez badago?",
-    opts:["Erabiltzaileak pazientzia galtzen du, beste zeregin batera doa edo aplikazioak huts egin duela pentsatzen du (10 s-ko arretaren muga).","Ez da ezer gertatzen 30 segundo arte.","Fluxua mantentzen da spinner gabe ere.","Fitts-en legea urratzen da."],
+    opts:["Pazientzia galtzen du edo aplikazioak huts egin duela pentsatzen du.", "Ez da arazorik sortzen 30 segundoko muga gainditu arte gutxienez.", "Pentsamendu-fluxua naturalki mantentzen da spinner sinple bat jarri gabe ere.", "Fitts-en legea eta koloreen 60-30-10 proportzioa urratzen dira batera."],
     ans:0, exp:"10 s da gizakiaren arretaren muga: aurrerapen-barra (%, geratzen den denbora) eta ezeztatzeko aukera ezinbestekoak dira."
   },
 
   // ---------- 4. DISEINUA, ESTILO GIDA & UI (GEHIGARRIAK) ----------
   { id:"d6", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Aplikazio baten diseinu-prozesuak 4 fase iteratibo ditu. Zein da lehen fasea (pantailarik marraztu aurretik)?",
-    opts:["1. Helburuak eta egin beharrak definitu (zertarako balio duen, objektuak eta akzioak idatziz).","1. Kolore-paleta eta logoa aukeratu.","1. Prototipo interaktiboa Figman egin.","1. A/B testak egitea."],
+    opts:["Helburuak, objektuak eta akzioak idatziz definitzea.", "Markaren kolore-paleta, tipografia eta logoa aukeratzea.", "Prototipo interaktibo osoa Figman edo Penpot-en sortzea.", "Erabiltzaile errealekin A/B testak eta SUS galdetegiak pasatzea."],
     ans:0, exp:"Lehenik pentsatu, gero diseinatu: 1. Helburuak (objektuak + akzioak) → 2. Ezaugarriak (estilo gida + laguntza) → 3. Prototipoa → 4. Ebaluazioa."
   },
   { id:"d7", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zein bi laguntza-mota bereizten dira diseinu-prozesuaren 2.2 fasean («Pantailaz haratagoko ezaugarriak»)?",
-    opts:["Aplikazioan txertatutako laguntza (onboarding, tooltipak) eta kanpoko dokumentazioa (eskuliburuak, FAQ, bideo-tutorialak).","SQL laguntza eta CSS laguntza.","Hardware laguntza eta sare laguntza.","Laguntza fisikoa eta laguntza kulturala."],
+    opts:["Txertatutako laguntza (onboarding/tooltip) eta kanpoko dokumentazioa (FAQ).", "Datu-baseko SQL laguntza eta CSS estilo-orrien laguntza teknikoa.", "Hardware-laguntza fisikoa eta sare-konexioaren diagnostiko automatikoa.", "Laguntza fisikoa, laguntza logikoa eta laguntza semantikoa."],
     ans:0, exp:"Txertatutako laguntza ataza egin bitartean agertzen da; kanpokoa zalantzak daudenean kontsultatzeko da."
   },
   { id:"d8", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zergatik da abantaila handia prototipoak (bereziki wireframe-ak) egitea garapena hasi aurretik?",
-    opts:["Denbora/dirua aurrezten da, akatsak goiz aurkitzen dira, bezeroak oinarrietan zentratzen du arreta (ez koloreetan) eta parte hartzen du.","Kodea automatikoki Javara konpilatzen duelako.","Ez delako erabiltzaileekin ebaluatu beharrik izaten.","Datu-basea sortzen duelako."],
+    opts:["Akatsak goiz aurkitzen dira eta bezeroa egituran zentratzen da.", "Wireframe-ak zuzenean JavaFX edo HTML kodera konpilatzen direlako.", "Prototipoa eginda ez delako erabiltzaileekin ebaluaziorik egin behar.", "Datu-basearen taulak eta REST APIaren endpoint-ak sortzen dituelako."],
     ans:0, exp:"Azken diseinua erakutsiz gero bezeroa kolore eta tipografietan geldituko da; wireframe-ak egituran eta fluxuan zentratzen laguntzen du."
   },
   { id:"d9", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Zein da Diseinua Ebaluatzeko (4. fasea) erabiltzen den SUS galdetegiaren esanahia?",
-    opts:["System Usability Scale: erabilgarritasuna neurtzeko galdetegi estandarizatua.","Style Unified System: estilo gidaren formatoa.","Software Update Standard.","Screen User Size."],
+    opts:["System Usability Scale (erabilgarritasun-galdetegia).", "Style Unified System (estilo giden formatu estandarra).", "Software Update Standard (bertsio-kontrolerako araua).", "Screen User Size (pantaila-tamainak neurtzeko eskema)."],
     ans:0, exp:"Ebaluazio-metodo ohikoenak: erabilgarritasun-testak, ebaluazio heuristikoa, galdetegiak (SUS) eta A/B testak."
   },
   { id:"d10", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Ondorengoetatik zein EZ da benetako Diseinu Sistema ezagun bat?",
-    opts:["JDBC Connector.","Google Material Design 3.","IBM Carbon Design System.","Microsoft Fluent 2."],
+    opts:["JDBC Connector.", "Google Material Design 3.", "IBM Carbon Design System.", "Microsoft Fluent 2."],
     ans:0, exp:"Material Design 3 (Google), HIG (Apple), Carbon (IBM), Fluent 2 (Microsoft) eta GEL (BBC) diseinu sistemak dira; JDBC datu-base konexiorako APIa da."
   },
   { id:"d11", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA"],
     q:"Estilo gida baten 3 helburu nagusiak zeintzuk dira?",
-    opts:["Koherentzia pantailen artean, koherentzia denboran zehar eta estiloa talde osoari komunikatzea.","SEO hobetzea, zerbitzaria azkartzea eta kodea laburtzea.","Datu-basea normalizatzea, APIa segurtatzea eta testak pasatzea.","Irudiak konprimitzea, bideoak editatzea eta audioa nahastea."],
+    opts:["Koherentzia pantailen artean, denboran zehar eta talde osoan.", "Bilatzaileetako SEO hobetzea, zerbitzaria azkartzea eta kodea laburtzea.", "Datu-basea normalizatzea, APIa babestea eta unitate-testak pasatzea.", "Irudiak konprimitzea, bideoak editatzea eta audio-pistak sinkronizatzea."],
     ans:0, exp:"Estilo gidak aplikazioa bateratua izatea (gaur eta etorkizuneko bertsioetan) eta talde guztiak erreferentzia bera izatea bermatzen du."
   },
 
   // ---------- 5. GESTALT & ERABILGARRITASUNA (GEHIGARRIAK) ----------
   { id:"g8", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_continuity,
     q:"Begiratu irudiari: gezirik ez egon arren, gure begiek ibilbide leun batean lerrokatutako puntu urdinak batera jarraitzen dituzte. Zein Gestalt lege da?",
-    opts:["G6 · Jarraitutasunaren legea (Continuity).","G4 · Itxieraren legea (Closure).","G3 · Eskualde komuna.","G5 · Simetria."],
+    opts:["G6 · Jarraitutasuna (Continuity).", "G4 · Itxieraren legea (Closure).", "G3 · Eskualde komuna (Common Region).", "G5 · Simetriaren legea (Symmetry)."],
     ans:0, exp:"G6 · Jarraitutasuna: lerro edo kurba leun batean jarritako elementuak elkarrekin lotuta hautematen ditugu (stepper-ak, timeline-ak, zutabeak)."
   },
   { id:"g9", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA","VISUAL"], visual: SVGS.gestalt_symmetry,
     q:"Musika-erreproduzigailu honetan kontrolak erdiko ardatzaren inguruan modu orekatuan kokatuta daude. Zein Gestalt lege da?",
-    opts:["G5 · Simetriaren legea (Symmetry).","G7 · Norabide komuna (Common Fate).","G4 · Itxitura (Closure).","G3 · Eskualde komuna."],
+    opts:["G5 · Simetria (Symmetry).", "G7 · Norabide komuna (Common Fate).", "G4 · Itxieraren legea (Closure).", "G3 · Eskualde komuna (Common Region)."],
     ans:0, exp:"G5 · Simetria: gure garunak forma simetrikoak eta ordenatuak nahiago ditu, txukunagoak eta egonkorragoak iruditzen zaizkiolako."
   },
   { id:"g10", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA"],
     q:"Jatetxe baten menuan plater baten izenaren ondoan dagoen prezioa plater horri dagokiola ulertzen dugu. Zein Gestalt lege da?",
-    opts:["G1 · Hurbiltasunaren legea (Proximity).","G4 · Itxitura.","G7 · Norabide komuna.","Irudia eta funtsa."],
+    opts:["G1 · Hurbiltasuna (Proximity).", "G4 · Itxieraren legea (Closure).", "G7 · Norabide komuna (Common Fate).", "Irudia eta funtsa (Figure-Ground)."],
     ans:0, exp:"Hurbiltasun fisikoak berak lotzen ditu platera eta prezioa marra edo koadrorik behar izan gabe."
   },
   { id:"g11", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA"],
     q:"ISO 9241-11 estandarrak zein 3 dimentsio aipatzen ditu Erabilgarritasuna definitzeko?",
-    opts:["Eraginkortasuna, efizientzia eta gogobetetzea.","Estetika, abiadura eta prezioa.","Segurtasuna, pribatutasuna eta irisgarritasuna.","Simetria, hurbiltasuna eta itxitura."],
+    opts:["Eraginkortasuna, efizientzia eta gogobetetzea.", "Estetika bisuala, abiadura teknikoa eta prezioa.", "Segurtasun informatikoa, pribatutasuna eta errendimendua.", "Simetria geometrikoa, hurbiltasuna eta kontrastea."],
     ans:0, exp:"ISO 9241-11: helburuak eraginkortasunez (lortzea), efizientziaz (ahalegin/denbora gutxirekin) eta gogobetetzez (atsegin) lortzea."
   },
   { id:"g12", topic:"T5_GESTALT", kind:"mcq", tags:["TEORIA"],
     q:"Erabiltzaile batek aplikazioa hilabete batez erabili gabe utzi ondoren, berriz irekitzean azkar gogoratzen du nola erabili. Zein Nielsen erabilgarritasun-osagai da?",
-    opts:["Gogoragarritasuna (Memorability).","Ikasgarritasuna (Learnability).","Efizientzia (Efficiency).","Gogobetetzea (Satisfaction)."],
+    opts:["Gogoragarritasuna (Memorability).", "Ikasgarritasuna (Learnability).", "Erabilera-efizientzia (Efficiency).", "Erabiltzailearen gogobetetzea (Satisfaction)."],
     ans:0, exp:"Gogoragarritasuna: denbora tarte baten ondoren sistema berriz erabiltzean erraz gogoratzeko gaitasuna."
   },
   { id:"g13", topic:"T5_GESTALT", kind:"tf", tags:["TEORIA"],
@@ -1263,91 +1258,91 @@ const QUESTIONS = [
   // ---------- 6. KOLOREAK (GEHIGARRIAK) ----------
   { id:"c7", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"HEX notazioan #FF5A5F kolorean, zer adierazten dute lehen bi digituek (FF)?",
-    opts:["Gorri (Red) kanalaren balio maximoa hamaseitarrez (FF = 255).","Urdin (Blue) kanalaren balio minimoa.","Opazitatea (% 100).","Saturazioa HSL ereduan."],
+    opts:["Gorri (Red) kanalaren balio maximoa (255).", "Urdin (Blue) kanalaren balio minimoa hamaseitarrez (0).", "Kolorearen opazitate edo gardentasun maila maximoa (% 100).", "HSL ereduko saturazio-ehuneko zehatza (255etik gora)."],
     ans:0, exp:"HEX #RRGGBB da: lehen biak R (gorria), hurrengoak G (berdea), azkenak B (urdina). FF₁₆ = 255₁₀."
   },
   { id:"c8", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zirkulu kromatikoan ondoz ondo dauden koloreak hartuta sortzen den paleta zein da?",
-    opts:["Banaketa analogoa (harmonikoa): ongi funtzionatzen dute elkarrekin baina kontraste handirik ez dute.","Banaketa osagarria: kontraste maximoa.","Triada: 120°-ra dauden 3 kolore.","Karratua: 90°-ra dauden 4 kolore."],
+    opts:["Banaketa analogoa (harmonikoa).", "Banaketa osagarria (kontraste maximoa).", "Triada (120°-ra dauden hiru kolore).", "Karratua (90°-ra dauden lau kolore)."],
     ans:0, exp:"Kolore analogoek oinarri bera partekatzen dutenez harmonia leuna ematen dute, baina kontuz: azentuetarako kontraste txikia izan dezakete."
   },
   { id:"c9", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zirkulu kromatikoan distantzia berera (120°-ra) dauden 3 kolore aukeratzean zein harmonia sortzen da?",
-    opts:["Triada (paleta bizia eta orekatua; komeni da 1 nagusi izatea eta beste 2ak azentu gisa).","Monokromatikoa.","Analogoa.","Karratua."],
+    opts:["Triada.", "Banaketa monokromatikoa.", "Banaketa analogoa.", "Banaketa karratua."],
     ans:0, exp:"Triada: 360° / 3 = 120°-ra dauden hiru kolore. Karratua 90°-ra dauden 4 kolore dira."
   },
   { id:"c10", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Zergatik esaten da koloreen psikologia EZ dela zientzia zehatza?",
-    opts:["Kulturak, esperientzia pertsonalak eta testuinguruak asko baldintzatzen dutelako (adib. zuria dolua da Japonian/Txinan).","Koloreek ez dutelako inongo eraginik pertsonengan.","Pantaila guztiek kolore bera erakusten dutelako.","Soilik RGB-n funtzionatzen duelako."],
+    opts:["Kulturak, esperientziak eta testuinguruak baldintzatzen dutelako.", "Koloreek ez dutelako inolako eragin emozionalik pertsonen erabakietan.", "Gailu eta pantaila guztiek kolore-kalibrazio guztiz berdina dutelako.", "Soilik inprimatutako CMYK dokumentuetan aplikatzen den teoria delako."],
     ans:0, exp:"Adibidez, mendebaldean zuria garbitasuna/ezkontza da eta beltza dolua; Asiako ekialdean zuria dolua da eta antzinako Egipton beltza emankortasuna zen."
   },
   { id:"c11", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"HSL ereduan, zer da Ñabardura (Hue) eta zer angelutan daude gorria, berdea eta urdina?",
-    opts:["Zirkulu kromatikoko angelua: 0° gorria, 120° berdea eta 240° urdina.","Kolorearen gardentasuna % 0tik % 100era.","Pantailaren distira pixel bakoitzean.","Kolorearen pisu tipografikoa."],
+    opts:["Zirkuluko angelua: 0° gorria, 120° berdea, 240° urdina.", "Kolorearen gardentasun-maila % 0tik % 100era bitartean.", "Pantailako pixel bakoitzaren distira fisikoa kandelatan.", "Tipografiaren pisu bisuala eta atzeko planoarekiko kontrastea."],
     ans:0, exp:"Hue = 0°–360° (0° gorria, 120° berdea, 240° urdina); Saturation = purutasuna (0% grisa, 100% bizia); Lightness = argitasuna."
   },
   { id:"c12", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA"],
     q:"Kolore bakarra aukeratu eta haren argitasuna eta saturazioa aldatuz (tintak eta itzalak) sortzen den paleta zein da?",
-    opts:["Banaketa monokromatikoa.","Banaketa osagarria.","Triada.","Konposatua."],
+    opts:["Banaketa monokromatikoa.", "Banaketa osagarri bikoitza.", "Triada kromatikoa.", "Banaketa konposatua."],
     ans:0, exp:"Monokromatikoa da paleta koherente bat sortzeko biderik errazena (adib. argitasuna % 10, 30, 50, 70 eta 90ean aldatuz)."
   },
 
   // ---------- 7. IRISGARRITASUNA (GEHIGARRIAK) ----------
   { id:"i5", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"WCAG 2.2-ren POUR printzipioetan, webgune osoa sagu gabe teklatu soilarekin (Tab, Enter, geziak) erabiltzea eta distira arriskutsurik ez izatea zein printzipio da?",
-    opts:["O · Eragingarria (Operable).","P · Hautemangarria (Perceivable).","U · Ulergarria (Understandable).","R · Sendoa (Robust)."],
+    opts:["O · Eragingarria (Operable).", "P · Hautemangarria (Perceivable).", "U · Ulergarria (Understandable).", "R · Sendoa (Robust)."],
     ans:0, exp:"Operable (Eragingarria): erabiltzaileak interfazea maneiatu ahal izatea (teklatua, denbora nahikoa, nabigazio argia, konbultsiorik ez eragin)."
   },
   { id:"i6", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"Irudiei alt testua jartzea eta bideoei azpitituluak gehitzea zein POUR printzipiori dagokio?",
-    opts:["P · Hautemangarria (Perceivable).","O · Eragingarria (Operable).","U · Ulergarria (Understandable).","R · Sendoa (Robust)."],
+    opts:["P · Hautemangarria (Perceivable).", "O · Eragingarria (Operable).", "U · Ulergarria (Understandable).", "R · Sendoa (Robust)."],
     ans:0, exp:"Hautemangarria: informazioa zentzu batekin baino gehiagorekin jaso ahal izatea (ikusmen edo entzumen urritasuna dutenek ere eskuratzeko)."
   },
   { id:"i7", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"HTML semantikoa (<button>, <nav>, <main>) eta ARIA atributuak erabiltzea pantaila-irakurgailuekin (screen readers) bateragarria izateko zein POUR printzipio da?",
-    opts:["R · Sendoa (Robust).","P · Hautemangarria (Perceivable).","O · Eragingarria (Operable).","U · Ulergarria (Understandable)."],
+    opts:["R · Sendoa (Robust).", "P · Hautemangarria (Perceivable).", "O · Eragingarria (Operable).", "U · Ulergarria (Understandable)."],
     ans:0, exp:"Sendoa (Robust): edukia laguntza-teknologiek (gaurkoek eta etorkizunekoek) fidagarritasunez interpretatu ahal izatea."
   },
   { id:"i8", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"WCAG AA mailan, zenbat izan behar da gutxieneko kontrastea ikonoetarako, kontrolen ertzetarako eta testu handirako (≥18 pt edo ≥14 pt lodia)?",
-    opts:["Gutxienez 3 : 1.","Gutxienez 4,5 : 1.","Gutxienez 7 : 1.","Gutxienez 1,5 : 1."],
+    opts:["Gutxienez 3 : 1.", "Gutxienez 4,5 : 1.", "Gutxienez 7 : 1.", "Gutxienez 1,5 : 1."],
     ans:0, exp:"AA maila: testu arrunta ≥ 4,5:1 · testu handia ≥ 3:1 · ikonoak eta kontrolen ertzak ≥ 3:1."
   },
   { id:"i9", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"Zein lege europar sartu zen indarrean 2025eko ekainaren 28an produktu eta zerbitzu digital askotan irisgarritasuna derrigortuz?",
-    opts:["EAA — Irisgarritasunaren Europako Legea (Espainian 11/2023 Legea).","GDPR — Datuen Babeserako Erregelamendua.","ISO 9241-11.","Hansen 1971 Dekretua."],
+    opts:["EAA (Irisgarritasunaren Europako Legea).", "GDPR (Datuen Babeserako Erregelamendua).", "ISO 9241-11 (Erabilgarritasun Araua).", "Hansen 1971 (Interakzio Printzipioak)."],
     ans:0, exp:"EBko EAA (2025/06/28) + Espainiako 11/2023 Legea (produktu/zerbitzu digitalak) + 1112/2018 Errege Dekretua (sektore publikoa)."
   },
   { id:"i10", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA"],
     q:"Dislexia, autismoa eta TDAH zein desgaitasun-taldetan sartzen dira irisgarritasun-diseinuan?",
-    opts:["Kognitiboak eta neurologikoak.","Ikusmenekoak.","Entzumenekoak.","Mugikortasunekoak."],
+    opts:["Kognitiboak eta neurologikoak.", "Ikusmen-urritasunekoak.", "Entzumen-urritasunekoak.", "Mugikortasun fisiko mugatukoak."],
     ans:0, exp:"Lau talde nagusiak: ikusmena, entzumena, mugikortasuna eta kognitiboak/neurologikoak (hizkera argiak, diseinu ordenatuak eta animazio gutxik laguntzen dute)."
   },
 
   // ---------- 8. ZAILTASUNAK & ERROREAK (GEHIGARRIAK) ----------
   { id:"z6", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Lego moto baten gidaria aurrera begira jartzen dugu, beste aldera jartzeak ez duelako zentzurik. Zein diseinu-muga (constraint) da?",
-    opts:["Muga semantikoa (egoeraren esanahiak mugatzen du).","Muga fisikoa.","Muga logikoa.","Muga kulturala."],
+    opts:["Muga semantikoa.", "Muga fisikoa.", "Muga logikoa.", "Muga kulturala."],
     ans:0, exp:"Muga semantikoa: ezagutza orokorrak eta egoeraren esanahiak berak adierazten digute zein den aukera bakarra."
   },
   { id:"z7", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Zaborrontzi ikonoak «ezabatu» esan nahi izatea eta gorriak «arriskua / gelditu» zein muga-mota da?",
-    opts:["Muga kulturala (konbentzio sozial partekatuak).","Muga fisikoa.","Muga logikoa.","Muga semantikoa."],
+    opts:["Muga kulturala.", "Muga fisikoa.", "Muga logikoa.", "Muga semantikoa."],
     ans:0, exp:"Muga kulturalak gizarteak onartutako konbentzioak dira eta kultura batetik bestera alda daitezke."
   },
   { id:"z8", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Instagramen story bat hurrengora pasatu nahi duzu, baina nahi gabe hatzak beherago jo eta erreakzioen pantaila irekitzen da. Zer da?",
-    opts:["Slip (exekuzio-errorea / lapsusa).","Mistake (akats kontzeptuala).","Muga semantikoa.","Design for errors."],
+    opts:["Slip (exekuzio-errorea / lapsusa).", "Mistake (akats kontzeptuala).", "Muga semantikoaren haustura.", "Design for Errors printzipioa."],
     ans:0, exp:"Helburua zuzena zen (story-a pasatzea), baina exekuzioan nahi gabe beste ekintza bat aktibatu da → Slip."
   },
   { id:"z9", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"Nola konpontzen edo saihesten dira nagusiki «Mistake» (akats kontzeptual) motako erroreak?",
-    opts:["Hizkera argiarekin, berehalako feedbackarekin eta ekintza kritikoen ondorioak aurrez argi azalduz.","Botoiak handiago eginez bakarrik.","Aplikazioa pantaila osoan jarriz.","Errore-kode zenbakidunak erakutsiz."],
+    opts:["Hizkera argia, feedbacka eta ondorioak aurrez azalduz.", "Botoi guztiak bikoitza handiago eginez eta kolore biziz margotuz.", "Aplikazioa pantaila osoan (FullScreen) jarriz arreta ez galtzeko.", "Errore-kode zenbakidun teknikoak (403, 422, 500) pantailan erakutsiz."],
     ans:0, exp:"Mistake-ak ulermen faltagatik gertatzen direnez, argitasun semantikoak, adibideek eta ondorioen azalpenek prebenitzen dituzte."
   },
   { id:"z10", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA"],
     q:"«Design for Errors» (Erroreetarako diseinatu) ikuspegiaren 3 zutabeak zeintzuk dira?",
-    opts:["1. Saihesteko errazak · 2. Estresik gabe konpontzekoak (Desegin) · 3. Detektatu eta hizkera argian azaldu.","1. Erroreak ezkutatu · 2. Kontsolan inprimatu · 3. Programa itxi.","1. Kolore gorria · 2. Soinu ozena · 3. Blokeoa.","1. Wireframe · 2. Mockup · 3. Prototipoa."],
+    opts:["Saihesteko errazak · Estresik gabe konpontzekoak · Argi azaldu.", "Erroreak ezkutatu · Kontsolan isilean gorde · Programa berrabiarazi.", "Kolore gorri bizia jarri · Alerta-soinua jo · Formularioa blokeatu.", "Wireframea marraztu · Mockupa sortu · Prototipo interaktiboa probatu."],
     ans:0, exp:"Errore batzuk saihestezinak direnez: ahal dena prebenitu, gertatzean erraz desegin (Undo) eta beti argi azaldu konponbidearekin."
   },
   { id:"z11", topic:"T8_ZAILT", kind:"tf", tags:["TEORIA"],
@@ -1359,34 +1354,34 @@ const QUESTIONS = [
   // ---------- 9. MVC & PROIEKTU-FLUXUA (GEHIGARRIAK) ----------
   { id:"m9", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Zein da Launcher.java eta App.java klaseen arteko zeregina gure JavaFX Maven proiektuan?",
-    opts:["Launcher.main()-ek JavaFX abiarazten du (modulu-arazoak saihestuz), eta App.start(Stage)-ek FXMLLoader bidez .fxml kargatu eta leihoa erakusten du.","App.java-k SQL kontsultak egiten ditu eta Launcher-ek JSONa irakurtzen du.","Biak bista fitxategiak dira.","Launcher-ek API zerbitzaria pizten du."],
+    opts:["Launcher-ek JavaFX abiarazten du; App-ek FXML eta Stage kargatzen ditu.", "App.java-k MySQL SQL kontsultak egiten ditu eta Launcher-ek JSONa irakurtzen du.", "Biak .fxml bistak kargatzeko estilo-orri eta konfigurazio fitxategiak dira.", "Launcher-ek .NET API zerbitzaria pizten du eta App-ek itzaltzen du."],
     ans:0, exp:"Application klasea zuzenean exekutatu ordez Launcher klase bereizi bat erabiltzen da JavaFX runtime-a seguru abiarazteko; App-ek kargatzen du FXML + Scene + Stage."
   },
   { id:"m10", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Zertarako erabiltzen da PantailaAldatzailea.java klasea kiroldegiko proiektu osoan (4 bistako bertsioan)?",
-    opts:["FXML pantailen artean nabigatzeko (Erreserbak, Bazkideak, Pistak, Bonoak) eta hautatutako datu-iturria (moduApi) pantailaz aldatzean mantentzeko.","Datu-baseko taulak sortzeko.","CSS fitxategiak deskargatzeko.","Maven paketeak konpilatzeko."],
+    opts:["FXML pantailen artean nabigatu eta moduApi egoera mantentzea.", "MySQL datu-baseko taula eta erlazio guztiak automatikoki sortzea.", "Scene Builder-etik esportatutako CSS estilo-orriak kargatzea.", "Maven proiektuaren menpekotasun guztiak konpilatu eta paketatzea."],
     ans:0, exp:"PantailaAldatzailea-k FXMLLoader logika zentralizatzen du eta moduApi egoera estatikoa gordetzen du pantailen artean."
   },
   { id:"m11", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`public class ErreserbakController {\n    @FXML private Label lblEgoera;\n    ...\n    @FXML public void initialize() {\n        lblEgoera.setText("Prest");\n    }\n}`,
     q:"Zergatik jarri behar da @FXML anotazioa pribatuak (private) diren eremu eta metodoetan?",
-    opts:["FXMLLoader-ek reflexio bidez aldagai horietan FXMLko kontrolak injektatu eta metodoak deitu ahal izateko.","Java konpiladoreak eremua datu-basean gordetzeko.","Aldagaia konstante (final) bihurtzeko.","Botoiari kolorea aldatzeko."],
+    opts:["FXMLLoader-ek reflexio bidez private eremuak injektatu ahal izateko.", "Java konpiladoreak eremu horiek MySQL datu-basean gorde ahal izateko.", "Aldagai horiek konstante (final) bihurtu eta ezin aldatzeko.", "Scene Builder-ek botoi eta etiketei kolore lehenetsia emateko."],
     ans:0, exp:"Eremua/metodoa private denez, @FXML gabe FXMLLoader-ek ezin du ikusi eta NullPointerException edo LoadException gertatuko litzateke."
   },
   { id:"m12", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Zergatik pasatu behar zaio TableView.setItems(...) metodoari FXCollections.observableArrayList(erreserbak) eta ez List arrunt bat zuzenean?",
-    opts:["JavaFX-eko TableView-k ObservableList bat eskatzen duelako, zerrendan aldaketak daudenean pantaila automatikoki eguneratzeko.","List arruntek ezin dutelako objekturik gorde.","ObservableList-ek SQL kontsultak egiten dituelako.","JSON formatura pasatzeko."],
+    opts:["TableView-k ObservableList behar du aldaketak automatikoki islatzeko.", "Java-ko List arruntek ezin dutelako Erreserba bezalako objekturik gorde.", "ObservableList-ek zuzenean SQL SELECT kontsultak exekutatzen dituelako.", "FXCollections-ek objektuak JSON testura bihurtzen dituelako APIrako."],
     ans:0, exp:"ObservableList-ek Observer patroia inplementatzen du: errenkadak gehitu/kendu ahala UI taulak automatikoki erreakzionatzen du."
   },
   { id:"m13", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Gure .NET APIan (API_kiroldegia_db), zer zeregin dute ApiResponse<T> eta ApiError klaseek?",
-    opts:["APIaren erantzun arrakastatsuak (Status, Code=200, Data/DataList) eta erroreak (Code, Type, Message, Detail) formatu estandar eta aurreikusgarrian itzultzea.","JavaFX botoiak marraztea.","MySQL zerbitzaria instalatzea.","Pasahitzak zifratzea."],
+    opts:["Erantzun arrakastatsuak eta erroreak formatu estandarrean itzultzea.", "JavaFX-eko TableView zutabeak eta botoiak automatikoki marraztea.", "MySQL datu-base zerbitzaria Windows-en instalatu eta abiaraztea.", "Erabiltzaileen pasahitzak zifratu eta JWT tokenak sortzea."],
     ans:0, exp:"Erantzun-formatu bateratu horri esker Java bezeroak (ApiErantzuna / ApiZerbitzua) garbi bereiz ditzake 200 OK, 404 Not Found eta 500 erroreak."
   },
   { id:"m14", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`// Erreserba.java barruan\npublic static List<Erreserba> lortuGuztiak() throws SQLException {\n    try (Connection conn = DBKonexioa.lortuKonexioa(); ...) {\n        // SELECT ... JOIN ...\n    }\n}`,
     q:"Zergatik da gomendagarria try-with-resources (try (...)) erabiltzea DBKonexioa, PreparedStatement eta ResultSet-ekin?",
-    opts:["Blokea amaitzean konexioa eta baliabideak automatikoki ixten direlako (baita salbuespena badago ere), memoria/konexio ihesak saihestuz.","Kontsulta bi aldiz azkarrago doalako.","SQL errorea ezkutatzen duelako.","JavaFX hari nagusia gelditzeko."],
+    opts:["Konexioa eta baliabideak automatikoki ixten direlako amaieran.", "SQL SELECT kontsulta bi aldiz azkarrago exekutatzen delako.", "SQLException salbuespen guztiak isilean ezabatzen dituelako.", "JavaFX-eko interfazearen hari nagusia blokeatu gabe lan egiteko."],
     ans:0, exp:"try-with-resources-ek AutoCloseable baliabide guztiak segurtasunez ixten ditu beti."
   },
   { id:"m15", topic:"M1_MVC", kind:"tf", tags:["MVC_ALL"],
@@ -1398,43 +1393,43 @@ const QUESTIONS = [
   // ---------- 10. JAVAFX PANES & RESPONSIVE (GEHIGARRIAK) ----------
   { id:"p10", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: SVGS.gridpane_svg,
     q:"Begiratu zirriborro honi (2 zutabe lerrokatuta eta azpiko eremuak bi zutabeak hartuta). Zein JavaFX Pane da egokiena eta zein propietate erabiltzen du «Oharrak» eremuak?",
-    opts:["GridPane + Column Span = 2 («Oharrak» eremuak bi zutabeak hartzeko).","TilePane + Pref Columns = 2.","BorderPane + Center.","VBox + Spacing = 2."],
+    opts:["GridPane + Column Span = 2.", "TilePane + Pref Columns = 2.", "BorderPane + Center Margin = 2.", "VBox + Spacing = 2."],
     ans:0, exp:"GridPane-n Column Span / Row Span erabiltzen da elementu batek gelaxka bat baino gehiago har dezan (HTML-ko colspan/rowspan bezala)."
   },
   { id:"p11", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: SVGS.stackpane_svg,
     q:"Irudiko 3 geruzak elkarren gainean kokatzeko (pantaila nagusia + fondo iluna + abisu-txartela), zein Pane erabili behar da?",
-    opts:["StackPane.","BorderPane.","GridPane.","HBox."],
+    opts:["StackPane.", "BorderPane.", "GridPane.", "HBox."],
     ans:0, exp:"StackPane-k haur guztiak Z ardatzean pilatzen ditu, lehenengoa atzean eta azkena aurrean."
   },
   { id:"p12", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","VISUAL"], visual: SVGS.flowpane_svg,
     q:"Elementu bakoitzak bere zabalera propioa mantentzen du, eta lekurik ez dagoenean hurrengo lerrora jauzi egiten dute. Zein Pane da?",
-    opts:["FlowPane (ScrollPane baten barruan Fit To Width = true jarrita, edukia luzea bada).","TilePane.","AnchorPane.","BorderPane."],
+    opts:["FlowPane.", "TilePane.", "AnchorPane.", "BorderPane."],
     ans:0, exp:"FlowPane Flexbox-en antzekoa da: tamaina desberdineko txartel/fitxategiak automatikoki berrantolatzen ditu (wrap)."
   },
   { id:"p13", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"AnchorPane batean TextArea bat leihoaren tamainarekin batera luzatu eta zabaltzeko, zer konfiguratu behar da Scene Builder-en?",
-    opts:["Lau aingurak (Top, Right, Bottom, Left) aktibatu AnchorPane Constraints atalean.","Layout X eta Layout Y zenbaki finkoak idatzi aingurarik gabe.","Pref Columns = 4 jarri.","Alignment = CENTER jarri."],
+    opts:["Lau aingurak (Top, Right, Bottom, Left) aktibatzea.", "Layout X eta Layout Y zenbaki finkoak idaztea aingurarik gabe.", "Pref Columns = 4 eta Orientation = HORIZONTAL jartzea.", "Alignment = CENTER eta Spacing = 10 konfiguratzea."],
     ans:0, exp:"Aingurarik gabe Layout X/Y finkoetan geratzen da; bi kontrako aldeetan ainguratuta (Left+Right, Top+Bottom) leihoarekin batera luzatzen da."
   },
   { id:"p14", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"BorderPane baten LEFT eremuan 4 botoi bertikalki jarri nahi baditugu, zer egin behar dugu?",
-    opts:["VBox bat sartu LEFT eremuan, eta 4 botoiak VBox horren barruan (Max Width = MAX_VALUE zabalera betetzeko).","4 botoiak zuzenean LEFT eremuan bata bestearen gainean jaregin.","TilePane bat TOP-en jarri.","LEFT eremua 4 aldiz bikoiztu FXML-n."],
+    opts:["VBox bat sartu LEFT-en, eta 4 botoiak VBox horren barruan.", "4 botoiak zuzenean LEFT eremuan bata bestearen gainean jaregin.", "TilePane bat TOP eremuan jarri eta Alignment = LEFT ezarri.", "LEFT etiketa lau aldiz errepikatu BorderPane barruko FXML-n."],
     ans:0, exp:"BorderPane-ko eremu bakoitzak edukiontzi/nodo BAKAR bat onartzen du; elementu anitzetarako VBox edo HBox sartzen da barruan."
   },
   { id:"p15", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`Rectangle2D pantaila = Screen.getPrimary().getVisualBounds();\nScene scene = new Scene(loader.load(), pantaila.getWidth() * 0.8, pantaila.getHeight() * 0.8);\nstage.setScene(scene);\nstage.centerOnScreen();`,
     q:"Zer egiten du zehatz-mehatz Screen.getPrimary().getVisualBounds() metodoak kode honetan?",
-    opts:["Pantaila nagusiaren zabalera eta altuera erabilgarria irakurtzen du (sistema eragileko ataza-barra kenduta), leihoa % 80an irekitzeko.","Leihoa FullScreen moduan jartzen du ESC botoiarekin.","Aplikazioaren irudi guztiak eskalan txikitzen ditu.","FXMLko botoi guztien neurria aldatzen du."],
+    opts:["Pantailaren neurri erabilgarria irakurtzen du (ataza-barra kenduta).", "Leihoa FullScreen moduan irekitzen du sistema eragileko barra ezkutatuz.", "Aplikazioaren irudi eta ikono guztiak % 80ko eskalan txikitzen ditu.", "FXMLko botoi guztien Max Width propietatea automatikoki aldatzen du."],
     ans:0, exp:"getVisualBounds()-ek ataza-barra errespetatzen du; leihoa handia baina pantaila osoa ez izateko 2. estrategia ofiziala da."
   },
   { id:"p16", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"Zein da Spacing eta Padding propietateen arteko aldea VBox edo HBox batean?",
-    opts:["Spacing = barruko elementuen arteko tartea; Padding = edukiontziaren ertzetik barruko edukira dagoen barne-marjina.","Padding elementuen arteko tartea da eta Spacing kanpoko kolorea.","Gauza bera dira.","Spacing bertikala da beti eta Padding horizontala."],
+    opts:["Spacing = elementuen arteko tartea; Padding = ertzaren barne-marjina.", "Padding = elementuen arteko tartea; Spacing = kanpoko ertzaren kolorea.", "Biak propietate bera dira, bata VBox-erako eta bestea HBox-erako.", "Spacing bertikala da beti eta Padding horizontala da kasu guztietan."],
     ans:0, exp:"Spacing haurren arteko distantzia da; Padding edukiontziaren barruko ertz-marjina (goian, eskuinean, behean, ezkerrean)."
   },
   { id:"p17", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL"],
     q:"VBox baten barruan TableView edo TextArea batek geratzen den altuera bertikal guztia hartzeko, zein propietate jarri behar zaio?",
-    opts:["VBox Constraints → Vgrow = ALWAYS.","HBox Constraints → Hgrow = NEVER.","Editable = false.","Orientation = HORIZONTAL."],
+    opts:["VBox Constraints → Vgrow = ALWAYS.", "HBox Constraints → Hgrow = NEVER.", "TableView Properties → Editable = false.", "Layout Constraints → Orientation = HORIZONTAL."],
     ans:0, exp:"VBox-en altuera hazteko Vgrow = ALWAYS; HBox-en zabalera hazteko Hgrow = ALWAYS."
   },
 
