@@ -366,6 +366,11 @@
   .score-circle.pass { border-color: var(--good); background: var(--good-soft); color: var(--good); }
   .score-circle.fail { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); }
 
+
+  .ico { display: inline-block; vertical-align: -3px; flex-shrink: 0; }
+  .ico-lg { display: inline-block; color: var(--primary); margin-bottom: 6px; }
+  .section-heading { display: inline-flex; align-items: center; gap: 7px; }
+
   /* QR Sync Modal */
   .modal-backdrop {
     position: fixed;
@@ -408,8 +413,8 @@
       <small>Teoria (8 gaiak) + MVC &amp; JavaFX Layout Pane + Kode-analisia (Goierri Eskola · DAM)</small>
     </div>
     <div class="header-actions">
-      <button class="btn-ghost" id="btnHome" onclick="goHome()">🏠 Hasiera</button>
-      <button class="btn-ghost" id="btnTheme" onclick="toggleTheme()">🌙 Gai iluna</button>
+      <button class="btn-ghost" id="btnHome" onclick="goHome()"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Hasiera</button>
+      <button class="btn-ghost" id="btnTheme" onclick="toggleTheme()"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Gai iluna</button>
     </div>
   </div>
 </header>
@@ -421,22 +426,22 @@
       <h2 style="margin-top:0;">1. Aukeratu entrenamendu-modua</h2>
       <div class="mode-grid">
         <div class="mode-card active" data-mode="study" onclick="selectMode('study')">
-          <div class="icon">📘</div>
+          <div class="icon"><svg class="ico-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
           <h3>Ikasketa Modua</h3>
           <p>Berehalako zuzenketa eta azalpen zehatza galdera bakoitzaren ondoren. Ikasten joateko onena.</p>
         </div>
         <div class="mode-card" data-mode="exam" onclick="selectMode('exam')">
-          <div class="icon">⏱️</div>
+          <div class="icon"><svg class="ico-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M10 2h4"/></svg></div>
           <h3>Azterketa Simulakroa</h3>
           <p>Kronometroarekin eta erantzunak ezkutuan amaitu arte. Amaieran nota (/10) eta akatsen berrikuspena.</p>
         </div>
         <div class="mode-card" data-mode="open" onclick="selectMode('open')">
-          <div class="icon">✍️</div>
+          <div class="icon"><svg class="ico-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
           <h3>Galdera Irekiak / Flashcards</h3>
           <p>Azterketako garapen-galderak eta kode-diseinua: idatzi zure erantzuna eta ereduarekin alderatu.</p>
         </div>
         <div class="mode-card" data-mode="mistakes" onclick="selectMode('mistakes')">
-          <div class="icon">🎯</div>
+          <div class="icon"><svg class="ico-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <h3>Huts Egindakoak Errepasatu</h3>
           <p>Aurreko probetan huts egin dituzun galderak bakarrik landu menperatu arte (<span id="missedCountHome">0</span> gordeta).</p>
         </div>
@@ -447,11 +452,11 @@
         <div class="field">
           <label for="selTopic">Gaia / Multzoa</label>
           <select id="selTopic">
-            <option value="ALL">🔥 Guztiak nahastuta (Teoria + MVC/JavaFX)</option>
-            <option value="TEORIA">📚 Teoria osoa (8 gaiak)</option>
-            <option value="MVC_ALL">💻 MVC + JavaFX Pane + Kodea</option>
-            <option value="VISUAL">🖼️ Irudi eta Kasu Bisualak bakarrik (UI/UX + Paneak)</option>
-            <option value="CODE">🐛 Kode-analisia eta Bug Hunt (FXML / Controller / Model)</option>
+            <option value="ALL">Guztiak nahastuta (Teoria + MVC/JavaFX)</option>
+            <option value="TEORIA">Teoria osoa (8 gaiak)</option>
+            <option value="MVC_ALL">MVC + JavaFX Pane + Kodea</option>
+            <option value="VISUAL">Irudi eta Kasu Bisualak bakarrik (UI/UX + Paneak)</option>
+            <option value="CODE">Kode-analisia eta Bug Hunt (FXML / Controller / Model)</option>
             <optgroup label="Teoriako gai indibidualak">
               <option value="T1_UX">1. UX, Norman ateak &amp; Modelo mentala</option>
               <option value="T2_NIELSEN">2. Nielsen-en 10 heuristikoak</option>
@@ -479,11 +484,11 @@
           </select>
         </div>
         <div>
-          <button class="btn-primary" style="padding:11px 24px;font-size:1rem;" onclick="startQuiz()">🚀 Hasi Proba Berria</button>
+          <button class="btn-primary" style="padding:11px 24px;font-size:1rem;" onclick="startQuiz()"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Hasi Proba Berria</button>
         </div>
       </div>
       <div style="font-size:0.8rem;color:var(--muted);">
-        💡 <strong>Lasterbideak (H7):</strong> Erabili teklatuko <span class="kbd">1</span>–<span class="kbd">4</span> aukeratzeko eta <span class="kbd">Enter</span> hurrengo galderara pasatzeko. Saio bakoitzean galderak eta aukerak ausaz nahasten dira!
+        <svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> <strong>Lasterbideak (H7):</strong> Erabili teklatuko <span class="kbd">1</span>–<span class="kbd">4</span> aukeratzeko eta <span class="kbd">Enter</span> hurrengo galderara pasatzeko. Saio bakoitzean galderak eta aukerak ausaz nahasten dira!
       </div>
     </div>
 
@@ -491,16 +496,16 @@
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-          <h2 style="margin:0;">📊 Aurrerapena</h2>
+          <h2 class="section-heading" style="margin:0;"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Aurrerapena</h2>
           <select id="selProfile" onchange="switchProfile(this.value)" style="width:auto;min-width:155px;padding:6px 10px;font-size:0.84rem;font-weight:700;"></select>
-          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="createProfile()">➕ Erabiltzaile berria</button>
-          <button class="btn-secondary hidden" id="btnDelProfile" style="padding:6px 10px;font-size:0.8rem;" onclick="deleteCurrentProfile()" title="Ezabatu profil hau">✖️</button>
+          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="createProfile()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Erabiltzaile berria</button>
+          <button class="btn-secondary hidden" id="btnDelProfile" style="padding:6px 10px;font-size:0.8rem;" onclick="deleteCurrentProfile()" title="Ezabatu profil hau"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="openQrSyncModal()">📱 Sinkronizatu (QR / Esteka)</button>
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="exportStatsCode()">📤 Esportatu</button>
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="importStatsCode()">📥 Inportatu</button>
-          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="resetStats()">🗑️ Garbitu profila</button>
+          <button class="btn-primary" style="padding:6px 11px;font-size:0.8rem;" onclick="openQrSyncModal()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3z"/><path d="M17 17h4v4h-4z"/></svg> Sinkronizatu (QR / Esteka)</button>
+          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="exportStatsCode()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Esportatu</button>
+          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="importStatsCode()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Inportatu</button>
+          <button class="btn-secondary" style="padding:6px 11px;font-size:0.8rem;" onclick="resetStats()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg> Garbitu profila</button>
         </div>
       </div>
       <div id="syncNotice" class="feedback-box good hidden" style="margin-top:8px;padding:8px 12px;font-size:0.84rem;"></div>
@@ -519,7 +524,7 @@
           <span class="badge" id="qTypeBadge">Test</span>
         </div>
         <div style="display:flex;gap:10px;align-items:center;">
-          <span id="timerBox" class="badge hidden">⏱️ 00:00</span>
+          <span id="timerBox" class="badge hidden"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M10 2h4"/></svg> 00:00</span>
           <span id="liveScoreBox" class="badge good">✓ 0 · ✗ 0</span>
         </div>
       </div>
@@ -538,7 +543,7 @@
       <div id="qOpenArea" class="hidden">
         <textarea id="openUserText" placeholder="Idatzi hemen zure erantzuna (autoebaluaziorako)..."></textarea>
         <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;">
-          <button class="btn-primary" id="btnRevealModel" onclick="revealOpenAnswer()">👁️ Erakutsi erantzun eredua</button>
+          <button class="btn-primary" id="btnRevealModel" onclick="revealOpenAnswer()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Erakutsi erantzun eredua</button>
           <button class="btn-good hidden" id="btnMarkKnown" onclick="markOpenResult(true)">✓ Ondo nekien</button>
           <button class="btn-bad hidden" id="btnMarkReview" onclick="markOpenResult(false)">↻ Errepasatu behar dut</button>
         </div>
@@ -549,7 +554,7 @@
       <div class="quiz-nav">
         <button class="btn-secondary" id="btnPrev" onclick="prevQuestion()">← Aurrekoa</button>
         <div style="display:flex;gap:8px;">
-          <button class="btn-warn hidden" id="btnFinishExam" onclick="finishQuiz()">✅ Amaitu eta zuzendu</button>
+          <button class="btn-warn hidden" id="btnFinishExam" onclick="finishQuiz()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Amaitu eta zuzendu</button>
           <button class="btn-primary" id="btnNext" onclick="nextQuestion()">Hurrengoa →</button>
         </div>
       </div>
@@ -564,16 +569,16 @@
         <h2 id="resultHeadline" style="margin:4px 0;"></h2>
         <p id="resultSub" style="margin:0;color:var(--muted);"></p>
         <div style="margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-          <button class="btn-primary" onclick="startQuiz()">🔄 Sortu beste proba berri bat</button>
-          <button class="btn-warn hidden" id="btnRetryMissed" onclick="retrySessionMissed()">🎯 Errepasatu huts egindakoak bakarrik</button>
-          <button class="btn-secondary" onclick="goHome()">🏠 Menura itzuli</button>
+          <button class="btn-primary" onclick="startQuiz()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Sortu beste proba berri bat</button>
+          <button class="btn-warn hidden" id="btnRetryMissed" onclick="retrySessionMissed()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Errepasatu huts egindakoak bakarrik</button>
+          <button class="btn-secondary" onclick="goHome()"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Menura itzuli</button>
         </div>
       </div>
     </div>
 
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
-        <h3 style="margin:0;">📋 Galderen berrikuspen zehatza</h3>
+        <h3 class="section-heading" style="margin:0;"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> Galderen berrikuspen zehatza</h3>
         <div style="display:flex;gap:6px;">
           <button class="btn-secondary" style="padding:5px 10px;font-size:0.8rem;" onclick="renderReview('all')">Guztiak</button>
           <button class="btn-secondary" style="padding:5px 10px;font-size:0.8rem;" onclick="renderReview('wrong')">Huts egindakoak bakarrik</button>
@@ -585,7 +590,7 @@
   <!-- ==================== QR SINKRONIZAZIO MODALA ==================== -->
   <div id="qrModal" class="modal-backdrop hidden" onclick="if(event.target===this) closeQrSyncModal()">
     <div class="modal-box">
-      <h3 style="margin:0 0 4px 0;">📱 Eskaneatu mugikorrarekin</h3>
+      <h3 class="section-heading" style="margin:0 0 4px 0;"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3z"/><path d="M17 17h4v4h-4z"/></svg> Eskaneatu mugikorrarekin</h3>
       <p id="qrProfileInfo" style="margin:0 0 6px 0;font-size:0.84rem;color:var(--muted);"></p>
       <div class="qr-frame">
         <img id="qrImage" alt="QR sinkronizazio-kodea" />
@@ -594,7 +599,7 @@
         Ireki mugikorreko kamera eta eskaneatu QR hau: zure <strong>profila (izena barne) eta estatistika guztiak</strong> automatikoki kargatuko dira!
       </p>
       <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
-        <button class="btn-primary" onclick="copySyncLink()">📋 Kopiatu esteka</button>
+        <button class="btn-primary" onclick="copySyncLink()"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Kopiatu esteka</button>
         <button class="btn-secondary" onclick="closeQrSyncModal()">Itxi</button>
       </div>
     </div>
@@ -1558,7 +1563,7 @@ function getProfiles() {
     const list = JSON.parse(localStorage.getItem(LS_PROFILES_KEY));
     if (Array.isArray(list) && list.length > 0) return list;
   } catch {}
-  return [{ id: DEFAULT_PROFILE_ID, name: "👤 Nire profila" }];
+  return [{ id: DEFAULT_PROFILE_ID, name: "Nire profila" }];
 }
 function saveProfiles(list) { localStorage.setItem(LS_PROFILES_KEY, JSON.stringify(list)); }
 
@@ -1588,14 +1593,14 @@ function switchProfile(id) {
 function createProfile() {
   const raw = prompt("Idatzi erabiltzaile berriaren izena (adib. Mikel, Gonbidatua, 2. itzulia):");
   if (!raw || !raw.trim()) return;
-  const name = "👤 " + raw.trim();
+  const name = raw.trim();
   const id = "u_" + Date.now();
   const list = getProfiles();
   list.push({ id, name });
   saveProfiles(list);
   setActiveProfileId(id);
   renderHomeStats();
-  showSyncNotice(`✅ «${raw.trim()}» profila sortu da estatistika hutsekin! Beste profilen datuak bere horretan mantentzen dira.`);
+  showSyncNotice(`«${raw.trim()}» profila sortu da estatistika hutsekin. Beste profilen datuak bere horretan mantentzen dira.`);
 }
 
 function deleteCurrentProfile() {
@@ -1661,9 +1666,9 @@ function applySyncedPayload(decoded) {
   const { profileName, stats } = decoded;
   let label = "Nire profila";
   if (profileName) {
-    const fullName = "👤 " + profileName;
+    const fullName = profileName.replace(/^\u{1F464}\s*/u, "").trim();
     const list = getProfiles();
-    let existing = list.find(p => p.name.toLowerCase() === fullName.toLowerCase());
+    let existing = list.find(p => p.name.replace(/^\u{1F464}\s*/u, "").trim().toLowerCase() === fullName.toLowerCase());
     if (!existing) {
       existing = { id: "u_" + Date.now(), name: fullName };
       list.push(existing);
@@ -1696,7 +1701,7 @@ function openQrSyncModal() {
   const st = loadStats();
   const cur = getProfiles().find(p => p.id === getActiveProfileId());
   document.getElementById("qrProfileInfo").textContent =
-    `${cur ? cur.name : "👤 Nire profila"} · ${st.sessions} proba · ${st.totalGood}/${st.totalAns} zuzen`;
+    `${cur ? cur.name.replace(/^\u{1F464}\s*/u, "") : "Nire profila"} · ${st.sessions} proba · ${st.totalGood}/${st.totalAns} zuzen`;
   const img = document.getElementById("qrImage");
   const primarySrc = `https://api.qrserver.com/v1/create-qr-code/?size=260x260&ecc=L&margin=8&data=${encodeURIComponent(fullUrl)}`;
   const fallbackSrc = `https://quickchart.io/qr?size=260&ecLevel=L&text=${encodeURIComponent(fullUrl)}`;
@@ -1714,7 +1719,7 @@ function copySyncLink() {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(fullUrl).then(() => {
       closeQrSyncModal();
-      showSyncNotice("✅ Sinkronizazio-esteka arbelean kopiatuta! Ireki esteka mugikorrean eta zure profila + estatistikak automatikoki kargatuko dira.");
+      showSyncNotice("Sinkronizazio-esteka arbelean kopiatuta. Ireki esteka mugikorrean eta zure profila + estatistikak automatikoki kargatuko dira.");
     }).catch(() => prompt("Kopiatu esteka hau eta ireki mugikorrean:", fullUrl));
   } else {
     prompt("Kopiatu esteka hau eta ireki mugikorrean:", fullUrl);
@@ -1725,7 +1730,7 @@ function exportStatsCode() {
   const code = encodeStatsB64(loadStats());
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(code).then(() => {
-      showSyncNotice("✅ Aurrerapen-kodea kopiatuta! Beste gailuan sakatu «📥 Inportatu» eta itsatsi kodea.");
+      showSyncNotice("Aurrerapen-kodea kopiatuta. Beste gailuan sakatu «Inportatu» eta itsatsi kodea.");
     }).catch(() => prompt("Kopiatu zure aurrerapen-kodea:", code));
   } else {
     prompt("Kopiatu zure aurrerapen-kodea:", code);
@@ -1739,9 +1744,9 @@ function importStatsCode() {
     const token = raw.includes("sync=") ? raw.split("sync=")[1].split("&")[0] : raw;
     const decoded = decodeStatsB64(token);
     const label = applySyncedPayload(decoded);
-    showSyncNotice(`✅ «${label}» profila ongi inportatu da! (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen)`);
+    showSyncNotice(`«${label}» profila ongi inportatu da (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen).`);
   } catch (e) {
-    alert("❌ Ezin izan da kodea irakurri. Ziurtatu kode osoa kopiatu duzula.");
+    alert("Ezin izan da kodea irakurri. Ziurtatu kode osoa kopiatu duzula.");
   }
 }
 
@@ -1755,7 +1760,7 @@ function importStatsCode() {
       if (history.replaceState) {
         history.replaceState(null, "", location.pathname);
       }
-      setTimeout(() => showSyncNotice(`✅ «${label}» profila eta estatistikak automatikoki sinkronizatu dira! (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen)`), 150);
+      setTimeout(() => showSyncNotice(`«${label}» profila eta estatistikak automatikoki sinkronizatu dira (${decoded.stats.sessions} proba, ${decoded.stats.totalGood}/${decoded.stats.totalAns} zuzen).`), 150);
     }
   } catch (e) { /* ignore malformed sync */ }
 })();
@@ -1763,14 +1768,14 @@ function importStatsCode() {
 function toggleTheme() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
   document.documentElement.setAttribute("data-theme", isDark ? "light" : "dark");
-  document.getElementById("btnTheme").textContent = isDark ? "🌙 Gai iluna" : "☀️ Gai argia";
+  document.getElementById("btnTheme").innerHTML = isDark ? '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Gai iluna' : '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Gai argia';
   localStorage.setItem("ig_theme", isDark ? "light" : "dark");
 }
 (function initTheme() {
   const t = localStorage.getItem("ig_theme");
   if (t === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
-    document.getElementById("btnTheme").textContent = "☀️ Gai argia";
+    document.getElementById("btnTheme").innerHTML = '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Gai argia';
   }
 })();
 
@@ -1801,7 +1806,7 @@ function renderHomeStats() {
   const activeId = getActiveProfileId();
   const sel = document.getElementById("selProfile");
   if (sel) {
-    sel.innerHTML = profiles.map(p => `<option value="${escHtml(p.id)}" ${p.id === activeId ? "selected" : ""}>${escHtml(p.name)}</option>`).join("");
+    sel.innerHTML = profiles.map(p => `<option value="${escHtml(p.id)}" ${p.id === activeId ? "selected" : ""}>${escHtml(p.name.replace(/^\u{1F464}\s*/u, ""))}</option>`).join("");
   }
   const delBtn = document.getElementById("btnDelProfile");
   if (delBtn) delBtn.classList.toggle("hidden", activeId === DEFAULT_PROFILE_ID);
@@ -1890,7 +1895,7 @@ function startQuiz(customDeck = null) {
 function updateTimerDisplay() {
   const m = String(Math.floor(state.timerSec / 60)).padStart(2, "0");
   const s = String(state.timerSec % 60).padStart(2, "0");
-  document.getElementById("timerBox").textContent = `⏱️ ${m}:${s}`;
+  document.getElementById("timerBox").innerHTML = `<svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M10 2h4"/></svg> ${m}:${s}`;
 }
 
 function renderDots() {
@@ -1955,7 +1960,7 @@ function renderQuestion() {
     document.getElementById("btnMarkReview").classList.toggle("hidden", !revealed);
     if (revealed) {
       fb.className = "feedback-box " + (a.correct === true ? "good" : a.correct === false ? "bad" : "");
-      fb.innerHTML = `<strong class="fb-head">📌 Erantzun eredua:</strong><div style="white-space:pre-line;">${escHtml(q.modelAns)}</div>`;
+      fb.innerHTML = `<strong class="fb-head"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> Erantzun eredua:</strong><div style="white-space:pre-line;">${escHtml(q.modelAns)}</div>`;
       fb.classList.remove("hidden");
     }
   } else {
@@ -1979,13 +1984,13 @@ function renderQuestion() {
 
     if (a && !isExam) {
       fb.className = "feedback-box " + (a.correct ? "good" : "bad");
-      fb.innerHTML = `<strong class="fb-head">${a.correct ? "✅ Zuzena!" : "❌ Okerra"}</strong>${escHtml(q.exp)}`;
+      fb.innerHTML = `<strong class="fb-head">${a.correct ? '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Zuzena' : '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Okerra'}</strong>${escHtml(q.exp)}`;
       fb.classList.remove("hidden");
     }
   }
 
   document.getElementById("btnPrev").disabled = state.idx === 0;
-  document.getElementById("btnNext").textContent = state.idx === state.deck.length - 1 ? "Amaitu proba ✅" : "Hurrengoa →";
+  document.getElementById("btnNext").innerHTML = state.idx === state.deck.length - 1 ? '<svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Amaitu proba' : "Hurrengoa →";
   renderDots();
   updateLiveScore();
 }
@@ -2050,10 +2055,10 @@ function finishQuiz() {
   circle.className = "score-circle " + (pass ? "pass" : "fail");
   document.getElementById("scoreNum").textContent = score10;
   document.getElementById("resultHeadline").textContent =
-    score10 >= 9 ? "🏆 Bikain! Azterketarako prest-prest zaude!" :
-    score10 >= 7 ? "👏 Oso ondo! Oinarria ongi menperatuta daukazu." :
-    score10 >= 5 ? "👍 Gaindituta! Errepasatu huts egindako puntuak nota igotzeko." :
-    "💪 Jarraitu praktikatzen! Aztertu huts egindakoak eta saiatu berriro.";
+    score10 >= 9 ? "Bikain! Azterketarako prest-prest zaude." :
+    score10 >= 7 ? "Oso ondo! Oinarria ongi menperatuta daukazu." :
+    score10 >= 5 ? "Gaindituta! Errepasatu huts egindako puntuak nota igotzeko." :
+    "Jarraitu praktikatzen. Aztertu huts egindakoak eta saiatu berriro.";
 
   const timeStr = state.mode === "exam" ? ` · Denbora: ${Math.floor(state.timerSec/60)}m ${state.timerSec%60}s` : "";
   document.getElementById("resultSub").textContent = `${goodCount} zuzen ${state.deck.length} galderatik (${Math.round((goodCount/state.deck.length)*100)}%)${timeStr}`;
@@ -2079,7 +2084,7 @@ function renderReview(filter) {
   });
 
   if (!items.length) {
-    list.innerHTML = `<p style="color:var(--good);font-weight:700;">🎉 Ez duzu huts bakar bat ere egin!</p>`;
+    list.innerHTML = `<p style="color:var(--good);font-weight:700;"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Ez duzu huts bakar bat ere egin!</p>`;
     return;
   }
 
@@ -2106,7 +2111,7 @@ function renderReview(filter) {
       <div style="font-size:0.86rem;">
         <div><strong>Zure erantzuna:</strong> ${escHtml(chosenTxt)}</div>
         ${!ok ? `<div style="color:var(--good);font-weight:700;"><strong>Erantzun zuzena:</strong> ${escHtml(rightTxt)}</div>` : ''}
-        <div style="color:var(--muted);margin-top:4px;">💡 ${escHtml(q.exp)}</div>
+        <div style="color:var(--muted);margin-top:4px;"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> ${escHtml(q.exp)}</div>
       </div>
     </div>`;
   }).join("");
