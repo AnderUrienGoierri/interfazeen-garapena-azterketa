@@ -371,6 +371,21 @@
   .ico-lg { display: inline-block; color: var(--primary); margin-bottom: 6px; }
   .section-heading { display: inline-flex; align-items: center; gap: 7px; }
 
+
+  /* Syntax Highlighting (VS Code Dark+ / IntelliJ estiloa) */
+  .hl-kw   { color: #c586c0; font-weight: 700; }
+  .hl-ty   { color: #4ec9b0; }
+  .hl-fn   { color: #dcdcaa; }
+  .hl-str  { color: #ce9178; }
+  .hl-num  { color: #b5cea8; }
+  .hl-cm   { color: #6a9955; font-style: italic; }
+  .hl-ann  { color: #fbbf24; font-weight: 700; }
+  .hl-tag  { color: #569cd6; font-weight: 700; }
+  .hl-attr { color: #9cdcfe; }
+  .fix-code-wrap { margin-top: 10px; }
+  .fix-code-title { font-size: 0.8rem; font-weight: 800; color: var(--good); margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  .fix-code-wrap pre.q-code { margin: 0; border-left: 4px solid var(--good); font-size: 0.8rem; }
+
   /* QR Sync Modal */
   .modal-backdrop {
     position: fixed;
@@ -966,6 +981,142 @@ const SVGS = {
     <rect x="198" y="24" width="32" height="70" rx="3" fill="#dbeafe"/><text x="214" y="62" text-anchor="middle" font-size="7.5" fill="#1e3a8a">L</text>
     <rect x="234" y="24" width="86" height="70" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/><text x="277" y="62" text-anchor="middle" font-size="8" font-weight="bold" fill="#166534">CENTER (zabaldu)</text>
   </svg>`
+,
+
+  h4_inconsistent: `<div style="display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:10px 12px;width:155px;text-align:left;">
+      <div style="font-size:0.72rem;font-weight:800;color:#64748b;margin-bottom:8px;">1. Pantaila</div>
+      <div style="text-align:right;"><span style="background:#2563eb;color:#fff;padding:4px 10px;border-radius:5px;font-size:0.78rem;font-weight:700;">Gorde</span></div>
+    </div>
+    <div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:10px 12px;width:155px;text-align:left;">
+      <div style="font-size:0.72rem;font-weight:800;color:#64748b;margin-bottom:8px;">2. Pantaila</div>
+      <div style="text-align:left;"><span style="background:#16a34a;color:#fff;padding:4px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;">Bidali datuak</span></div>
+    </div>
+  </div>`,
+
+  h8_minimal: `<div style="display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:8px;width:160px;text-align:center;">
+      <div style="font-size:0.7rem;color:#64748b;font-weight:700;margin-bottom:4px;">A bertsioa</div>
+      <div style="background:#fef08a;font-size:0.65rem;padding:2px;margin-bottom:3px;">ESKAINTZA %90!!</div>
+      <div style="background:#fecaca;font-size:0.65rem;padding:2px;margin-bottom:3px;">BERRIAK · EGURALDIA · IRAGARKIA</div>
+      <div style="border:1px solid #94a3b8;padding:3px;font-size:0.7rem;color:#64748b;margin-bottom:3px;">Bilatu...</div>
+      <div style="background:#ddd6fe;font-size:0.65rem;padding:2px;">POP-UP · BANNER · COOKIE</div>
+    </div>
+    <div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:14px 10px;width:160px;text-align:center;display:flex;flex-direction:column;justify-content:center;">
+      <div style="font-size:0.7rem;color:#64748b;font-weight:700;margin-bottom:10px;">B bertsioa</div>
+      <div style="border:1.5px solid #2563eb;border-radius:16px;padding:5px 10px;font-size:0.75rem;color:#64748b;">Bilatu...</div>
+    </div>
+  </div>`,
+
+  btn_states: `<div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:12px 14px;display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:0.78rem;font-weight:700;">
+    <span style="background:#2563eb;color:#fff;padding:6px 12px;border-radius:6px;">Normala</span>
+    <span style="background:#1d4ed8;color:#fff;padding:6px 12px;border-radius:6px;box-shadow:0 3px 8px rgba(37,99,235,0.35);">Gainean (Hover)</span>
+    <span style="background:#1e3a8a;color:#fff;padding:6px 12px;border-radius:6px;">Sakatuta</span>
+    <span style="background:#cbd5e1;color:#64748b;padding:6px 12px;border-radius:6px;">Desgaituta</span>
+  </div>`,
+
+  proto_flow: `<svg width="340" height="92" viewBox="0 0 340 92" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="10" width="90" height="72" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 2"/>
+    <rect x="14" y="18" width="74" height="10" fill="#cbd5e1"/><rect x="14" y="34" width="34" height="38" fill="#e2e8f0"/><rect x="54" y="34" width="34" height="38" fill="#e2e8f0"/>
+    <text x="51" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#475569">1. Zirriborroa</text>
+    <text x="108" y="48" font-size="14" font-weight="bold" fill="#2563eb">→</text>
+    <rect x="124" y="10" width="90" height="72" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="132" y="18" width="74" height="12" rx="2" fill="#1e3a8a"/><rect x="132" y="35" width="34" height="34" rx="3" fill="#93c5fd"/><rect x="172" y="35" width="34" height="34" rx="3" fill="#fde68a"/>
+    <text x="169" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#1e3a8a">2. Estatikoa</text>
+    <text x="226" y="48" font-size="14" font-weight="bold" fill="#16a34a">→</text>
+    <rect x="242" y="10" width="92" height="72" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <rect x="250" y="18" width="76" height="12" rx="2" fill="#166534"/><rect x="258" y="40" width="60" height="20" rx="5" fill="#16a34a"/><text x="288" y="53" text-anchor="middle" font-size="8" font-weight="bold" fill="#fff">Klikagarria</text>
+    <text x="288" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="#166534">3. Nabigagarria</text>
+  </svg>`,
+
+  rgb_cmyk: `<svg width="310" height="104" viewBox="0 0 310 104" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="4" width="144" height="96" rx="8" fill="#0f172a"/>
+    <circle cx="62" cy="44" r="22" fill="#ef4444" fill-opacity="0.75"/><circle cx="88" cy="44" r="22" fill="#22c55e" fill-opacity="0.75"/><circle cx="75" cy="64" r="22" fill="#3b82f6" fill-opacity="0.75"/>
+    <circle cx="75" cy="50" r="7" fill="#ffffff"/>
+    <text x="76" y="95" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#e2e8f0">Argia → Zuria</text>
+    <rect x="162" y="4" width="144" height="96" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="220" cy="44" r="22" fill="#06b6d4" fill-opacity="0.65"/><circle cx="246" cy="44" r="22" fill="#ec4899" fill-opacity="0.65"/><circle cx="233" cy="64" r="22" fill="#facc15" fill-opacity="0.75"/>
+    <circle cx="233" cy="50" r="7" fill="#0f172a"/>
+    <text x="234" y="95" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#0f172a">Pigmentua → Beltza</text>
+  </svg>`,
+
+  hsl_lightness: `<svg width="320" height="68" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,0%)"/><text x="29" y="56" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#475569">L=0%</text>
+    <rect x="58" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,25%)"/><text x="79" y="56" text-anchor="middle" font-size="8.5" fill="#475569">25%</text>
+    <rect x="108" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,50%)" stroke="#0f172a" stroke-width="2"/><text x="129" y="56" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1d4ed8">L=50%</text>
+    <rect x="158" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,70%)"/><text x="179" y="56" text-anchor="middle" font-size="8.5" fill="#475569">70%</text>
+    <rect x="208" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,88%)"/><text x="229" y="56" text-anchor="middle" font-size="8.5" fill="#475569">88%</text>
+    <rect x="258" y="8" width="42" height="34" rx="4" fill="hsl(220,90%,100%)" stroke="#cbd5e1"/><text x="279" y="56" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#475569">L=100%</text>
+  </svg>`,
+
+  wheel_analog: `<svg width="210" height="122" viewBox="0 0 210 122" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="105" cy="61" r="46" fill="none" stroke="#e2e8f0" stroke-width="15"/>
+    <path d="M 105 15 A 46 46 0 0 1 151 61" fill="none" stroke="#2563eb" stroke-width="15"/>
+    <circle cx="105" cy="15" r="8" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+    <circle cx="137" cy="28" r="8" fill="#0284c7" stroke="#fff" stroke-width="2"/>
+    <circle cx="151" cy="61" r="8" fill="#06b6d4" stroke="#fff" stroke-width="2"/>
+    <text x="105" y="65" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#0f172a">Ondoz ondo</text>
+  </svg>`,
+
+  wcag_aa_aaa: `<div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px 16px;display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:0.86rem;font-weight:700;">
+    <span style="color:#949494;">#949494 (3,03:1)</span>
+    <span style="color:#767676;">#767676 (4,54:1)</span>
+    <span style="color:#595959;">#595959 (7,00:1)</span>
+  </div>`,
+
+  mistake_archive: `<div style="background:#fff;color:#0f172a;border:1px solid #cbd5e1;border-radius:8px;padding:12px 16px;display:inline-block;text-align:left;width:240px;">
+    <div style="font-size:0.78rem;color:#64748b;margin-bottom:6px;">Erabiltzailearen helburua: argazkia betiko ezabatzea</div>
+    <div style="border:1px solid #e2e8f0;border-radius:6px;overflow:hidden;font-size:0.84rem;">
+      <div style="padding:7px 10px;background:#dbeafe;color:#1e3a8a;font-weight:700;">Artxibatu (hau sakatu du)</div>
+      <div style="padding:7px 10px;border-top:1px solid #e2e8f0;color:#dc2626;">Ezabatu</div>
+    </div>
+  </div>`,
+
+  usb_physical: `<svg width="260" height="86" viewBox="0 0 260 86" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="6" width="248" height="74" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="26" y="24" width="66" height="38" rx="4" fill="#334155"/><rect x="92" y="30" width="26" height="26" fill="#cbd5e1" stroke="#475569"/>
+    <rect x="92" y="30" width="26" height="10" fill="#2563eb"/>
+    <text x="136" y="47" font-size="13" font-weight="bold" fill="#0f172a">→</text>
+    <rect x="156" y="26" width="76" height="34" rx="4" fill="#1e293b"/>
+    <rect x="166" y="34" width="56" height="18" fill="#0f172a" stroke="#64748b"/>
+    <rect x="166" y="44" width="56" height="8" fill="#2563eb"/>
+  </svg>`,
+
+  hbox_region_svg: `<svg width="330" height="72" viewBox="0 0 330 72" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="10" width="318" height="52" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+    <rect x="16" y="20" width="84" height="32" rx="5" fill="#ffffff" stroke="#1e3a8a"/><text x="58" y="40" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e3a8a">Label (Titulua)</text>
+    <rect x="108" y="20" width="114" height="32" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-dasharray="5 3"/><text x="165" y="40" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1d4ed8">← Hutsune elastikoa →</text>
+    <rect x="230" y="20" width="84" height="32" rx="5" fill="#2563eb"/><text x="272" y="40" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">Aldatu APIra</text>
+  </svg>`,
+
+  mvc_layers_svg: `<svg width="340" height="92" viewBox="0 0 340 92" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="22" width="84" height="48" rx="7" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.6"/>
+    <text x="50" y="43" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e3a8a">.fxml</text>
+    <text x="50" y="57" text-anchor="middle" font-size="8" fill="#1e40af">Interfazea</text>
+    <text x="106" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">↔</text>
+    <rect x="122" y="22" width="96" height="48" rx="7" fill="#fef3c7" stroke="#d97706" stroke-width="1.8"/>
+    <text x="170" y="43" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#92400e">???</text>
+    <text x="170" y="57" text-anchor="middle" font-size="8" fill="#b45309">Zubia (@FXML)</text>
+    <text x="232" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">↔</text>
+    <rect x="248" y="22" width="84" height="48" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="290" y="43" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">Model</text>
+    <text x="290" y="57" text-anchor="middle" font-size="8" fill="#15803d">DB / API</text>
+  </svg>`,
+
+  times_scale_svg: `<svg width="330" height="82" viewBox="0 0 330 82" xmlns="http://www.w3.org/2000/svg">
+    <line x1="24" y1="36" x2="306" y2="36" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="52" cy="36" r="10" fill="#16a34a"/><text x="52" y="18" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">0,1 s</text><text x="52" y="64" text-anchor="middle" font-size="8" fill="#475569">Berehalakoa</text>
+    <circle cx="165" cy="36" r="10" fill="#d97706"/><text x="165" y="18" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#92400e">1,0 s</text><text x="165" y="64" text-anchor="middle" font-size="8" fill="#475569">???</text>
+    <circle cx="278" cy="36" r="10" fill="#dc2626"/><text x="278" y="18" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#991b1b">10 s</text><text x="278" y="64" text-anchor="middle" font-size="8" fill="#475569">Arretaren muga</text>
+  </svg>`,
+
+  hotel_form_svg: `<svg width="280" height="120" viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="6" width="268" height="108" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="18" y="26" font-size="8.5" font-weight="bold" fill="#334155">Sarrera:</text><rect x="82" y="14" width="178" height="18" rx="3" fill="#eff6ff" stroke="#2563eb"/><text x="90" y="26" font-size="8" fill="#1d4ed8">2026-11-28 (DatePicker)</text>
+    <text x="18" y="52" font-size="8.5" font-weight="bold" fill="#334155">Irteera:</text><rect x="82" y="40" width="178" height="18" rx="3" fill="#fee2e2" stroke="#dc2626"/><text x="90" y="52" font-size="8" fill="#991b1b">2026-11-25 (Sarrera baino lehen!)</text>
+    <text x="18" y="78" font-size="8.5" font-weight="bold" fill="#334155">Logela:</text><rect x="82" y="66" width="178" height="18" rx="3" fill="#f8fafc" stroke="#94a3b8"/><text x="90" y="78" font-size="8" fill="#475569">Bikoitza ▾ (ComboBox)</text>
+    <rect x="190" y="92" width="70" height="16" rx="4" fill="#cbd5e1"/><text x="225" y="103" text-anchor="middle" font-size="8" font-weight="bold" fill="#64748b">Erreserbatu</text>
+  </svg>`
 
 };
 
@@ -1253,7 +1404,7 @@ const QUESTIONS = [
     code:`<!-- erreserbak-view.fxml -->\n<Button onAction="#onKargatuDatuak" text="Kargatu" />\n\n// ErreserbakController.java\n@FXML private void onKargatuClick() { kargatuDatuak(); }`,
     q:"BUG HUNT: Zer gertatuko da aplikazioa exekutatzean kode honekin?",
     opts:["LoadException emango du, metodoaren izenak ez datozelako bat.", "Ondo funtzionatuko du, JavaFX-ek antzeko izenak lotzen dituelako.", "Konpilazio-errorea emango du FXML fitxategia Javara pasatzean.", "Botoia pantailan agertuko da baina ez du ezer egingo klikatzean."],
-    ans:0, exp:"FXML-ko onAction=\"#metodoIzena\" eta Kontrolatzaileko @FXML metodoaren izenak ZEHATZ berdinak izan behar dira."
+    ans:0, exp:"FXML-ko onAction=\"#metodoIzena\" eta Kontrolatzaileko @FXML metodoaren izenak ZEHATZ berdinak izan behar dira.", fixCode:"<!-- erreserbak-view.fxml -->\n<Button onAction=\"#onKargatuClick\" text=\"Kargatu\" />\n\n// ErreserbakController.java\n@FXML private void onKargatuClick() { kargatuDatuak(); }"
   },
   { id:"m6", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL","CODE"],
     q:"Zergatik balio du erreserbak-view.fxml bista BAKARRAK bai MySQL datu-baseko bai .NET REST APIko datuak erakusteko?",
@@ -1306,7 +1457,7 @@ const QUESTIONS = [
     code:`scene.widthProperty().addListener((obs, oldVal, newVal) -> {\n    rightPanel.setVisible(newVal.doubleValue() >= 1000);\n});`,
     q:"BUG HUNT: Leihoa 900 px-era estutzean rightPanel desagertzen da, baina CENTER taula EZ da zabaltzen bere hutsunea betetzeko. Zer falta da?",
     opts:["rightPanel.setManaged(newVal.doubleValue() >= 1000);", "stage.setFullScreen(newVal.doubleValue() < 1000);", "rightPanel.getChildren().clear();", "stage.setMinWidth(1000);"],
-    ans:0, exp:"setVisible(false)-k elementua ezkutatzen du baina layout-ean espazioa gordetzen jarraitzen du; setManaged(false)-k espazio hori liberatzen du!"
+    ans:0, exp:"setVisible(false)-k elementua ezkutatzen du baina layout-ean espazioa gordetzen jarraitzen du; setManaged(false)-k espazio hori liberatzen du!", fixCode:"scene.widthProperty().addListener((obs, oldVal, newVal) -> {\n    boolean erakutsi = newVal.doubleValue() >= 1000;\n    rightPanel.setVisible(erakutsi);\n    rightPanel.setManaged(erakutsi); // Espazioa liberatzeko!\n});"
   },
   { id:"p8", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL","CODE"],
     code:`<HBox alignment="CENTER_LEFT" spacing="10.0">\n    <Label fx:id="lblIzenburua" text="Erreserbak" />\n    <Region HBox.hgrow="ALWAYS" />\n    <Button text="Aldatu APIra ->" />\n</HBox>`,
@@ -1757,22 +1908,22 @@ const QUESTIONS = [
   { id:"cd1", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<BorderPane xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\">\n    <bottom><Button onAction=\"#onKargatuClick\" text=\"Kargatu\" /></bottom>\n</BorderPane>",
     q:"BUG HUNT: Zer falta da <BorderPane> etiketan eta zer gertatuko da kargatzean?",
     opts:["fx:controller falta da; LoadException emango du onAction lotzean.", "fx:id falta da; botoia berdez agertuko da.", "spacing falta da; leihoa hutsik irekiko da.", "prefWidth falta da; ezin da konpilatu."],
-    ans:0, exp:"fx:controller gabe FXMLLoader-ek ez daki zein Java klasetan bilatu #onKargatuClick metodoa eta LoadException jaurtitzen du."
+    ans:0, exp:"fx:controller gabe FXMLLoader-ek ez daki zein Java klasetan bilatu #onKargatuClick metodoa eta LoadException jaurtitzen du.", fixCode:"<BorderPane xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\"\n            fx:controller=\"org.example.model_view_controller_ariketa.controller.ErreserbakController\">\n    <bottom><Button onAction=\"#onKargatuClick\" text=\"Kargatu\" /></bottom>\n</BorderPane>"
   },
   { id:"cd2", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"public class ErreserbakController {\n    private Label lblEgoera; // <- kontuz lerro honekin!\n    @FXML public void initialize() {\n        lblEgoera.setText(\"Kargatzen...\");\n    }\n}",
     q:"BUG HUNT: Zer salbuespen gertatuko da initialize() exekutatzean?",
     opts:["NullPointerException, @FXML gabe lblEgoera null delako.", "SQLException, datu-basea itxita dagoelako.", "ClassNotFoundException, Label klasea falta delako.", "StackOverflowError, begizta amaigabea delako."],
-    ans:0, exp:"Aldagaia private denez eta @FXML falta denez, FXMLLoader-ek ez du FXMLko Label-a injektatzen eta null geratzen da."
+    ans:0, exp:"Aldagaia private denez eta @FXML falta denez, FXMLLoader-ek ez du FXMLko Label-a injektatzen eta null geratzen da.", fixCode:"public class ErreserbakController {\n    @FXML private Label lblEgoera; // @FXML injekziorako!\n    @FXML public void initialize() {\n        lblEgoera.setText(\"Kargatzen...\");\n    }\n}"
   },
   { id:"cd3", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"// ErreserbakController.java\nzutabeEmaila.setCellValueFactory(new PropertyValueFactory<>(\"email\"));\n\n// Erreserba.java\npublic String getBazkideaEmaila() { return bazkideaEmaila; }",
     q:"BUG HUNT: Aplikazioa abiaraztean ez da kraskatzen, baina «Emaila» zutabea guztiz hutsik agertzen da. Zergatik?",
     opts:["PropertyValueFactory-k getEmail() bilatzen du, ez getBazkideaEmaila().", "TableView-k ezin dituelako String motako datuak erakutsi.", "Emaila zutabeak prefWidth handiagoa behar duelako.", "getter metodoak private izan behar duelako."],
-    ans:0, exp:"PropertyValueFactory<>(\"bazkideaEmaila\") jarri behar da Erreserba.getBazkideaEmaila() metodoarekin bat etortzeko."
+    ans:0, exp:"PropertyValueFactory<>(\"bazkideaEmaila\") jarri behar da Erreserba.getBazkideaEmaila() metodoarekin bat etortzeko.", fixCode:"// ErreserbakController.java (getter izenarekin bat etorriz)\nzutabeEmaila.setCellValueFactory(new PropertyValueFactory<>(\"bazkideaEmaila\"));\n\n// Erreserba.java\npublic String getBazkideaEmaila() { return bazkideaEmaila; }"
   },
   { id:"cd4", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"FXMLLoader loader = new FXMLLoader(App.class.getResource(\"erreserbak.fxml\"));\nScene scene = new Scene(loader.load());",
     q:"BUG HUNT: Fitxategiaren benetako izena «erreserbak-view.fxml» da. Zer gertatuko da loader.load() deitzean?",
     opts:["IllegalStateException («Location is not set»), getResource()-k null itzultzen duelako.", "JavaFX-ek antzeko izeneko fitxategia irekiko du.", "Leiho hutsa irekiko du errorerik eman gabe.", "pom.xml fitxategiak izena zuzenduko du."],
-    ans:0, exp:"getResource()-k fitxategia aurkitzen ez badu null bueltatzen du, eta FXMLLoader-ek «Location is not set» errorea ematen du."
+    ans:0, exp:"getResource()-k fitxategia aurkitzen ez badu null bueltatzen du, eta FXMLLoader-ek «Location is not set» errorea ematen du.", fixCode:"// Fitxategiaren izen zehatza resources/ karpetan:\nFXMLLoader loader = new FXMLLoader(App.class.getResource(\"erreserbak-view.fxml\"));\nScene scene = new Scene(loader.load());"
   },
   { id:"cd5", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"stage.setScene(scene);\nstage.setMaximized(true);\nstage.setMinWidth(800);\nstage.setMinHeight(500);\nstage.show();",
     q:"Zertarako jartzen dira setMinWidth(800) eta setMinHeight(500) lerroak setMaximized(true)-rekin batera?",
@@ -1847,7 +1998,7 @@ const QUESTIONS = [
   { id:"cd19", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<BorderPane>\n    <left>\n        <Button text=\"Sarrera\" />\n        <Button text=\"Irteera\" />\n    </left>\n</BorderPane>",
     q:"BUG HUNT: Zergatik emango du errorea FXML kode honek kargatzean?",
     opts:["BorderPane-ko <left> eremuak nodo BAKARRA onartzen duelako (VBox batean sartu behar dira).", "BorderPane-k <top> eta <bottom> derrigorrezkoak dituelako.", "Button elementuek ezin dutelako testu bakarra eduki.", "<left> etiketa letra larriz idatzi behar delako (<LEFT>)."],
-    ans:0, exp:"BorderPane-ren 5 eremuetako bakoitzak haur bakar bat har dezake; botoi bat baino gehiago jartzeko VBox edo HBox behar da."
+    ans:0, exp:"BorderPane-ren 5 eremuetako bakoitzak haur bakar bat har dezake; botoi bat baino gehiago jartzeko VBox edo HBox behar da.", fixCode:"<BorderPane>\n    <left>\n        <VBox spacing=\"8.0\">\n            <Button text=\"Sarrera\" />\n            <Button text=\"Irteera\" />\n        </VBox>\n    </left>\n</BorderPane>"
   },
   { id:"cd20", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"module org.example.model_view_controller_ariketa {\n    requires javafx.controls;\n    requires javafx.fxml;\n    opens org.example.model_view_controller_ariketa.controller to javafx.fxml;\n    opens org.example.model_view_controller_ariketa.model to javafx.base, com.google.gson;\n}",
     q:"Zergatik irekitzen da «model» paketea BI modulutara (javafx.base eta com.google.gson) module-info.java-n?",
@@ -1863,6 +2014,158 @@ const QUESTIONS = [
     q:"Noiz erakusten du JavaFX-ek TableView baten barruko <placeholder> etiketa?",
     opts:["Taularen item-zerrenda hutsik dagoenean (0 errenkada).", "Taulak 100 errenkada baino gehiago dituenean.", "Erabiltzaileak zutabe baten goiburuan klik egitean.", "Aplikazioa itxi baino segundo bat lehenago."],
     ans:0, exp:"Placeholder-a taula hutsik dagoenean agertzen da; horregatik erabiltzen dugu APIa itzalita dagoenean abisu gorria erdian erakusteko."
+  },
+
+  // ---------- IRUDI ETA KODE GALDERA GEHIGARRIAK (+30, SYNTAX HIGHLIGHT + FIXCODE) ----------
+  { id:"v19", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.h4_inconsistent,
+    q:"Aplikazio bereko 1. eta 2. pantailan ekintza bera bi izen, kolore eta kokapen ezberdinekin agertzen da. Zein heuristiko urratzen da?",
+    opts:["H4 · Koherentzia eta estandarrak.", "H1 · Sistemaren egoeraren ikusgarritasuna.", "H7 · Malgutasuna eta erabilera-eraginkortasuna.", "H10 · Laguntza-sistema eta dokumentazioa."],
+    ans:0, exp:"Barne-koherentzia (H4): aplikazio berean ekintza berak beti izen, estilo eta kokapen berdina izan behar du."
+  },
+  { id:"v20", topic:"T2_NIELSEN", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.h8_minimal,
+    q:"Konparatu A eta B bertsioak. Zein Nielsen heuristiko betetzen du B bertsioak zarata bisuala kenduz?",
+    opts:["H8 · Diseinu estetiko eta minimalista.", "H3 · Erabiltzailearen kontrola eta askatasuna.", "H5 · Erroreen prebentzio sistematikoa.", "H9 · Erroreak ezagutu eta konpontzea."],
+    ans:0, exp:"H8: beharrezko informazioa bakarrik erakutsi (Google adibidea); informazio gehigarriak garrantzitsuena ezkutatzen du."
+  },
+  { id:"v21", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.btn_states,
+    q:"Irudian botoi baten 4 egoerak definitu dira. Estilo Gida baten zein ataletan jasotzen da hau?",
+    opts:["Elementu interaktiboak.", "Ikonografia-bilduma.", "Idazketa-estiloa (tonua).", "Irudien estiloa eta formatua."],
+    ans:0, exp:"Estilo gidaren 4. atala (Elementu interaktiboak): botoiak, menuak eta estekak egoera guztiekin (normala, hover, sakatuta, desgaituta)."
+  },
+  { id:"v22", topic:"T4_DISEINUA", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.proto_flow,
+    q:"Irudiak 3. diseinu-faseko 3 prototipo-mailak erakusten ditu (1 → 2 → 3). Zein da haien izen zuzena ordenan?",
+    opts:["Wireframe → Mockup → Prototipo interaktiboa.", "Mockup → Wireframe → Prototipo interaktiboa.", "Estilo gida → Wireframe → Mockup estatikoa.", "Diseinu sistema → Mockup → Kode finala."],
+    ans:0, exp:"1. Wireframe (fideltasun baxua), 2. Mockup (itxura bisual estatikoa), 3. Prototipo interaktiboa (Figma/Penpot)."
+  },
+  { id:"v23", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.rgb_cmyk,
+    q:"Ezkerrean argia nahastean zuria sortzen da; eskuinean pigmentuak nahastean beltza. Zein dira bi sintesiak?",
+    opts:["RGB (gehigarria) eta CMYK (kengarria).", "CMYK (gehigarria) eta RGB (kengarria).", "HSL (gehigarria) eta HEX (kengarria).", "HEX (pantailak) eta HSB (inprimaketa)."],
+    ans:0, exp:"Pantailak RGB sintesi gehigarria dira (argia → zuria); inprimaketa CMYK sintesi kengarria (pigmentua → beltza)."
+  },
+  { id:"v24", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.hsl_lightness,
+    q:"Irudiko eskala HSL ereduan kolore beraren argitasuna (L) aldatuz lortu da. Zein paleta-mota sortzen da horrela?",
+    opts:["Banaketa monokromatikoa.", "Banaketa osagarria (180°).", "Triada harmonikoa (120°).", "Banaketa karratua (90°)."],
+    ans:0, exp:"Ñabardura bakarra aukeratu eta argitasuna (Lightness) aldatuz tinta eta itzal monokromatikoak lortzen dira."
+  },
+  { id:"v25", topic:"T6_KOLOREAK", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.wheel_analog,
+    q:"Zirkulu kromatikoan ondoz ondo dauden 3 urdin/zian kolore hauek zein harmonia osatzen dute?",
+    opts:["Banaketa analogoa (kontraste leunekoa).", "Banaketa osagarria (kontraste maximoa).", "Triada (120°-ra dauden koloreak).", "Banaketa karratua (90°-ko lau kolore)."],
+    ans:0, exp:"Kolore analogoak zirkuluan elkarren ondoan daude: oso harmonikoak dira baina kontraste handirik ez dute."
+  },
+  { id:"v26", topic:"T7_IRISG", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.wcag_aa_aaa,
+    q:"Atzeko plano zuri (#FFFFFF) baten gainean, zeinek gainditzen ditu WCAG AA (≥4,5:1) eta AAA (≥7:1) testu arruntean?",
+    opts:["#767676-k AA gainditzen du; #595959-k AA eta AAA biak.", "Hirurek gainditzen dituzte AA eta AAA mailak batera.", "#949494-k AA gainditzen du eta #767676-k AAA maila.", "Batek ere ez du AA gainditzen, beltz purua behar da."],
+    ans:0, exp:"#949494 (3,03:1) ez da nahikoa testu arrunterako; #767676 (4,54:1) AA ✓; #595959 (7,00:1) AAA ✓."
+  },
+  { id:"v27", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.mistake_archive,
+    q:"Erabiltzaileak argazkia betiko ezabatu nahi zuen, baina aldea ez zekielako «Artxibatu» sakatu du. Zer errorea da?",
+    opts:["Mistake (akats kontzeptuala).", "Slip (exekuzio-lapsusa).", "Muga fisikoaren haustura.", "WCAG O printzipioaren akatsa."],
+    ans:0, exp:"Mistake: helburu okerra aukeratu du sistema ez ulertzeagatik (aldea argi azalduz saihesten da)."
+  },
+  { id:"v28", topic:"T8_ZAILT", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.usb_physical,
+    q:"Irudiko konektoreak posizio bakarrean sartzea onartzen du bere formagatik. Zein muga-mota (constraint) da?",
+    opts:["Muga fisikoa.", "Muga logikoa.", "Muga semantikoa.", "Muga kulturala."],
+    ans:0, exp:"Muga fisikoa: objektuaren geometriak berak eragozten du gaizki konektatzea."
+  },
+  { id:"v29", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "VISUAL"], visual:SVGS.hbox_region_svg,
+    q:"Goiburuko HBox honetan titulua ezkerrean eta botoia eskuineko ertzean mantentzeko, zer da erdiko «hutsune elastikoa»?",
+    opts:["Region osagaia HBox.hgrow=\"ALWAYS\" jarrita.", "Label huts bat prefWidth=\"500\" finkoarekin.", "Separator bertikal bat Alignment=\"CENTER\" jarrita.", "StackPane huts bat BorderPane.margin-ekin."],
+    ans:0, exp:"Region + HBox.hgrow=\"ALWAYS\" malguki elastikoa da: soberako zabalera guztia hartzen du (gure erreserbak-view.fxml-ko 29. lerroa)."
+  },
+  { id:"v30", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "VISUAL"], visual:SVGS.mvc_layers_svg,
+    q:"MVC diagraman, zein geruza falta da erdian («???») .fxml bistaren eta Modeloaren arteko zubi gisa?",
+    opts:["Controller (Kontrolatzailea).", "DAO (Datu-base konexioa).", "Stage (Leiho fisikoa).", "CSS (Estilo-orria)."],
+    ans:0, exp:"Kontrolatzailea da Bista (.fxml) eta Modeloaren (DB/API) arteko zubia: klikak jaso, datuak eskatu eta bista eguneratzen du."
+  },
+  { id:"v31", topic:"T3_FITTS", kind:"mcq", tags:["TEORIA", "VISUAL"], visual:SVGS.times_scale_svg,
+    q:"Nielsen-en 3 erantzun-denboren eskalan, zer adierazten du erdiko 1,0 segundoko mugak («???»)?",
+    opts:["Pentsamendu-fluxua ez da eteten (>1 s: spinner).", "Ez da inolako atzerapenik nabaritzen.", "Pazientzia galtzen da (% barra + Ezeztatu).", "Sistema kraskatu dela suposatzen da."],
+    ans:0, exp:"0,1 s = berehalakoa · 1,0 s = fluxua ez da eteten (>1 s spinner) · 10 s = arretaren muga (aurrerapen-barra + Cancel)."
+  },
+  { id:"v32", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "VISUAL"], visual:SVGS.hotel_form_svg,
+    q:"Hotel-erreserba formulario honetan, irteera-data sarrera baino lehenagokoa denez botoia desgaitu da. Zer konbinatzen da?",
+    opts:["GridPane diseinua + muga logikoa / H5 balidazioa.", "TilePane diseinua + Gestalt itxitura-legea.", "AnchorPane finkoa + Nielsen 10 s muga.", "FlowPane diseinua + CMYK kolore-sintesia."],
+    ans:0, exp:"GridPane (etiketak + DatePicker/ComboBox) + H5 erroreen prebentzioa (irteera < sarrera bada ezin da erreserbatu)."
+  },
+  { id:"cd23", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"@FXML public void initialize() {\n    // Zutabeen setCellValueFactory(...) ahaztu zaigu!\n    taulaErreserbak.setItems(FXCollections.observableArrayList(Erreserba.lortuGuztiak()));\n}",
+    q:"BUG HUNT: 5 erreserba kargatzen dira DBtik, baina TableView-n 5 errenkada huts agertzen dira testurik gabe. Zergatik?",
+    opts:["Zutabeei setCellValueFactory(new PropertyValueFactory<>(...)) falta zaielako.", "FXCollections.observableArrayList-ek datuak ezabatzen dituelako.", "DBKonexioa-k String hutsak itzultzen dituelako beti.", "TableView-k ezin dituelako 5 errenkada baino gehiago erakutsi."],
+    ans:0, exp:"setCellValueFactory gabe, taulak badaki 5 objektu daudela baina ez daki Erreserba objektuaren zein atributu jarri zutabe bakoitzean.", fixCode:"@FXML public void initialize() {\n    zutabeId.setCellValueFactory(new PropertyValueFactory<>(\"id\"));\n    zutabePista.setCellValueFactory(new PropertyValueFactory<>(\"pistaIzena\"));\n    zutabeEmaila.setCellValueFactory(new PropertyValueFactory<>(\"bazkideaEmaila\"));\n    taulaErreserbak.setItems(FXCollections.observableArrayList(Erreserba.lortuGuztiak()));\n}"
+  },
+  { id:"cd24", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<AnchorPane prefHeight=\"900.0\" prefWidth=\"1920.0\">\n    <TableView layoutX=\"40.0\" layoutY=\"80.0\" prefWidth=\"1800.0\" prefHeight=\"750.0\" />\n</AnchorPane>",
+    q:"BUG HUNT: Zer gertatuko da FXML hau 1366×768 px-eko eramangarri batean irekitzean?",
+    opts:["Taula moztuta geratuko da, layoutX/Y eta prefWidth finkoekin ez delako egokitzen.", "JavaFX-ek automatikoki % 70era eskalatuko du taula osoa.", "AnchorPane-k automatikoki BorderPane bihurtuko du erroa.", "ScrollPane bat sortuko da berez eskuinean."],
+    ans:0, exp:"Posizio eta neurri finkoekin (Layout X/Y) ez da egokitzen. Erroan BorderPane (edo 4 aingurak) erabili behar da.", fixCode:"<BorderPane prefHeight=\"500.0\" prefWidth=\"850.0\">\n    <center>\n        <TableView fx:id=\"taulaErreserbak\" />\n    </center>\n</BorderPane>"
+  },
+  { id:"cd25", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"ResultSet rs = ps.executeQuery();\nint id = rs.getInt(\"id\"); // <- errore hemen!",
+    q:"BUG HUNT: Zein errorea emango du JDBC kode honek exekutatzean?",
+    opts:["SQLException («Before start of result set»), rs.next() deitu ez delako.", "NullPointerException, ps.executeQuery()-k null itzultzen duelako.", "ClassCastException, id String delako beti.", "IOException, konexioa automatikoki itxi delako."],
+    ans:0, exp:"ResultSet kurtsorea lehen errenkadaren aurretik hasten da; while (rs.next()) edo if (rs.next()) deitu behar da irakurri aurretik.", fixCode:"try (ResultSet rs = ps.executeQuery()) {\n    while (rs.next()) {\n        int id = rs.getInt(\"id\");\n        lista.add(new Erreserba(id, ...));\n    }\n}"
+  },
+  { id:"cd26", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"List<Erreserba> erreserbak = Erreserba.lortuGuztiak();\ntaulaErreserbak.setItems(erreserbak); // <- konpilazio errorea!",
+    q:"BUG HUNT: Zergatik ematen du konpilazio-errorea bigarren lerroak JavaFX-en?",
+    opts:["setItems()-ek ObservableList eskatzen duelako, ez List arrunta.", "Erreserba.lortuGuztiak()-ek array bat itzultzen duelako.", "taulaErreserbak final deklaratu behar delako.", "List<Erreserba> ezin delako Controller-en inportatu."],
+    ans:0, exp:"List arrunta FXCollections.observableArrayList(...) bidez bihurtu behar da ObservableList.", fixCode:"List<Erreserba> erreserbak = Erreserba.lortuGuztiak();\ntaulaErreserbak.setItems(FXCollections.observableArrayList(erreserbak));"
+  },
+  { id:"cd27", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<TilePane prefColumns=\"4\" prefTileWidth=\"60\" prefTileHeight=\"60\">\n    <Button text=\"7\" />\n    <Button text=\"CE\" />\n</TilePane>",
+    q:"Kalkulagailuaren TilePane honetan «7» botoia «CE» botoia baino txikiago ikusten da baldosa barruan. Zer falta zaie botoiei?",
+    opts:["maxWidth=\"1.7976931348623157E308\" eta maxHeight=\"1.7976931348623157E308\".", "VBox.vgrow=\"ALWAYS\" eta HBox.hgrow=\"ALWAYS\".", "alignment=\"TOP_LEFT\" eta editable=\"false\".", "fitToWidth=\"true\" eta wrapText=\"true\"."],
+    ans:0, exp:"Max Width/Height = MAX_VALUE jarrita, botoi guztiek 60×60 baldosa osoa betetzen dute testua edozein dela ere.", fixCode:"<TilePane prefColumns=\"4\" prefTileWidth=\"60\" prefTileHeight=\"60\" hgap=\"8\" vgap=\"8\">\n    <Button text=\"7\" maxWidth=\"1.7976931348623157E308\" maxHeight=\"1.7976931348623157E308\" />\n    <Button text=\"CE\" maxWidth=\"1.7976931348623157E308\" maxHeight=\"1.7976931348623157E308\" />\n</TilePane>"
+  },
+  { id:"cd28", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"HttpResponse<String> resp = client.send(req, HttpResponse.BodyHandlers.ofString());\nif (resp.statusCode() == 404) throw new ApiErantzuna.NotFoundException(...);\nif (resp.statusCode() >= 500) throw new ApiErantzuna.ServerErrorException(...);",
+    q:"Zertarako bereizten ditu ApiZerbitzua-k 404 eta 500 HTTP egoera-kodeak salbuespen ezberdinetan?",
+    opts:["Kontrolatzaileak errore bakoitzari mezu argi eta zehatza erakusteko (H9).", "MySQL datu-basearen pasahitza automatikoki aldatzeko.", "JavaFX leihoa tamainaz aldatzeko kodearen arabera.", "JSON fitxategia disko gogorrean gordetzeko."],
+    ans:0, exp:"Salbuespen zehatzek (404 Not Found vs 500 Server Error vs Konexio-errorea) erabiltzaileari arazoa argi diagnostikatzen laguntzen diote (H9).", fixCode:"if (resp.statusCode() == 200) {\n    return parseErreserbak(resp.body());\n} else if (resp.statusCode() == 404) {\n    throw new ApiErantzuna.NotFoundException(\"Ez da erreserbarik aurkitu\");\n} else {\n    throw new ApiErantzuna.ServerErrorException(\"Zerbitzari errorea: \" + resp.statusCode());\n}"
+  },
+  { id:"cd29", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"FXMLLoader loader = new FXMLLoader(getClass().getResource(\"bazkideak-view.fxml\"));\nParent root = loader.load();\nBazkideakController ctrl = loader.getController();\nctrl.hasieratuModua(moduApi);",
+    q:"Zer lortzen da loader.getController() deitzean loader.load() exekutatu ONDOREN?",
+    opts:["FXMLarekin instantziatu den Kontrolatzailearen erreferentzia, datuak edo egoera pasatzeko.", "FXML fitxategiaren XML testu gordina irakurtzea.", "MySQL datu-baserako Connection objektua lortzea.", "Stage leihoaren zabalera eta altuera irakurtzea."],
+    ans:0, exp:"loader.load()-ek kontrolatzailea sortzen du; ondoren getController()-ekin metodo publikoak dei diezazkiokezu pantaila berrira datuak pasatzeko.", fixCode:"FXMLLoader loader = new FXMLLoader(getClass().getResource(\"bazkideak-view.fxml\"));\nParent root = loader.load(); // Lehenik load()!\nBazkideakController ctrl = loader.getController();\nctrl.hasieratuModua(moduApi);\nstage.getScene().setRoot(root);"
+  },
+  { id:"cd30", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"Scene scene = new Scene(root, 850, 500);\nscene.getStylesheets().add(\n    App.class.getResource(\"estiloak.css\").toExternalForm()\n);",
+    q:"Zer egiten du kode honek JavaFX aplikazio batean (Ohar-bloka ariketako oharra)?",
+    opts:["Kanpoko CSS estilo-orri bat aplikatzen dio Scene osoko kontrol guztiei.", "HTML webgune bat irekitzen du nabigatzailean.", "FXML fitxategi berri bat sortzen du resources/ karpetan.", "Stage leihoaren ikonoa aldatzen du."],
+    ans:0, exp:"JavaFX-ek CSS propioa (-fx-background-color, -fx-text-fill...) onartzen du Scene mailan estiloak zentralizatzeko.", fixCode:"// estiloak.css adibidea:\n// .button { -fx-background-color: #2563eb; -fx-text-fill: white; }\nscene.getStylesheets().add(App.class.getResource(\"estiloak.css\").toExternalForm());"
+  },
+  { id:"cd31", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"public class Launcher {\n    public static void main(String[] args) {\n        Application.launch(App.class, args);\n    }\n}",
+    q:"Zergatik sortzen da Launcher.java aparteko klase bat (extends Application gabe) App.java abiarazteko?",
+    opts:["JavaFX runtime-a classpath-etik abiaraztean modulu-erroreak saihesteko.", "App.java klaseak ezin duelako start(Stage) metodorik eduki.", "Maven-ek fitxategiak alfabetikoki exekutatzen dituelako.", "MySQL driver-a kargatzeko JavaFX baino lehen."],
+    ans:0, exp:"Main klaseak Application hedatzen badu, JVM-ak JavaFX runtime osagaiak falta direla esan dezake; Launcher klaseak arazo hori konpontzen du.", fixCode:"public class Launcher {\n    public static void main(String[] args) {\n        Application.launch(App.class, args);\n    }\n}"
+  },
+  { id:"cd32", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"btnBidali.disableProperty().bind(\n    txtEmaila.textProperty().isEmpty()\n);",
+    q:"Zer egiten du JavaFX property-lotura (binding) lerro honek?",
+    opts:["txtEmaila hutsik dagoen bitartean btnBidali automatikoki desgaitzen du (muga logikoa).", "btnBidali sakatzean txtEmaila eremua husten du.", "txtEmaila eremuan idaztea debekatzen du betiko.", "Emaila baliozkoa den egiaztatzen du datu-basean."],
+    ans:0, exp:"JavaFX Binding bidez muga logiko garbia (H5) ezartzen da: testua idaztean botoia berehala gaitzen da, hutsik badago desgaituta.", fixCode:"btnBidali.disableProperty().bind(\n    txtIzena.textProperty().isEmpty().or(txtEmaila.textProperty().isEmpty())\n);"
+  },
+  { id:"cd33", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"LocalDate sarrera = dpSarrera.getValue();\nLocalDate irteera = dpIrteera.getValue();\nif (irteera.isBefore(sarrera)) {\n    lblErrorea.setText(\"Irteera-data ezin da sarrera baino lehenagokoa izan.\");\n    return;\n}",
+    q:"Hotel-erreserba formularioan (GridPane ariketako erronka), zer prebenitzen du balidazio honek?",
+    opts:["Datu inkonsistenteak DBan gordetzea (H5 prebentzioa + H9 mezu argia).", "DatePicker kontrolak pantailatik kanpo ateratzea.", "SQL konexioaren timeout errorea.", "TableView-ko zutabeak ordenatzea."],
+    ans:0, exp:"Kontrolatzailean datuak balidatzeak erroreak aurretik geldiarazten ditu (H5) eta erabiltzaileari hizkera argian azaltzen dio (H9).", fixCode:"if (sarrera == null || irteera == null || irteera.isBefore(sarrera)) {\n    lblErrorea.setStyle(\"-fx-text-fill: red;\");\n    lblErrorea.setText(\"Hautatu baliozko sarrera eta irteera datak.\");\n    return;\n}"
+  },
+  { id:"cd34", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"new Thread(() -> {\n    List<Erreserba> lista = apiZerbitzua.lortuErreserbak();\n    taulaErreserbak.setItems(FXCollections.observableArrayList(lista)); // <- errorea!\n}).start();",
+    q:"BUG HUNT: Atzeko hari (Thread) batetik zuzenean TableView eguneratzean «Not on FX application thread» errorea ematen du. Nola konpondu?",
+    opts:["taulaErreserbak.setItems(...) deia Platform.runLater(() -> ...) barruan sartuz.", "Thread-a kendu eta while(true) begizta jarriz.", "TableView static deklaratuz kontrolatzailean.", "stage.show() berriro deituz hariaren barruan."],
+    ans:0, exp:"JavaFX-eko UI kontrol guztiak JavaFX Application Thread haritik soilik alda daitezke; atzeko harietatik Platform.runLater(...) erabili behar da.", fixCode:"new Thread(() -> {\n    List<Erreserba> lista = apiZerbitzua.lortuErreserbak();\n    Platform.runLater(() -> {\n        taulaErreserbak.setItems(FXCollections.observableArrayList(lista));\n    });\n}).start();"
+  },
+  { id:"cd35", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"mezuak.getSelectionModel().selectedItemProperty().addListener((obs, oldMsg, newMsg) -> {\n    if (newMsg != null) {\n        lblGaia.setText(newMsg.getGaia());\n        txtAurrebista.setText(newMsg.getEdukia());\n    }\n});",
+    q:"Posta-bezeroan (BorderPane ariketa), zer egiten du listener honek?",
+    opts:["CENTER-eko ListView-n mezu bat hautatzean, RIGHT paneleko aurrebista eguneratzen du.", "Mezu berri bat bidaltzen du hautatutako helbidera.", "Hautatutako mezua zakarrontzira ezabatzen du.", "ListView-ko elementu guztiak alfabetikoki ordenatzen ditu."],
+    ans:0, exp:"selectedItemProperty() entzunez, erabiltzaileak zerrendako errenkada aldatu bezain laster xehetasunen panela automatikoki freskatzen da.", fixCode:"mezuak.getSelectionModel().selectedItemProperty().addListener((obs, oldM, newM) -> {\n    if (newM != null) {\n        lblGaia.setText(newM.getGaia());\n        txtAurrebista.setText(newM.getEdukia());\n    }\n});"
+  },
+  { id:"cd36", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<plugin>\n  <artifactId>maven-compiler-plugin</artifactId>\n  <configuration>\n    <encoding>UTF-8</encoding>\n  </configuration>\n</plugin>",
+    q:"Zergatik da garrantzitsua <encoding>UTF-8</encoding> ezartzea pom.xml fitxategian Windows-en?",
+    opts:["Windows-eko javac-ek CP-1252 erabiltzen duelako lehenetsita eta karaktere bereziekin huts egin dezakeelako.", "JavaFX 21-ek UTF-8 gabe leihoak beltzez marrazten dituelako.", "MySQL konexioa SSL bidez zifratzeko.", "Maven-ek Internetik gabe konpilatzeko."],
+    ans:0, exp:"Windows-en kodeketa lehenetsia windows-1252 denez, UTF-8 esplizituki ezartzeak «unmappable character» konpilazio-erroreak saihesten ditu.", fixCode:"<properties>\n    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n</properties>"
+  },
+  { id:"cd37", topic:"M2_PANES", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"<HBox alignment=\"CENTER_RIGHT\" spacing=\"10.0\"\n      GridPane.rowIndex=\"7\" GridPane.columnSpan=\"2\">\n    <Button text=\"Utzi\" />\n    <Button text=\"Erreserbatu\" />\n</HBox>",
+    q:"Non kokatzen dira «Utzi» eta «Erreserbatu» botoiak GridPane formulario honetan?",
+    opts:["7. errenkadan, bi zutabeak hartuz eta eskuineko ertzera lerrokatuta.", "0. zutabean bakarrik, bertikalki bata bestearen gainean.", "GridPane-ren kanpoan, BorderPane-ko goiburuan.", "Pantailaren erdi-erdian, tamaina finkoan."],
+    ans:0, exp:"GridPane.columnSpan=\"2\" + HBox alignment=\"CENTER_RIGHT\" da formularioetako ekintza-botoiak eskuinean lerrokatzeko patroia.", fixCode:"<HBox alignment=\"CENTER_RIGHT\" spacing=\"10.0\" GridPane.rowIndex=\"7\" GridPane.columnSpan=\"2\">\n    <Button text=\"Utzi\" onAction=\"#onUtziClick\" />\n    <Button text=\"Erreserbatu\" onAction=\"#onErreserbatuClick\" />\n</HBox>"
+  },
+  { id:"cd38", topic:"M1_MVC", kind:"mcq", tags:["MVC_ALL", "CODE"], code:"} catch (SQLException e) {\n    e.printStackTrace(); // <- erabiltzaileak ez du ezer ikusten!\n}",
+    q:"BUG HUNT (UX + Kodea): Datu-basea itzalita badago, kode honekin kontsolan bakarrik agertzen da errorea. Zer hobetu behar da?",
+    opts:["taula hustu, placeholder-a eta lblEgoera gorriz eguneratu hizkera argian (H1 + H9).", "catch blokea hutsik utzi salbuespena ezkutatzeko.", "System.exit(0) deitu leihoa berehala ixteko.", "e.printStackTrace() bi aldiz deitu hobeto ikusteko."],
+    ans:0, exp:"Erabiltzaile arruntak ez du kontsola ikusten; interfazean bertan (lblEgoera + placeholder) feedback argia eman behar da.", fixCode:"} catch (SQLException e) {\n    taulaErreserbak.getItems().clear();\n    taulaErreserbak.setPlaceholder(new Label(\"Ezin da MySQL datu-basearekin konektatu.\"));\n    lblEgoera.setStyle(\"-fx-text-fill: red; -fx-font-weight: bold;\");\n    lblEgoera.setText(\"Konexio errorea datu-basearekin.\");\n}"
   },
 
   // ---------- GALDERA IREKIAK / FLASHCARDS (OPEN MODE) ----------
@@ -1927,6 +2230,60 @@ let state = {
   timerHandle: null,
   finished: false
 };
+
+
+function highlightCode(raw) {
+  if (!raw) return "";
+  const isXml = /^\s*</.test(raw);
+  const kwSet = new Set([
+    "public","private","protected","static","final","void","class","interface","extends","implements",
+    "new","if","else","try","catch","finally","return","throws","throw","boolean","int","double","long",
+    "true","false","null","import","package","module","requires","opens","exports","to","while","for",
+    "SELECT","FROM","WHERE","INNER","LEFT","JOIN","ON","AS","DELETE","INSERT","INTO","VALUES","UPDATE","SET","AND","OR"
+  ]);
+  const tySet = new Set([
+    "TableView","TableColumn","Button","Label","TextField","TextArea","ListView","DatePicker","ComboBox","Spinner",
+    "BorderPane","HBox","VBox","GridPane","FlowPane","TilePane","StackPane","AnchorPane","ScrollPane","Region",
+    "Scene","Stage","Parent","Node","Screen","Rectangle2D","FXMLLoader","FXCollections","ObservableList",
+    "PropertyValueFactory","Alert","AlertType","ButtonType","Optional","ActionEvent","Application","Priority",
+    "Platform","Thread","Connection","PreparedStatement","ResultSet","SQLException","IOException","Exception",
+    "HttpClient","HttpRequest","HttpResponse","URI","List","String","Integer","Double","Erreserba","DBKonexioa",
+    "ApiZerbitzua","ApiErantzuna","ErreserbakController","PantailaAldatzailea","App","Launcher","ColumnConstraints",
+    "LocalDate","System"
+  ]);
+
+  if (isXml) {
+    return raw.replace(/(&|<|>)|<!--[\s\S]*?-->|<\/?[A-Za-z_][\w.:-]*|\/?>|[A-Za-z_][\w.:-]*(?=\s*=)|"[^"]*"/g, (m) => {
+      if (m === "&") return "&amp;";
+      if (m === "<") return "&lt;";
+      if (m === ">") return "&gt;";
+      if (m.startsWith("<!--")) return `<span class="hl-cm">${escHtml(m)}</span>`;
+      if (m.startsWith("<")) return `<span class="hl-tag">${escHtml(m)}</span>`;
+      if (m === "/>" || m === ">") return `<span class="hl-tag">${escHtml(m)}</span>`;
+      if (m.startsWith('"')) return `<span class="hl-str">${escHtml(m)}</span>`;
+      return `<span class="hl-attr">${escHtml(m)}</span>`;
+    });
+  }
+
+  const tokenRe = /(\/\/[^\n]*|\/\*[\s\S]*?\*\/|<!--[\s\S]*?-->|"(?:\\.|[^"\\])*"|@[A-Za-z_]\w*|\b\d+(?:\.\d+)?\b|\b[A-Za-z_]\w*\b(?=\s*\()|\b[A-Za-z_]\w*\b|[&<>])/g;
+  return raw.replace(tokenRe, (m) => {
+    if (m === "&") return "&amp;";
+    if (m === "<") return "&lt;";
+    if (m === ">") return "&gt;";
+    if (m.startsWith("//") || m.startsWith("/*") || m.startsWith("<!--")) return `<span class="hl-cm">${escHtml(m)}</span>`;
+    if (m.startsWith('"')) return `<span class="hl-str">${escHtml(m)}</span>`;
+    if (m.startsWith("@")) return `<span class="hl-ann">${escHtml(m)}</span>`;
+    if (/^\d/.test(m)) return `<span class="hl-num">${m}</span>`;
+    if (kwSet.has(m)) return `<span class="hl-kw">${m}</span>`;
+    if (tySet.has(m)) return `<span class="hl-ty">${m}</span>`;
+    return /^[a-z]/.test(m) ? `<span class="hl-fn">${m}</span>` : m;
+  });
+}
+
+function renderFixCodeBlock(fixCode) {
+  if (!fixCode) return "";
+  return `<div class="fix-code-wrap"><div class="fix-code-title">Kode zuzendua / adibide osoa:</div><pre class="q-code">${highlightCode(fixCode)}</pre></div>`;
+}
 
 function escHtml(str) {
   return String(str ?? "")
@@ -2320,7 +2677,7 @@ function renderQuestion() {
   else { vis.innerHTML = ""; vis.classList.add("hidden"); }
 
   const cod = document.getElementById("qCodeArea");
-  if (q.code) { cod.textContent = q.code; cod.classList.remove("hidden"); }
+  if (q.code) { cod.innerHTML = highlightCode(q.code); cod.classList.remove("hidden"); }
   else { cod.textContent = ""; cod.classList.add("hidden"); }
 
   const optArea = document.getElementById("qOptionsArea");
@@ -2362,7 +2719,7 @@ function renderQuestion() {
 
     if (a && !isExam) {
       fb.className = "feedback-box " + (a.correct ? "good" : "bad");
-      fb.innerHTML = `<strong class="fb-head">${a.correct ? '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Zuzena' : '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Okerra'}</strong>${escHtml(q.exp)}`;
+      fb.innerHTML = `<strong class="fb-head">${a.correct ? '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Zuzena' : '<svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Okerra'}</strong>${escHtml(q.exp)}${renderFixCodeBlock(q.fixCode)}`;
       fb.classList.remove("hidden");
     }
   }
@@ -2489,7 +2846,7 @@ function renderReview(filter) {
       <div style="font-size:0.86rem;">
         <div><strong>Zure erantzuna:</strong> ${escHtml(chosenTxt)}</div>
         ${!ok ? `<div style="color:var(--good);font-weight:700;"><strong>Erantzun zuzena:</strong> ${escHtml(rightTxt)}</div>` : ''}
-        <div style="color:var(--muted);margin-top:4px;"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> ${escHtml(q.exp)}</div>
+        <div style="color:var(--muted);margin-top:4px;"><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> ${escHtml(q.exp)}</div>${renderFixCodeBlock(q.fixCode)}
       </div>
     </div>`;
   }).join("");
